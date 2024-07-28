@@ -71,6 +71,7 @@ public class CraftnoyaibaModItems {
 	public static final RegistryObject<Item> SMALL_GOURD = REGISTRY.register("small_gourd", () -> new SmallGourdItem());
 	public static final RegistryObject<Item> MEDIUM_GOURD = REGISTRY.register("medium_gourd", () -> new MediumGourdItem());
 	public static final RegistryObject<Item> BIG_GOURD = REGISTRY.register("big_gourd", () -> new BigGourdItem());
+	public static final RegistryObject<Item> HAND_DEMON_SPAWN_EGG = REGISTRY.register("hand_demon_spawn_egg", () -> new ForgeSpawnEggItem(CraftnoyaibaModEntities.HAND_DEMON, -9066915, -5877423, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

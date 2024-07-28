@@ -180,6 +180,7 @@ public class CraftnoyaibaModVariables {
 			clone.LeftLegHealthMax = original.LeftLegHealthMax;
 			clone.RightLegHealth = original.RightLegHealth;
 			clone.RightLegHealthMax = original.RightLegHealthMax;
+			clone.HandDemonQuest = original.HandDemonQuest;
 			if (!event.isWasDeath()) {
 				clone.Slot = original.Slot;
 				clone.ParryTimer = original.ParryTimer;
@@ -197,6 +198,9 @@ public class CraftnoyaibaModVariables {
 				clone.LostHead = original.LostHead;
 				clone.EquippedSword = original.EquippedSword;
 				clone.equipped = original.equipped;
+				clone.FinalSelectionProgress1 = original.FinalSelectionProgress1;
+				clone.Quest = original.Quest;
+				clone.QuestColor = original.QuestColor;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -482,6 +486,10 @@ public class CraftnoyaibaModVariables {
 		public boolean LostHead = false;
 		public ItemStack EquippedSword = ItemStack.EMPTY;
 		public boolean equipped = false;
+		public double FinalSelectionProgress1 = 0;
+		public String Quest = "\"\"";
+		public String QuestColor = "\"\"";
+		public boolean HandDemonQuest = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -602,6 +610,10 @@ public class CraftnoyaibaModVariables {
 			nbt.putBoolean("LostHead", LostHead);
 			nbt.put("EquippedSword", EquippedSword.save(new CompoundTag()));
 			nbt.putBoolean("equipped", equipped);
+			nbt.putDouble("FinalSelectionProgress1", FinalSelectionProgress1);
+			nbt.putString("Quest", Quest);
+			nbt.putString("QuestColor", QuestColor);
+			nbt.putBoolean("HandDemonQuest", HandDemonQuest);
 			return nbt;
 		}
 
@@ -719,6 +731,10 @@ public class CraftnoyaibaModVariables {
 			LostHead = nbt.getBoolean("LostHead");
 			EquippedSword = ItemStack.of(nbt.getCompound("EquippedSword"));
 			equipped = nbt.getBoolean("equipped");
+			FinalSelectionProgress1 = nbt.getDouble("FinalSelectionProgress1");
+			Quest = nbt.getString("Quest");
+			QuestColor = nbt.getString("QuestColor");
+			HandDemonQuest = nbt.getBoolean("HandDemonQuest");
 		}
 	}
 
@@ -864,6 +880,10 @@ public class CraftnoyaibaModVariables {
 					variables.LostHead = message.data.LostHead;
 					variables.EquippedSword = message.data.EquippedSword;
 					variables.equipped = message.data.equipped;
+					variables.FinalSelectionProgress1 = message.data.FinalSelectionProgress1;
+					variables.Quest = message.data.Quest;
+					variables.QuestColor = message.data.QuestColor;
+					variables.HandDemonQuest = message.data.HandDemonQuest;
 				}
 			});
 			context.setPacketHandled(true);

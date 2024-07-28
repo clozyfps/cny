@@ -31,6 +31,7 @@ public class CraftnoyaibaModTabs {
 	public static final RegistryObject<CreativeModeTab> YAIBA_DEMONS = REGISTRY.register("yaiba_demons",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.craftnoyaiba.yaiba_demons")).icon(() -> new ItemStack(CraftnoyaibaModItems.BLOOD.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(CraftnoyaibaModItems.BASIC_DEMON_SPAWN_EGG.get());
+				tabData.accept(CraftnoyaibaModItems.HAND_DEMON_SPAWN_EGG.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> YAIBA_DEMON_ARMOR = REGISTRY.register("yaiba_demon_armor",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.craftnoyaiba.yaiba_demon_armor")).icon(() -> new ItemStack(CraftnoyaibaModItems.UPPER_MOON_ONE_ARMOR_CHESTPLATE.get())).displayItems((parameters, tabData) -> {

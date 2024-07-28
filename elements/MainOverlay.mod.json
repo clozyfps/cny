@@ -5,23 +5,6 @@
     "priority": "NORMAL",
     "components": [
       {
-        "type": "label",
-        "data": {
-          "name": "label_proc_move_display",
-          "text": {
-            "fixedValue": "",
-            "name": "MoveDisplay"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "anchorPoint": "BOTTOM_LEFT",
-          "x": 28,
-          "y": 197
-        }
-      },
-      {
         "type": "image",
         "data": {
           "image": "slayer_ui_00.png",

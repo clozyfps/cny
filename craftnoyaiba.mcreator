@@ -7121,7 +7121,7 @@
           }
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Mobs/Procedures"
     },
     {
       "name": "ZenitsuAgatsuma",
@@ -8086,6 +8086,242 @@
         ]
       },
       "path": "~/Items"
+    },
+    {
+      "name": "FinalSelectionGoal1",
+      "type": "procedure",
+      "sortid": 388,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_selection_goal_1",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionGoal1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "FinalSelectionOverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 389,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_selection_overlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionOverlayDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "FinalSelectionOverlay",
+      "type": "overlay",
+      "sortid": 390,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_selection_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/client/screens/FinalSelectionOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Overlays"
+    },
+    {
+      "name": "QuestKill",
+      "type": "procedure",
+      "sortid": 391,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quest_kill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/QuestKillProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MoveSelectedDisplay",
+      "type": "overlay",
+      "sortid": 392,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_selected_display",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/client/screens/MoveSelectedDisplayOverlay.java"
+        ]
+      },
+      "path": "~/Overlays"
+    },
+    {
+      "name": "HandDemon",
+      "type": "livingentity",
+      "sortid": 393,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hand_demon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/HandDemonRenderer.java",
+          "src/main/java/net/mcreator/craftnoyaiba/entity/HandDemonEntity.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/hand_demon_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "FinalSelectionGoal2",
+      "type": "procedure",
+      "sortid": 394,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_selection_goal_2",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionGoal2Procedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "FinalSelectionGoal3",
+      "type": "procedure",
+      "sortid": 395,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_selection_goal_3",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionGoal3Procedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "FinalSelectionGoal4",
+      "type": "procedure",
+      "sortid": 396,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_selection_goal_4",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionGoal4Procedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "ShowCompletedFinalSelection1",
+      "type": "procedure",
+      "sortid": 397,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_completed_final_selection_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/ShowCompletedFinalSelection1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "ShowCompletedFinalSelection2",
+      "type": "procedure",
+      "sortid": 398,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_completed_final_selection_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/ShowCompletedFinalSelection2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "CompleteFinalSelection",
+      "type": "procedure",
+      "sortid": 399,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "complete_final_selection",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/CompleteFinalSelectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -8766,6 +9002,30 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "FinalSelectionProgress1",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "Quest",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "QuestColor",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "HandDemonQuest",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -9058,6 +9318,7 @@
       "gui.craftnoyaiba.take_blood.button_take": "Take",
       "gamerule.cnyAutoParry.description": "parry automatically",
       "advancements.recovery_breathing.title": "Recovery Breathing",
+      "entity.craftnoyaiba.hand_demon": "Hand Demon",
       "advancements.demon.title": "Demon",
       "item.craftnoyaiba.small_gourd": "Small Gourd",
       "gamerule.assignedRanks": "assignedranks",
@@ -9095,6 +9356,7 @@
       "subtitles.swordblock": "",
       "biome.craftnoyaiba.town": "Town",
       "effect.craftnoyaiba.tcaf_active": "TcafActive",
+      "item.craftnoyaiba.hand_demon_spawn_egg": "Hand Demon Spawn Egg",
       "subtitles.stab": "",
       "effect.craftnoyaiba.string_performance_move": "String Performance Move",
       "item.craftnoyaiba.demon_slayer_uniform_leggings": "Demon Slayer Uniform",

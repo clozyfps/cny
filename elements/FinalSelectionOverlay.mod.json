@@ -1,0 +1,95 @@
+{
+  "_fv": 60,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_final_selection_goal_1",
+          "text": {
+            "fixedValue": "",
+            "name": "FinalSelectionGoal1"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 9,
+          "y": 11
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_final_selection_goal_2",
+          "text": {
+            "fixedValue": "",
+            "name": "FinalSelectionGoal2"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 9,
+          "y": 27
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_final_selection_goal_4",
+          "text": {
+            "fixedValue": "",
+            "name": "FinalSelectionGoal4"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ShowCompletedFinalSelection1"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 9,
+          "y": 11
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_final_selection_goal_3",
+          "text": {
+            "fixedValue": "",
+            "name": "FinalSelectionGoal3"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ShowCompletedFinalSelection2"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 9,
+          "y": 27
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "FinalSelectionOverlayDisplayOverlayIngame"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

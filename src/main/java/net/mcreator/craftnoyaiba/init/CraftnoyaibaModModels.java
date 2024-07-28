@@ -25,6 +25,7 @@ import net.mcreator.craftnoyaiba.client.model.Modeljigoro;
 import net.mcreator.craftnoyaiba.client.model.Modelflashy_hashiraarmor;
 import net.mcreator.craftnoyaiba.client.model.Modeldemonthird;
 import net.mcreator.craftnoyaiba.client.model.Modeldemonsecond;
+import net.mcreator.craftnoyaiba.client.model.ModelHandDemon;
 import net.mcreator.craftnoyaiba.client.model.ModelCustomModel;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -47,6 +48,7 @@ public class CraftnoyaibaModModels {
 		event.registerLayerDefinition(Modeldemonsecond.LAYER_LOCATION, Modeldemonsecond::createBodyLayer);
 		event.registerLayerDefinition(Modelswordsmith.LAYER_LOCATION, Modelswordsmith::createBodyLayer);
 		event.registerLayerDefinition(Modelkokushibo_robes.LAYER_LOCATION, Modelkokushibo_robes::createBodyLayer);
+		event.registerLayerDefinition(ModelHandDemon.LAYER_LOCATION, ModelHandDemon::createBodyLayer);
 		event.registerLayerDefinition(Modelstone.LAYER_LOCATION, Modelstone::createBodyLayer);
 	}
 }

@@ -21,6 +21,7 @@ import net.mcreator.craftnoyaiba.client.renderer.KaigakuHumanRenderer;
 import net.mcreator.craftnoyaiba.client.renderer.JigoroKuwajimaRenderer;
 import net.mcreator.craftnoyaiba.client.renderer.InfinityCastleDoorUpsideDownRenderer;
 import net.mcreator.craftnoyaiba.client.renderer.InfinityCastleDoorRenderer;
+import net.mcreator.craftnoyaiba.client.renderer.HandDemonRenderer;
 import net.mcreator.craftnoyaiba.client.renderer.FlamingThunderGodRenderer;
 import net.mcreator.craftnoyaiba.client.renderer.FlameFirstFormRenderer;
 import net.mcreator.craftnoyaiba.client.renderer.BasicDemonRenderer;
@@ -48,5 +49,6 @@ public class CraftnoyaibaModEntityRenderers {
 		event.registerEntityRenderer(CraftnoyaibaModEntities.BASIC_DEMON.get(), BasicDemonRenderer::new);
 		event.registerEntityRenderer(CraftnoyaibaModEntities.SWORDSMITH.get(), SwordsmithRenderer::new);
 		event.registerEntityRenderer(CraftnoyaibaModEntities.PRIMARY_GALE_SLASH.get(), PrimaryGaleSlashRenderer::new);
+		event.registerEntityRenderer(CraftnoyaibaModEntities.HAND_DEMON.get(), HandDemonRenderer::new);
 	}
 }

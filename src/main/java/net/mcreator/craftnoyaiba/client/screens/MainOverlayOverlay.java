@@ -15,7 +15,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.craftnoyaiba.procedures.MoveDisplayProcedure;
 import net.mcreator.craftnoyaiba.procedures.MainOverlayDisplayOverlayIngame2Procedure;
 import net.mcreator.craftnoyaiba.procedures.BreatheBar7Procedure;
 import net.mcreator.craftnoyaiba.procedures.BreatheBar6Procedure;
@@ -77,9 +76,6 @@ public class MainOverlayOverlay {
 			if (BreatheBar6Procedure.execute(entity)) {
 				event.getGuiGraphics().blit(new ResourceLocation("craftnoyaiba:textures/screens/slayer_ui_5.png"), 6, h / 2 + -85, 0, 0, 176, 166, 176, 166);
 			}
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
-
-					MoveDisplayProcedure.execute(entity), 28, h - 43, -1, false);
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();

@@ -31,6 +31,7 @@ import net.mcreator.craftnoyaiba.entity.JigoroKuwajimaEntity;
 import net.mcreator.craftnoyaiba.entity.InfinityCastleDoorUpsideDownEntity;
 import net.mcreator.craftnoyaiba.entity.InfinityCastleDoorEntity;
 import net.mcreator.craftnoyaiba.entity.HeatLightningStartEntity;
+import net.mcreator.craftnoyaiba.entity.HandDemonEntity;
 import net.mcreator.craftnoyaiba.entity.GodspeedTCAFEntity;
 import net.mcreator.craftnoyaiba.entity.FlamingThunderGodEntity;
 import net.mcreator.craftnoyaiba.entity.FlameFirstFormEntity;
@@ -96,6 +97,10 @@ public class CraftnoyaibaModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<PrimaryGaleSlashEntity>> PRIMARY_GALE_SLASH = register("primary_gale_slash", EntityType.Builder.<PrimaryGaleSlashEntity>of(PrimaryGaleSlashEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PrimaryGaleSlashEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<HandDemonEntity>> HAND_DEMON = register("hand_demon",
+			EntityType.Builder.<HandDemonEntity>of(HandDemonEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HandDemonEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -117,6 +122,7 @@ public class CraftnoyaibaModEntities {
 			BasicDemonEntity.init();
 			SwordsmithEntity.init();
 			PrimaryGaleSlashEntity.init();
+			HandDemonEntity.init();
 		});
 	}
 
@@ -135,5 +141,6 @@ public class CraftnoyaibaModEntities {
 		event.put(BASIC_DEMON.get(), BasicDemonEntity.createAttributes().build());
 		event.put(SWORDSMITH.get(), SwordsmithEntity.createAttributes().build());
 		event.put(PRIMARY_GALE_SLASH.get(), PrimaryGaleSlashEntity.createAttributes().build());
+		event.put(HAND_DEMON.get(), HandDemonEntity.createAttributes().build());
 	}
 }
