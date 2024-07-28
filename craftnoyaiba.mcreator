@@ -620,8 +620,8 @@
       "registry_name": "menu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/network/MenuButtonMessage.java",
           "src/main/java/net/mcreator/craftnoyaiba/client/gui/MenuScreen.java",
+          "src/main/java/net/mcreator/craftnoyaiba/network/MenuButtonMessage.java",
           "src/main/java/net/mcreator/craftnoyaiba/world/inventory/MenuMenu.java"
         ]
       },
@@ -2221,21 +2221,6 @@
         ]
       },
       "path": "~/Items/Procedures"
-    },
-    {
-      "name": "Gourd",
-      "type": "item",
-      "sortid": 103,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gourd",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craftnoyaiba/models/item/gourd.json",
-          "src/main/java/net/mcreator/craftnoyaiba/item/GourdItem.java"
-        ]
-      },
-      "path": "~/Items"
     },
     {
       "name": "YaibaNichirins",
@@ -8020,6 +8005,87 @@
         ]
       },
       "path": "~/Mobs/Misc/Breathing/Wind"
+    },
+    {
+      "name": "SmallGourd",
+      "type": "item",
+      "sortid": 384,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_gourd",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/small_gourd.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/SmallGourdItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SmallGourdRightclicked",
+      "type": "procedure",
+      "sortid": 385,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_gourd_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/SmallGourdRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Procedures"
+    },
+    {
+      "name": "MediumGourd",
+      "type": "item",
+      "sortid": 386,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "medium_gourd",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/medium_gourd.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/MediumGourdItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "BigGourd",
+      "type": "item",
+      "sortid": 387,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big_gourd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/BigGourdItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/big_gourd.json"
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -8887,15 +8953,16 @@
       "entity.craftnoyaiba.primary_gale_slash": "Primary Gale Slash",
       "entity.craftnoyaiba.flame_first_form": "Flame First Form",
       "gui.craftnoyaiba.create_ability.button_sslx2": "§lX",
-      "effect.craftnoyaiba.tcafend": "Tcafend",
-      "gui.craftnoyaiba.create_ability.button_sslx3": "§lX",
-      "entity.craftnoyaiba.thunder_clap_and_flash_mob": "Thunder Clap And Flash Mob",
       "item.craftnoyaiba.kiriya_ubuyashiki_spawn_egg": "Kiriya Ubuyashiki Spawn Egg",
+      "entity.craftnoyaiba.thunder_clap_and_flash_mob": "Thunder Clap And Flash Mob",
+      "gui.craftnoyaiba.create_ability.button_sslx3": "§lX",
+      "effect.craftnoyaiba.tcafend": "Tcafend",
+      "item.craftnoyaiba.medium_gourd": "Medium Gourd",
       "gui.craftnoyaiba.create_ability.button_ssl": "§l+",
       "gui.craftnoyaiba.create_ability.button_sslx4": "§lX",
       "block.craftnoyaiba.pillar_block_bottom": "Pillar Block (Bottom)",
-      "item.craftnoyaiba.swordsmith_spawn_egg": "Swordsmith Spawn Egg",
       "subtitles.biwa": "",
+      "item.craftnoyaiba.swordsmith_spawn_egg": "Swordsmith Spawn Egg",
       "effect.craftnoyaiba.new_godspeed": "New Godspeed",
       "advancements.muzan_favorite.descr": "One Of Muzan\u0027s Favorites, You can say Muzan.",
       "item.craftnoyaiba.basic_nichirin_sword": "Nichirin Sword",
@@ -8903,9 +8970,9 @@
       "advancements.repetitive_action.descr": "Speak to Himejima",
       "advancements.total_concentration_constant.descr": "Master the art of \"Total Concentration\"",
       "effect.craftnoyaiba.cooldown": "Cooldown",
-      "advancements.the_infinity_castle.title": "The Infinity Castle",
-      "item.craftnoyaiba.khakkhara": "Khakkhara",
       "item.craftnoyaiba.special_thunder_nichirin": "Special Thunder Nichirin",
+      "item.craftnoyaiba.khakkhara": "Khakkhara",
+      "advancements.the_infinity_castle.title": "The Infinity Castle",
       "item_group.craftnoyaiba.yaiba_nichirins": "Yaiba Nichirins",
       "death.attack.breathing_damage.player": "%1$s died whilst trying to escape %2$s",
       "advancements.opening_thread.title": "Opening Thread",
@@ -8970,11 +9037,11 @@
       "advancements.craft_no_yaiba.title": "Craft No Yaiba",
       "entity.craftnoyaiba.basic_demon": "Demon",
       "subtitles.infinitycastlesummon": "",
-      "item.craftnoyaiba.gourd": "Gourd",
       "effect.craftnoyaiba.ground_slam": "GroundSlam",
       "biome.craftnoyaiba.fujikasane": "Fujikasane",
       "advancements.muzan_favorite.title": "Muzan\u0027s Favorite",
       "item.craftnoyaiba.crimson_iron_sand": "Crimson Iron Sand",
+      "item.craftnoyaiba.big_gourd": "Big Gourd",
       "item.craftnoyaiba.kaigaku_human_spawn_egg": "Kaigaku (Human) Spawn Egg",
       "item_group.craftnoyaiba.yaiba_demons": "Yaiba Demons",
       "advancements.repetitive_action.title": "Repetitive Action",
@@ -8992,6 +9059,7 @@
       "gamerule.cnyAutoParry.description": "parry automatically",
       "advancements.recovery_breathing.title": "Recovery Breathing",
       "advancements.demon.title": "Demon",
+      "item.craftnoyaiba.small_gourd": "Small Gourd",
       "gamerule.assignedRanks": "assignedranks",
       "subtitles.uppermoonmeeting": "",
       "subtitles.woodenblock": "",

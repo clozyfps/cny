@@ -9,17 +9,17 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
-import net.mcreator.craftnoyaiba.procedures.GourdRightclickedProcedure;
+import net.mcreator.craftnoyaiba.procedures.SmallGourdRightclickedProcedure;
 
-public class GourdItem extends Item {
-	public GourdItem() {
-		super(new Item.Properties().durability(10).rarity(Rarity.COMMON));
+public class SmallGourdItem extends Item {
+	public SmallGourdItem() {
+		super(new Item.Properties().durability(15).rarity(Rarity.COMMON));
 	}
 
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		GourdRightclickedProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+		SmallGourdRightclickedProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
 		return ar;
 	}
 }

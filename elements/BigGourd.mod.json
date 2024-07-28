@@ -4,19 +4,19 @@
   "definition": {
     "renderType": 1,
     "texture": "a2i2e_layer_2",
-    "customModelName": "gourd:default",
+    "customModelName": "big_gourd:default",
     "customProperties": {},
     "states": [],
-    "name": "Gourd",
+    "name": "Big Gourd",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "TOOLS"
+      "value": "CUSTOM:YaibaItems"
     },
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
-    "damageCount": 10,
+    "damageCount": 15,
     "recipeRemainder": {
       "value": ""
     },
@@ -36,7 +36,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "GourdRightclicked"
+      "name": "SmallGourdRightclicked"
     },
     "enableRanged": false,
     "shootConstantly": false,
