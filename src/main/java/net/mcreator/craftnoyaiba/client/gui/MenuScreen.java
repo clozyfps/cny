@@ -59,6 +59,11 @@ public class MenuScreen extends AbstractContainerScreen<MenuMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+
+		guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/box.png"), this.leftPos + 179, this.topPos + 7, 0, 0, 17, 17, 17, 17);
+
+		guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/menunew.png"), this.leftPos + -217, this.topPos + -38, 0, 0, 427, 240, 427, 240);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -80,30 +85,30 @@ public class MenuScreen extends AbstractContainerScreen<MenuMenu> {
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				LevelDisplayProcedure.execute(entity), -208, -20, -1, false);
+				LevelDisplayProcedure.execute(entity), -118, 34, -1, false);
 		guiGraphics.drawString(this.font,
 
-				StrengthDisplayProcedure.execute(entity), -208, 7, -1, false);
+				StrengthDisplayProcedure.execute(entity), -118, 52, -1, false);
 		guiGraphics.drawString(this.font,
 
-				DefenseDisplayProcedure.execute(entity), -208, 25, -1, false);
+				DefenseDisplayProcedure.execute(entity), -118, 70, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AgilityDisplayProcedure.execute(entity), -208, 43, -1, false);
+				AgilityDisplayProcedure.execute(entity), -118, 88, -1, false);
 		if (BreatheDisplayConditionProcedure.execute(entity))
 			guiGraphics.drawString(this.font,
 
-					BreathDisplayProcedure.execute(entity), -208, 61, -1, false);
+					BreathDisplayProcedure.execute(entity), -118, 106, -1, false);
 		if (BloodUIDisplayProcedure.execute(entity))
 			guiGraphics.drawString(this.font,
 
-					BloodDisplayProcedure.execute(entity), -208, 61, -1, false);
+					BloodDisplayProcedure.execute(entity), -118, 106, -1, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		button_ssl = new PlainTextButton(this.leftPos + 179, this.topPos + -29, 46, 20, Component.translatable("gui.craftnoyaiba.menu.button_ssl"), e -> {
+		button_ssl = new PlainTextButton(this.leftPos + 170, this.topPos + 7, 46, 20, Component.translatable("gui.craftnoyaiba.menu.button_ssl"), e -> {
 			if (true) {
 				CraftnoyaibaMod.PACKET_HANDLER.sendToServer(new MenuButtonMessage(0, x, y, z));
 				MenuButtonMessage.handleButtonAction(entity, 0, x, y, z);

@@ -21,8 +21,8 @@
           },
           "width": 46,
           "height": 20,
-          "x": 393,
-          "y": 8
+          "x": 384,
+          "y": 44
         }
       },
       {
@@ -37,8 +37,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 6,
-          "y": 17
+          "x": 96,
+          "y": 71
         }
       },
       {
@@ -53,8 +53,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 6,
-          "y": 44
+          "x": 96,
+          "y": 89
         }
       },
       {
@@ -69,8 +69,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 6,
-          "y": 62
+          "x": 96,
+          "y": 107
         }
       },
       {
@@ -85,8 +85,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 6,
-          "y": 80
+          "x": 96,
+          "y": 125
         }
       },
       {
@@ -104,8 +104,8 @@
           "displayCondition": {
             "name": "BreatheDisplayCondition"
           },
-          "x": 6,
-          "y": 98
+          "x": 96,
+          "y": 143
         }
       },
       {
@@ -123,8 +123,26 @@
           "displayCondition": {
             "name": "BloodUIDisplay"
           },
-          "x": 6,
-          "y": 98
+          "x": 96,
+          "y": 143
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "box.png",
+          "use1Xscale": false,
+          "x": 393,
+          "y": 44
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "menunew.png",
+          "use1Xscale": false,
+          "x": -3,
+          "y": -1
         }
       }
     ],
