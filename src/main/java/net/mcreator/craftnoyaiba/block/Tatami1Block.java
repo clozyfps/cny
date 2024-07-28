@@ -1,7 +1,6 @@
 
 package net.mcreator.craftnoyaiba.block;
 
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
@@ -11,7 +10,7 @@ import net.minecraft.core.BlockPos;
 
 public class Tatami1Block extends Block {
 	public Tatami1Block() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.WOOL).strength(1f, 10f));
+		super(BlockBehaviour.Properties.of().ignitedByLava().sound(SoundType.WOOL).strength(1f, 10f));
 	}
 
 	@Override
