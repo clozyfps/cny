@@ -1,0 +1,125 @@
+{
+  "_fv": 60,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "demon_ui_2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BloodBar1"
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 6,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "demon_ui_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BloodBar0"
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 6,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "demon_ui_3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BloodBar2"
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 6,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "demon_ui_4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BloodBar3"
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 6,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "demon_ui_5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BloodBar4"
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 6,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "demon_ui_6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BloodBar5"
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 6,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "demon_ui_7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BloodBar6"
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 6,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "demon_ui_full.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BloodBar7"
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 6,
+          "y": 35
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "BloodDisplayCondition"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

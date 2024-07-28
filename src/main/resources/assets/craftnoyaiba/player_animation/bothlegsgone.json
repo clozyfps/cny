@@ -1,0 +1,20 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"bothlegsgone": {
+			"loop": true,
+			"bones": {
+				"right_leg": {
+					"position": {
+						"vector": [0, -500, 0]
+					}
+				},
+				"left_leg": {
+					"position": {
+						"vector": [0, -500, 0]
+					}
+				}
+			}
+		}
+	}
+}
