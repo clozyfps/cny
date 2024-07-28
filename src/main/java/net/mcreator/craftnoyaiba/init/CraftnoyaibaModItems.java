@@ -23,6 +23,7 @@ import net.mcreator.craftnoyaiba.item.RifleItem;
 import net.mcreator.craftnoyaiba.item.PistolItem;
 import net.mcreator.craftnoyaiba.item.KhakkharaItem;
 import net.mcreator.craftnoyaiba.item.GourdItem;
+import net.mcreator.craftnoyaiba.item.DemonSlayerUniformLongItem;
 import net.mcreator.craftnoyaiba.item.DemonSlayerUniformItem;
 import net.mcreator.craftnoyaiba.item.CrimsonOreItem;
 import net.mcreator.craftnoyaiba.item.CrimsonIronSandItem;
@@ -67,6 +68,8 @@ public class CraftnoyaibaModItems {
 	public static final RegistryObject<Item> CRIMSON_IRON_SAND = REGISTRY.register("crimson_iron_sand", () -> new CrimsonIronSandItem());
 	public static final RegistryObject<Item> BASIC_DEMON_SPAWN_EGG = REGISTRY.register("basic_demon_spawn_egg", () -> new ForgeSpawnEggItem(CraftnoyaibaModEntities.BASIC_DEMON, -7110795, -4342853, new Item.Properties()));
 	public static final RegistryObject<Item> SWORDSMITH_SPAWN_EGG = REGISTRY.register("swordsmith_spawn_egg", () -> new ForgeSpawnEggItem(CraftnoyaibaModEntities.SWORDSMITH, -1, -2221542, new Item.Properties()));
+	public static final RegistryObject<Item> DEMON_SLAYER_UNIFORM_LONG_CHESTPLATE = REGISTRY.register("demon_slayer_uniform_long_chestplate", () -> new DemonSlayerUniformLongItem.Chestplate());
+	public static final RegistryObject<Item> DEMON_SLAYER_UNIFORM_LONG_LEGGINGS = REGISTRY.register("demon_slayer_uniform_long_leggings", () -> new DemonSlayerUniformLongItem.Leggings());
 
 	// Start of user code block custom items
 	// End of user code block custom items

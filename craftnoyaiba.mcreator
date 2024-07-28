@@ -3773,7 +3773,7 @@
           "src/main/resources/assets/craftnoyaiba/models/item/demon_slayer_uniform_leggings.json"
         ]
       },
-      "path": "~/Armors"
+      "path": "~/Armors/Slayer"
     },
     {
       "name": "YaibaArmors",
@@ -3847,8 +3847,8 @@
       "registry_name": "take_blood",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/client/gui/TakeBloodScreen.java",
-          "src/main/java/net/mcreator/craftnoyaiba/world/inventory/TakeBloodMenu.java"
+          "src/main/java/net/mcreator/craftnoyaiba/world/inventory/TakeBloodMenu.java",
+          "src/main/java/net/mcreator/craftnoyaiba/client/gui/TakeBloodScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -7238,7 +7238,7 @@
           "src/main/resources/assets/craftnoyaiba/models/item/upper_moon_one_armor_chestplate.json"
         ]
       },
-      "path": "~/Armors"
+      "path": "~/Armors/Demon"
     },
     {
       "name": "Tatami1",
@@ -8020,6 +8020,22 @@
         ]
       },
       "path": "~/Mobs/Misc/Breathing/Wind"
+    },
+    {
+      "name": "DemonSlayerUniformLong",
+      "type": "armor",
+      "sortid": 384,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "demon_slayer_uniform_long",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/demon_slayer_uniform_long_leggings.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/DemonSlayerUniformLongItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/demon_slayer_uniform_long_chestplate.json"
+        ]
+      },
+      "path": "~/Armors/Slayer"
     }
   ],
   "variable_elements": [
@@ -8887,15 +8903,15 @@
       "entity.craftnoyaiba.primary_gale_slash": "Primary Gale Slash",
       "entity.craftnoyaiba.flame_first_form": "Flame First Form",
       "gui.craftnoyaiba.create_ability.button_sslx2": "§lX",
-      "effect.craftnoyaiba.tcafend": "Tcafend",
-      "gui.craftnoyaiba.create_ability.button_sslx3": "§lX",
-      "entity.craftnoyaiba.thunder_clap_and_flash_mob": "Thunder Clap And Flash Mob",
       "item.craftnoyaiba.kiriya_ubuyashiki_spawn_egg": "Kiriya Ubuyashiki Spawn Egg",
+      "entity.craftnoyaiba.thunder_clap_and_flash_mob": "Thunder Clap And Flash Mob",
+      "gui.craftnoyaiba.create_ability.button_sslx3": "§lX",
+      "effect.craftnoyaiba.tcafend": "Tcafend",
       "gui.craftnoyaiba.create_ability.button_ssl": "§l+",
       "gui.craftnoyaiba.create_ability.button_sslx4": "§lX",
       "block.craftnoyaiba.pillar_block_bottom": "Pillar Block (Bottom)",
-      "item.craftnoyaiba.swordsmith_spawn_egg": "Swordsmith Spawn Egg",
       "subtitles.biwa": "",
+      "item.craftnoyaiba.swordsmith_spawn_egg": "Swordsmith Spawn Egg",
       "effect.craftnoyaiba.new_godspeed": "New Godspeed",
       "advancements.muzan_favorite.descr": "One Of Muzan\u0027s Favorites, You can say Muzan.",
       "item.craftnoyaiba.basic_nichirin_sword": "Nichirin Sword",
@@ -8903,9 +8919,9 @@
       "advancements.repetitive_action.descr": "Speak to Himejima",
       "advancements.total_concentration_constant.descr": "Master the art of \"Total Concentration\"",
       "effect.craftnoyaiba.cooldown": "Cooldown",
-      "advancements.the_infinity_castle.title": "The Infinity Castle",
-      "item.craftnoyaiba.khakkhara": "Khakkhara",
       "item.craftnoyaiba.special_thunder_nichirin": "Special Thunder Nichirin",
+      "item.craftnoyaiba.khakkhara": "Khakkhara",
+      "advancements.the_infinity_castle.title": "The Infinity Castle",
       "item_group.craftnoyaiba.yaiba_nichirins": "Yaiba Nichirins",
       "death.attack.breathing_damage.player": "%1$s died whilst trying to escape %2$s",
       "advancements.opening_thread.title": "Opening Thread",
@@ -8948,6 +8964,7 @@
       "item_group.craftnoyaiba.yaiba_slayer_armor": "Yaiba Slayer Armor",
       "item.craftnoyaiba.jigoro_kuwajima_spawn_egg": "Jigoro Kuwajima Spawn Egg",
       "item.craftnoyaiba.kanata_ubuyashiki_spawn_egg": "Kanata Ubuyashiki Spawn Egg",
+      "item.craftnoyaiba.demon_slayer_uniform_long_leggings": "Demon Slayer Uniform (Long)",
       "advancements.recovery_breathing.descr": "WIP",
       "item_group.craftnoyaiba.yaiba_humans": "Yaiba Humans",
       "item.craftnoyaiba.crimson_ore": "Crimson Ore",
@@ -9021,6 +9038,7 @@
       "gui.craftnoyaiba.create_ability.button_empty1": "§l\u003e\u003e",
       "gui.craftnoyaiba.create_ability.button_empty": "§l+",
       "key.craftnoyaiba.use_skill": "Use Skill",
+      "item.craftnoyaiba.demon_slayer_uniform_long_chestplate": "Demon Slayer Uniform (Long)",
       "advancements.repetitive_action_mastered.descr": "Use Breathings 250 Times After Learning Repetitive Action",
       "item.craftnoyaiba.test": "Test",
       "biome.craftnoyaiba.infinity_castle_biome": "Infinity Castle Biome",
@@ -9203,7 +9221,21 @@
       },
       {
         "name": "Armors",
-        "children": []
+        "children": [
+          {
+            "name": "Demon",
+            "children": []
+          },
+          {
+            "name": "Slayer",
+            "children": [
+              {
+                "name": "Variants",
+                "children": []
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "Mobs",

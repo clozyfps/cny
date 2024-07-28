@@ -57,6 +57,8 @@ public class CraftnoyaibaModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.craftnoyaiba.yaiba_slayer_armor")).icon(() -> new ItemStack(CraftnoyaibaModItems.DEMON_SLAYER_UNIFORM_CHESTPLATE.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(CraftnoyaibaModItems.DEMON_SLAYER_UNIFORM_CHESTPLATE.get());
 				tabData.accept(CraftnoyaibaModItems.DEMON_SLAYER_UNIFORM_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.DEMON_SLAYER_UNIFORM_LONG_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.DEMON_SLAYER_UNIFORM_LONG_LEGGINGS.get());
 			})
 
 					.build());

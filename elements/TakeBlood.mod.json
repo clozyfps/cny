@@ -13,10 +13,10 @@
       {
         "type": "image",
         "data": {
-          "image": "receiveblood_gui.png",
+          "image": "bloodguiv2.png",
           "use1Xscale": false,
-          "x": 132,
-          "y": 35
+          "x": -3,
+          "y": -1
         }
       }
     ],

@@ -13,6 +13,7 @@ import net.mcreator.craftnoyaiba.client.model.Modelweakdemonfirst;
 import net.mcreator.craftnoyaiba.client.model.Modeluzuisheathe;
 import net.mcreator.craftnoyaiba.client.model.Modeluzui_armor;
 import net.mcreator.craftnoyaiba.client.model.Modeluniformv3;
+import net.mcreator.craftnoyaiba.client.model.Modeluniform_long;
 import net.mcreator.craftnoyaiba.client.model.Modeluniform;
 import net.mcreator.craftnoyaiba.client.model.Modelswordsmith;
 import net.mcreator.craftnoyaiba.client.model.Modelstone;
@@ -37,6 +38,7 @@ public class CraftnoyaibaModModels {
 		event.registerLayerDefinition(ModelCustomModel.LAYER_LOCATION, ModelCustomModel::createBodyLayer);
 		event.registerLayerDefinition(Modeljigoro.LAYER_LOCATION, Modeljigoro::createBodyLayer);
 		event.registerLayerDefinition(Modeluniformv3.LAYER_LOCATION, Modeluniformv3::createBodyLayer);
+		event.registerLayerDefinition(Modeluniform_long.LAYER_LOCATION, Modeluniform_long::createBodyLayer);
 		event.registerLayerDefinition(Modelsheatheempty.LAYER_LOCATION, Modelsheatheempty::createBodyLayer);
 		event.registerLayerDefinition(Modelflashy_hashiraarmor.LAYER_LOCATION, Modelflashy_hashiraarmor::createBodyLayer);
 		event.registerLayerDefinition(Modelslayer_uniform.LAYER_LOCATION, Modelslayer_uniform::createBodyLayer);
