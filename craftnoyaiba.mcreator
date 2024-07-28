@@ -2223,21 +2223,6 @@
       "path": "~/Items/Procedures"
     },
     {
-      "name": "Gourd",
-      "type": "item",
-      "sortid": 103,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gourd",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craftnoyaiba/models/item/gourd.json",
-          "src/main/java/net/mcreator/craftnoyaiba/item/GourdItem.java"
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
       "name": "YaibaNichirins",
       "type": "tab",
       "sortid": 107,
@@ -3773,7 +3758,7 @@
           "src/main/resources/assets/craftnoyaiba/models/item/demon_slayer_uniform_leggings.json"
         ]
       },
-      "path": "~/Armors/Slayer"
+      "path": "~/Armors"
     },
     {
       "name": "YaibaArmors",
@@ -3847,8 +3832,8 @@
       "registry_name": "take_blood",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/world/inventory/TakeBloodMenu.java",
-          "src/main/java/net/mcreator/craftnoyaiba/client/gui/TakeBloodScreen.java"
+          "src/main/java/net/mcreator/craftnoyaiba/client/gui/TakeBloodScreen.java",
+          "src/main/java/net/mcreator/craftnoyaiba/world/inventory/TakeBloodMenu.java"
         ]
       },
       "path": "~/GUI"
@@ -7238,7 +7223,7 @@
           "src/main/resources/assets/craftnoyaiba/models/item/upper_moon_one_armor_chestplate.json"
         ]
       },
-      "path": "~/Armors/Demon"
+      "path": "~/Armors"
     },
     {
       "name": "Tatami1",
@@ -8036,6 +8021,87 @@
         ]
       },
       "path": "~/Armors/Slayer"
+    },
+    {
+      "name": "SmallGourdRightclicked",
+      "type": "procedure",
+      "sortid": 385,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_gourd_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/SmallGourdRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Procedures"
+    },
+    {
+      "name": "BigGourd",
+      "type": "item",
+      "sortid": 387,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big_gourd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/BigGourdItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/big_gourd.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SmallGourd",
+      "type": "item",
+      "sortid": 384,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_gourd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/SmallGourdItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/small_gourd.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "MediumGourd",
+      "type": "item",
+      "sortid": 386,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "medium_gourd",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/medium_gourd.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/MediumGourdItem.java"
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -8964,7 +9030,6 @@
       "item_group.craftnoyaiba.yaiba_slayer_armor": "Yaiba Slayer Armor",
       "item.craftnoyaiba.jigoro_kuwajima_spawn_egg": "Jigoro Kuwajima Spawn Egg",
       "item.craftnoyaiba.kanata_ubuyashiki_spawn_egg": "Kanata Ubuyashiki Spawn Egg",
-      "item.craftnoyaiba.demon_slayer_uniform_long_leggings": "Demon Slayer Uniform (Long)",
       "advancements.recovery_breathing.descr": "WIP",
       "item_group.craftnoyaiba.yaiba_humans": "Yaiba Humans",
       "item.craftnoyaiba.crimson_ore": "Crimson Ore",
@@ -8987,7 +9052,6 @@
       "advancements.craft_no_yaiba.title": "Craft No Yaiba",
       "entity.craftnoyaiba.basic_demon": "Demon",
       "subtitles.infinitycastlesummon": "",
-      "item.craftnoyaiba.gourd": "Gourd",
       "effect.craftnoyaiba.ground_slam": "GroundSlam",
       "biome.craftnoyaiba.fujikasane": "Fujikasane",
       "advancements.muzan_favorite.title": "Muzan\u0027s Favorite",
@@ -9038,7 +9102,6 @@
       "gui.craftnoyaiba.create_ability.button_empty1": "§l\u003e\u003e",
       "gui.craftnoyaiba.create_ability.button_empty": "§l+",
       "key.craftnoyaiba.use_skill": "Use Skill",
-      "item.craftnoyaiba.demon_slayer_uniform_long_chestplate": "Demon Slayer Uniform (Long)",
       "advancements.repetitive_action_mastered.descr": "Use Breathings 250 Times After Learning Repetitive Action",
       "item.craftnoyaiba.test": "Test",
       "biome.craftnoyaiba.infinity_castle_biome": "Infinity Castle Biome",

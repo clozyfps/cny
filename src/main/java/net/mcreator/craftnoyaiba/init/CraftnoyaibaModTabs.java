@@ -44,6 +44,8 @@ public class CraftnoyaibaModTabs {
 				tabData.accept(CraftnoyaibaModItems.BLOOD.get());
 				tabData.accept(CraftnoyaibaModItems.CRIMSON_ORE.get());
 				tabData.accept(CraftnoyaibaModItems.CRIMSON_IRON_SAND.get());
+				tabData.accept(CraftnoyaibaModItems.MEDIUM_GOURD.get());
+				tabData.accept(CraftnoyaibaModItems.BIG_GOURD.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> YAIBA_BLOCKS = REGISTRY.register("yaiba_blocks",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.craftnoyaiba.yaiba_blocks")).icon(() -> new ItemStack(CraftnoyaibaModBlocks.PILLAR_BLOCK_TOP.get())).displayItems((parameters, tabData) -> {
@@ -72,6 +74,7 @@ public class CraftnoyaibaModTabs {
 	public static final RegistryObject<CreativeModeTab> YAIBA_TRAINERS = REGISTRY.register("yaiba_trainers",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.craftnoyaiba.yaiba_trainers")).icon(() -> new ItemStack(CraftnoyaibaModItems.JIGORO_KUWAJIMA_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(CraftnoyaibaModItems.JIGORO_KUWAJIMA_SPAWN_EGG.get());
+				tabData.accept(CraftnoyaibaModItems.SMALL_GOURD.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> YAIBA_HUMANS = REGISTRY.register("yaiba_humans",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.craftnoyaiba.yaiba_humans")).icon(() -> new ItemStack(CraftnoyaibaModItems.KAIGAKU_HUMAN_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
@@ -85,7 +88,6 @@ public class CraftnoyaibaModTabs {
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-			tabData.accept(CraftnoyaibaModItems.GOURD.get());
 			tabData.accept(CraftnoyaibaModItems.BLADE.get());
 		}
 	}

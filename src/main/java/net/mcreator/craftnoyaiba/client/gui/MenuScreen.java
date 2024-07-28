@@ -108,7 +108,7 @@ public class MenuScreen extends AbstractContainerScreen<MenuMenu> {
 	@Override
 	public void init() {
 		super.init();
-		button_ssl = new PlainTextButton(this.leftPos + 170, this.topPos + 7, 46, 20, Component.translatable("gui.craftnoyaiba.menu.button_ssl"), e -> {
+		button_ssl = new PlainTextButton(this.leftPos + 181, this.topPos + 9, 46, 20, Component.translatable("gui.craftnoyaiba.menu.button_ssl"), e -> {
 			if (true) {
 				CraftnoyaibaMod.PACKET_HANDLER.sendToServer(new MenuButtonMessage(0, x, y, z));
 				MenuButtonMessage.handleButtonAction(entity, 0, x, y, z);

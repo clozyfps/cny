@@ -1,0 +1,7 @@
+{
+  "parent": "craftnoyaiba:custom/medium_gourd",
+  "textures": {
+    "0": "craftnoyaiba:block/medium_gourd",
+    "particle": "craftnoyaiba:item/a2i2e_layer_2"
+  }
+}

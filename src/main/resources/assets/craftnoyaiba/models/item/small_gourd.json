@@ -1,0 +1,7 @@
+{
+  "parent": "craftnoyaiba:custom/small_gourd",
+  "textures": {
+    "0": "craftnoyaiba:block/small_gourd",
+    "particle": "craftnoyaiba:item/a2i2e_layer_2"
+  }
+}

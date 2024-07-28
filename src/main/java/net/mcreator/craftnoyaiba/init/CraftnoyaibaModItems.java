@@ -19,16 +19,18 @@ import net.mcreator.craftnoyaiba.item.ThunderNichirinSwordItem;
 import net.mcreator.craftnoyaiba.item.TestItem;
 import net.mcreator.craftnoyaiba.item.SpecialThunderNichirinItem;
 import net.mcreator.craftnoyaiba.item.SoundNichirinSwordItem;
+import net.mcreator.craftnoyaiba.item.SmallGourdItem;
 import net.mcreator.craftnoyaiba.item.RifleItem;
 import net.mcreator.craftnoyaiba.item.PistolItem;
+import net.mcreator.craftnoyaiba.item.MediumGourdItem;
 import net.mcreator.craftnoyaiba.item.KhakkharaItem;
-import net.mcreator.craftnoyaiba.item.GourdItem;
 import net.mcreator.craftnoyaiba.item.DemonSlayerUniformLongItem;
 import net.mcreator.craftnoyaiba.item.DemonSlayerUniformItem;
 import net.mcreator.craftnoyaiba.item.CrimsonOreItem;
 import net.mcreator.craftnoyaiba.item.CrimsonIronSandItem;
 import net.mcreator.craftnoyaiba.item.BloodItem;
 import net.mcreator.craftnoyaiba.item.BladeItem;
+import net.mcreator.craftnoyaiba.item.BigGourdItem;
 import net.mcreator.craftnoyaiba.item.BasicNichirinSwordItem;
 import net.mcreator.craftnoyaiba.CraftnoyaibaMod;
 
@@ -36,7 +38,6 @@ public class CraftnoyaibaModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, CraftnoyaibaMod.MODID);
 	public static final RegistryObject<Item> BASIC_NICHIRIN_SWORD = REGISTRY.register("basic_nichirin_sword", () -> new BasicNichirinSwordItem());
 	public static final RegistryObject<Item> JIGORO_KUWAJIMA_SPAWN_EGG = REGISTRY.register("jigoro_kuwajima_spawn_egg", () -> new ForgeSpawnEggItem(CraftnoyaibaModEntities.JIGORO_KUWAJIMA, -2171275, -1, new Item.Properties()));
-	public static final RegistryObject<Item> GOURD = REGISTRY.register("gourd", () -> new GourdItem());
 	public static final RegistryObject<Item> KAIGAKU_HUMAN_SPAWN_EGG = REGISTRY.register("kaigaku_human_spawn_egg", () -> new ForgeSpawnEggItem(CraftnoyaibaModEntities.KAIGAKU_HUMAN, -16777216, -8998192, new Item.Properties()));
 	public static final RegistryObject<Item> TEST = REGISTRY.register("test", () -> new TestItem());
 	public static final RegistryObject<Item> THUNDER_NICHIRIN_SWORD = REGISTRY.register("thunder_nichirin_sword", () -> new ThunderNichirinSwordItem());
@@ -70,6 +71,9 @@ public class CraftnoyaibaModItems {
 	public static final RegistryObject<Item> SWORDSMITH_SPAWN_EGG = REGISTRY.register("swordsmith_spawn_egg", () -> new ForgeSpawnEggItem(CraftnoyaibaModEntities.SWORDSMITH, -1, -2221542, new Item.Properties()));
 	public static final RegistryObject<Item> DEMON_SLAYER_UNIFORM_LONG_CHESTPLATE = REGISTRY.register("demon_slayer_uniform_long_chestplate", () -> new DemonSlayerUniformLongItem.Chestplate());
 	public static final RegistryObject<Item> DEMON_SLAYER_UNIFORM_LONG_LEGGINGS = REGISTRY.register("demon_slayer_uniform_long_leggings", () -> new DemonSlayerUniformLongItem.Leggings());
+	public static final RegistryObject<Item> BIG_GOURD = REGISTRY.register("big_gourd", () -> new BigGourdItem());
+	public static final RegistryObject<Item> SMALL_GOURD = REGISTRY.register("small_gourd", () -> new SmallGourdItem());
+	public static final RegistryObject<Item> MEDIUM_GOURD = REGISTRY.register("medium_gourd", () -> new MediumGourdItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
