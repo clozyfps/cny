@@ -20,6 +20,16 @@
           "x": 25,
           "y": 203
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "skilldisplay.png",
+          "use1Xscale": false,
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 9,
+          "y": 194
+        }
       }
     ],
     "baseTexture": "",

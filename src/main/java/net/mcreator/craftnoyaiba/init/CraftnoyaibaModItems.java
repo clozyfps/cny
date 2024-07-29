@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.craftnoyaiba.item.ZohakutenArmorItem;
 import net.mcreator.craftnoyaiba.item.YellowLongItem;
 import net.mcreator.craftnoyaiba.item.YellowItem;
 import net.mcreator.craftnoyaiba.item.UpperMoonOneArmorItem;
@@ -24,6 +25,7 @@ import net.mcreator.craftnoyaiba.item.SpecialThunderNichirinItem;
 import net.mcreator.craftnoyaiba.item.SoundNichirinSwordItem;
 import net.mcreator.craftnoyaiba.item.SoundHashiraItem;
 import net.mcreator.craftnoyaiba.item.SmallGourdItem;
+import net.mcreator.craftnoyaiba.item.RuiArmorItem;
 import net.mcreator.craftnoyaiba.item.RifleItem;
 import net.mcreator.craftnoyaiba.item.RedLongItem;
 import net.mcreator.craftnoyaiba.item.RedItem;
@@ -32,6 +34,8 @@ import net.mcreator.craftnoyaiba.item.PurpleItem;
 import net.mcreator.craftnoyaiba.item.PistolItem;
 import net.mcreator.craftnoyaiba.item.PinkLongItem;
 import net.mcreator.craftnoyaiba.item.PinkItem;
+import net.mcreator.craftnoyaiba.item.MuzanArmorItem;
+import net.mcreator.craftnoyaiba.item.MuzanArmorCloaklessItem;
 import net.mcreator.craftnoyaiba.item.MediumGourdItem;
 import net.mcreator.craftnoyaiba.item.KhakkharaItem;
 import net.mcreator.craftnoyaiba.item.KaigakuArmorItem;
@@ -127,6 +131,13 @@ public class CraftnoyaibaModItems {
 	public static final RegistryObject<Item> GREEN_LONG_LEGGINGS = REGISTRY.register("green_long_leggings", () -> new GreenLongItem.Leggings());
 	public static final RegistryObject<Item> BLUE_LONG_CHESTPLATE = REGISTRY.register("blue_long_chestplate", () -> new BlueLongItem.Chestplate());
 	public static final RegistryObject<Item> BLUE_LONG_LEGGINGS = REGISTRY.register("blue_long_leggings", () -> new BlueLongItem.Leggings());
+	public static final RegistryObject<Item> ZOHAKUTEN_ARMOR_CHESTPLATE = REGISTRY.register("zohakuten_armor_chestplate", () -> new ZohakutenArmorItem.Chestplate());
+	public static final RegistryObject<Item> ZOHAKUTEN_ARMOR_LEGGINGS = REGISTRY.register("zohakuten_armor_leggings", () -> new ZohakutenArmorItem.Leggings());
+	public static final RegistryObject<Item> RUI_ARMOR_CHESTPLATE = REGISTRY.register("rui_armor_chestplate", () -> new RuiArmorItem.Chestplate());
+	public static final RegistryObject<Item> RUI_ARMOR_LEGGINGS = REGISTRY.register("rui_armor_leggings", () -> new RuiArmorItem.Leggings());
+	public static final RegistryObject<Item> MUZAN_ARMOR_CHESTPLATE = REGISTRY.register("muzan_armor_chestplate", () -> new MuzanArmorItem.Chestplate());
+	public static final RegistryObject<Item> MUZAN_ARMOR_LEGGINGS = REGISTRY.register("muzan_armor_leggings", () -> new MuzanArmorItem.Leggings());
+	public static final RegistryObject<Item> MUZAN_ARMOR_CLOAKLESS_CHESTPLATE = REGISTRY.register("muzan_armor_cloakless_chestplate", () -> new MuzanArmorCloaklessItem.Chestplate());
 
 	// Start of user code block custom items
 	// End of user code block custom items

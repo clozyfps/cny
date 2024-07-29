@@ -37,6 +37,13 @@ public class CraftnoyaibaModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.craftnoyaiba.yaiba_demon_armor")).icon(() -> new ItemStack(CraftnoyaibaModItems.UPPER_MOON_ONE_ARMOR_CHESTPLATE.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(CraftnoyaibaModItems.UPPER_MOON_ONE_ARMOR_CHESTPLATE.get());
 				tabData.accept(CraftnoyaibaModItems.UPPER_MOON_ONE_ARMOR_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.ZOHAKUTEN_ARMOR_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.ZOHAKUTEN_ARMOR_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.RUI_ARMOR_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.RUI_ARMOR_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.MUZAN_ARMOR_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.MUZAN_ARMOR_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.MUZAN_ARMOR_CLOAKLESS_CHESTPLATE.get());
 			})
 
 					.build());

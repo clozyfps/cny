@@ -21,8 +21,8 @@
           },
           "width": 46,
           "height": 20,
-          "x": 395,
-          "y": 46
+          "x": 362,
+          "y": 50
         }
       },
       {
@@ -130,18 +130,40 @@
       {
         "type": "image",
         "data": {
-          "image": "box.png",
+          "image": "menunew.png",
           "use1Xscale": false,
-          "x": 393,
-          "y": 44
+          "displayCondition": {
+            "name": "IfHumanCheck"
+          },
+          "x": -3,
+          "y": -1
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_racedisplay",
+          "text": {
+            "fixedValue": "",
+            "name": "RaceDisplay"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 161
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "menunew.png",
+          "image": "demon_gui.png",
           "use1Xscale": false,
-          "x": -3,
+          "displayCondition": {
+            "name": "IfDemonCheck"
+          },
+          "x": -2,
           "y": -1
         }
       }

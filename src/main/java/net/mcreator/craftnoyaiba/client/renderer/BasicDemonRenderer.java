@@ -1,11 +1,30 @@
 
 package net.mcreator.craftnoyaiba.client.renderer;
 
-public class BasicDemonRenderer extends MobRenderer<BasicDemonEntity, Modelweakdemonfirst<BasicDemonEntity>> {
+import net.minecraft.world.level.Level;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.layers.RenderLayer;
+import net.minecraft.client.renderer.entity.MobRenderer;
+import net.minecraft.client.renderer.entity.LivingEntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.Minecraft;
 
+import net.mcreator.craftnoyaiba.procedures.BasicDemonDisplayConditionProcedure;
+import net.mcreator.craftnoyaiba.procedures.BasicDemonDisplayCondition2Procedure;
+import net.mcreator.craftnoyaiba.entity.BasicDemonEntity;
+import net.mcreator.craftnoyaiba.client.model.Modelweakdemonfirst;
+import net.mcreator.craftnoyaiba.client.model.Modeldemonthird;
+import net.mcreator.craftnoyaiba.client.model.Modeldemonsecond;
+
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.blaze3d.vertex.PoseStack;
+
+public class BasicDemonRenderer extends MobRenderer<BasicDemonEntity, Modelweakdemonfirst<BasicDemonEntity>> {
 	public BasicDemonRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelweakdemonfirst(context.bakeLayer(Modelweakdemonfirst.LAYER_LOCATION)), 0.5f);
-
 		this.addLayer(new RenderLayer<BasicDemonEntity, Modelweakdemonfirst<BasicDemonEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("craftnoyaiba:textures/entities/demon3.png");
 
@@ -50,5 +69,4 @@ public class BasicDemonRenderer extends MobRenderer<BasicDemonEntity, Modelweakd
 	public ResourceLocation getTextureLocation(BasicDemonEntity entity) {
 		return new ResourceLocation("craftnoyaiba:textures/entities/firstdemon.png");
 	}
-
 }

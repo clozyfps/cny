@@ -12,7 +12,10 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.craftnoyaiba.world.inventory.MenuMenu;
 import net.mcreator.craftnoyaiba.procedures.StrengthDisplayProcedure;
+import net.mcreator.craftnoyaiba.procedures.RaceDisplayProcedure;
 import net.mcreator.craftnoyaiba.procedures.LevelDisplayProcedure;
+import net.mcreator.craftnoyaiba.procedures.IfHumanCheckProcedure;
+import net.mcreator.craftnoyaiba.procedures.IfDemonCheckProcedure;
 import net.mcreator.craftnoyaiba.procedures.DefenseDisplayProcedure;
 import net.mcreator.craftnoyaiba.procedures.BreatheDisplayConditionProcedure;
 import net.mcreator.craftnoyaiba.procedures.BreathDisplayProcedure;
@@ -59,11 +62,12 @@ public class MenuScreen extends AbstractContainerScreen<MenuMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
-		guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/box.png"), this.leftPos + 179, this.topPos + 7, 0, 0, 17, 17, 17, 17);
-
-		guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/menunew.png"), this.leftPos + -217, this.topPos + -38, 0, 0, 427, 240, 427, 240);
-
+		if (IfHumanCheckProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/menunew.png"), this.leftPos + -217, this.topPos + -38, 0, 0, 427, 240, 427, 240);
+		}
+		if (IfDemonCheckProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/demon_gui.png"), this.leftPos + -216, this.topPos + -38, 0, 0, 427, 240, 427, 240);
+		}
 		RenderSystem.disableBlend();
 	}
 
@@ -103,12 +107,15 @@ public class MenuScreen extends AbstractContainerScreen<MenuMenu> {
 			guiGraphics.drawString(this.font,
 
 					BloodDisplayProcedure.execute(entity), -118, 106, -1, false);
+		guiGraphics.drawString(this.font,
+
+				RaceDisplayProcedure.execute(entity), -118, 124, -1, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		button_ssl = new PlainTextButton(this.leftPos + 181, this.topPos + 9, 46, 20, Component.translatable("gui.craftnoyaiba.menu.button_ssl"), e -> {
+		button_ssl = new PlainTextButton(this.leftPos + 148, this.topPos + 13, 46, 20, Component.translatable("gui.craftnoyaiba.menu.button_ssl"), e -> {
 			if (true) {
 				CraftnoyaibaMod.PACKET_HANDLER.sendToServer(new MenuButtonMessage(0, x, y, z));
 				MenuButtonMessage.handleButtonAction(entity, 0, x, y, z);

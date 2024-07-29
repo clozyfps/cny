@@ -620,8 +620,8 @@
       "registry_name": "menu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/client/gui/MenuScreen.java",
           "src/main/java/net/mcreator/craftnoyaiba/network/MenuButtonMessage.java",
+          "src/main/java/net/mcreator/craftnoyaiba/client/gui/MenuScreen.java",
           "src/main/java/net/mcreator/craftnoyaiba/world/inventory/MenuMenu.java"
         ]
       },
@@ -1196,8 +1196,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftnoyaiba/network/AbilitySelectionButtonMessage.java",
-          "src/main/java/net/mcreator/craftnoyaiba/world/inventory/AbilitySelectionMenu.java",
-          "src/main/java/net/mcreator/craftnoyaiba/client/gui/AbilitySelectionScreen.java"
+          "src/main/java/net/mcreator/craftnoyaiba/client/gui/AbilitySelectionScreen.java",
+          "src/main/java/net/mcreator/craftnoyaiba/world/inventory/AbilitySelectionMenu.java"
         ]
       },
       "path": "~/GUI"
@@ -1673,9 +1673,9 @@
       "registry_name": "house_1",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftnoyaiba/worldgen/structure_set/house_1.json",
           "src/main/resources/data/craftnoyaiba/worldgen/template_pool/house_1.json",
-          "src/main/resources/data/craftnoyaiba/worldgen/structure/house_1.json"
+          "src/main/resources/data/craftnoyaiba/worldgen/structure/house_1.json",
+          "src/main/resources/data/craftnoyaiba/worldgen/structure_set/house_1.json"
         ]
       },
       "path": "~/Structures"
@@ -1923,10 +1923,10 @@
       "registry_name": "jigoro_kuwajima",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftnoyaiba/forge/biome_modifier/jigoro_kuwajima_biome_modifier.json",
           "src/main/java/net/mcreator/craftnoyaiba/client/renderer/JigoroKuwajimaRenderer.java",
-          "src/main/java/net/mcreator/craftnoyaiba/entity/JigoroKuwajimaEntity.java",
-          "src/main/resources/assets/craftnoyaiba/models/item/jigoro_kuwajima_spawn_egg.json"
+          "src/main/resources/data/craftnoyaiba/forge/biome_modifier/jigoro_kuwajima_biome_modifier.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/jigoro_kuwajima_spawn_egg.json",
+          "src/main/java/net/mcreator/craftnoyaiba/entity/JigoroKuwajimaEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -2243,9 +2243,9 @@
       "registry_name": "kaigaku_human",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/KaigakuHumanRenderer.java",
-          "src/main/resources/data/craftnoyaiba/forge/biome_modifier/kaigaku_human_biome_modifier.json",
           "src/main/resources/assets/craftnoyaiba/models/item/kaigaku_human_spawn_egg.json",
+          "src/main/resources/data/craftnoyaiba/forge/biome_modifier/kaigaku_human_biome_modifier.json",
+          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/KaigakuHumanRenderer.java",
           "src/main/java/net/mcreator/craftnoyaiba/entity/KaigakuHumanEntity.java"
         ]
       },
@@ -2791,8 +2791,8 @@
       "registry_name": "thunder_clap_and_flash_mob",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/entity/ThunderClapAndFlashMobEntity.java",
-          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/ThunderClapAndFlashMobRenderer.java"
+          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/ThunderClapAndFlashMobRenderer.java",
+          "src/main/java/net/mcreator/craftnoyaiba/entity/ThunderClapAndFlashMobEntity.java"
         ]
       },
       "path": "~/Mobs/Misc"
@@ -3311,8 +3311,8 @@
       "registry_name": "blood",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/item/BloodItem.java",
-          "src/main/resources/assets/craftnoyaiba/models/item/blood.json"
+          "src/main/resources/assets/craftnoyaiba/models/item/blood.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/BloodItem.java"
         ]
       },
       "path": "~/Items"
@@ -3753,12 +3753,12 @@
       "registry_name": "demon_slayer_uniform",
       "metadata": {
         "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/demon_slayer_uniform_leggings.json",
           "src/main/java/net/mcreator/craftnoyaiba/item/DemonSlayerUniformItem.java",
-          "src/main/resources/assets/craftnoyaiba/models/item/demon_slayer_uniform_chestplate.json",
-          "src/main/resources/assets/craftnoyaiba/models/item/demon_slayer_uniform_leggings.json"
+          "src/main/resources/assets/craftnoyaiba/models/item/demon_slayer_uniform_chestplate.json"
         ]
       },
-      "path": "~/Armors"
+      "path": "~/Armors/Slayer"
     },
     {
       "name": "YaibaArmors",
@@ -3781,8 +3781,8 @@
       "registry_name": "blade",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftnoyaiba/models/item/blade.json",
-          "src/main/java/net/mcreator/craftnoyaiba/item/BladeItem.java"
+          "src/main/java/net/mcreator/craftnoyaiba/item/BladeItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/blade.json"
         ]
       },
       "path": "~/Items"
@@ -3832,8 +3832,8 @@
       "registry_name": "take_blood",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/client/gui/TakeBloodScreen.java",
-          "src/main/java/net/mcreator/craftnoyaiba/world/inventory/TakeBloodMenu.java"
+          "src/main/java/net/mcreator/craftnoyaiba/world/inventory/TakeBloodMenu.java",
+          "src/main/java/net/mcreator/craftnoyaiba/client/gui/TakeBloodScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -3961,11 +3961,11 @@
       "registry_name": "wisteria",
       "metadata": {
         "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/wisteria.json",
           "src/main/resources/assets/craftnoyaiba/models/block/wisteria.json",
           "src/main/java/net/mcreator/craftnoyaiba/block/WisteriaBlock.java",
-          "src/main/resources/data/craftnoyaiba/loot_tables/blocks/wisteria.json",
           "src/main/resources/assets/craftnoyaiba/blockstates/wisteria.json",
-          "src/main/resources/assets/craftnoyaiba/models/item/wisteria.json"
+          "src/main/resources/data/craftnoyaiba/loot_tables/blocks/wisteria.json"
         ]
       },
       "path": "~/Blocks"
@@ -3991,11 +3991,11 @@
       "registry_name": "demon_spawn_point",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftnoyaiba/models/item/demon_spawn_point.json",
           "src/main/resources/assets/craftnoyaiba/blockstates/demon_spawn_point.json",
-          "src/main/java/net/mcreator/craftnoyaiba/block/DemonSpawnPointBlock.java",
           "src/main/resources/data/craftnoyaiba/loot_tables/blocks/demon_spawn_point.json",
-          "src/main/resources/assets/craftnoyaiba/models/block/demon_spawn_point.json"
+          "src/main/resources/assets/craftnoyaiba/models/block/demon_spawn_point.json",
+          "src/main/java/net/mcreator/craftnoyaiba/block/DemonSpawnPointBlock.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/demon_spawn_point.json"
         ]
       },
       "path": "~/Blocks"
@@ -4010,11 +4010,11 @@
       "metadata": {
         "files": [
           "src/main/resources/data/craftnoyaiba/worldgen/configured_feature/fujikasane_tree.json",
+          "src/main/java/net/mcreator/craftnoyaiba/world/features/treedecorators/FujikasaneLeaveDecorator.java",
+          "src/main/resources/data/craftnoyaiba/worldgen/biome/fujikasane.json",
           "src/main/resources/data/craftnoyaiba/worldgen/placed_feature/fujikasane_tree.json",
           "src/main/java/net/mcreator/craftnoyaiba/world/features/treedecorators/FujikasaneTrunkDecorator.java",
-          "src/main/resources/data/craftnoyaiba/worldgen/biome/fujikasane.json",
-          "src/main/java/net/mcreator/craftnoyaiba/world/features/treedecorators/FujikasaneFruitDecorator.java",
-          "src/main/java/net/mcreator/craftnoyaiba/world/features/treedecorators/FujikasaneLeaveDecorator.java"
+          "src/main/java/net/mcreator/craftnoyaiba/world/features/treedecorators/FujikasaneFruitDecorator.java"
         ]
       },
       "path": "~/Biomes"
@@ -4028,9 +4028,9 @@
       "registry_name": "final_selection",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftnoyaiba/worldgen/structure_set/final_selection.json",
           "src/main/resources/data/craftnoyaiba/worldgen/structure/final_selection.json",
-          "src/main/resources/data/craftnoyaiba/worldgen/template_pool/final_selection.json"
+          "src/main/resources/data/craftnoyaiba/worldgen/template_pool/final_selection.json",
+          "src/main/resources/data/craftnoyaiba/worldgen/structure_set/final_selection.json"
         ]
       },
       "path": "~/Structures"
@@ -4100,9 +4100,9 @@
       "registry_name": "kiriya_ubuyashiki",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/entity/KiriyaUbuyashikiEntity.java",
           "src/main/resources/assets/craftnoyaiba/models/item/kiriya_ubuyashiki_spawn_egg.json",
-          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/KiriyaUbuyashikiRenderer.java"
+          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/KiriyaUbuyashikiRenderer.java",
+          "src/main/java/net/mcreator/craftnoyaiba/entity/KiriyaUbuyashikiEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -4132,11 +4132,11 @@
       "registry_name": "muzan_spawn_point",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftnoyaiba/loot_tables/blocks/muzan_spawn_point.json",
-          "src/main/resources/assets/craftnoyaiba/models/block/muzan_spawn_point.json",
-          "src/main/resources/assets/craftnoyaiba/blockstates/muzan_spawn_point.json",
           "src/main/java/net/mcreator/craftnoyaiba/block/MuzanSpawnPointBlock.java",
-          "src/main/resources/assets/craftnoyaiba/models/item/muzan_spawn_point.json"
+          "src/main/resources/assets/craftnoyaiba/models/item/muzan_spawn_point.json",
+          "src/main/resources/assets/craftnoyaiba/models/block/muzan_spawn_point.json",
+          "src/main/resources/data/craftnoyaiba/loot_tables/blocks/muzan_spawn_point.json",
+          "src/main/resources/assets/craftnoyaiba/blockstates/muzan_spawn_point.json"
         ]
       },
       "path": "~/Blocks"
@@ -4179,9 +4179,9 @@
       "registry_name": "infinity_castle",
       "metadata": {
         "files": [
+          "src/main/resources/data/craftnoyaiba/worldgen/template_pool/infinity_castle.json",
           "src/main/resources/data/craftnoyaiba/worldgen/structure_set/infinity_castle.json",
-          "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle.json",
-          "src/main/resources/data/craftnoyaiba/worldgen/template_pool/infinity_castle.json"
+          "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle.json"
         ]
       },
       "path": "~/Structures"
@@ -4306,8 +4306,8 @@
       "registry_name": "infinity_castle_bridge_house",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle_bridge_house.json",
           "src/main/resources/data/craftnoyaiba/worldgen/structure_set/infinity_castle_bridge_house.json",
+          "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle_bridge_house.json",
           "src/main/resources/data/craftnoyaiba/worldgen/template_pool/infinity_castle_bridge_house.json"
         ]
       },
@@ -4323,8 +4323,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/craftnoyaiba/worldgen/structure_set/infinity_castle_house_connector.json",
-          "src/main/resources/data/craftnoyaiba/worldgen/template_pool/infinity_castle_house_connector.json",
-          "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle_house_connector.json"
+          "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle_house_connector.json",
+          "src/main/resources/data/craftnoyaiba/worldgen/template_pool/infinity_castle_house_connector.json"
         ]
       },
       "path": "~/Structures"
@@ -4338,9 +4338,9 @@
       "registry_name": "infinity_castle_platform",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftnoyaiba/worldgen/template_pool/infinity_castle_platform.json",
           "src/main/resources/data/craftnoyaiba/worldgen/structure_set/infinity_castle_platform.json",
-          "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle_platform.json"
+          "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle_platform.json",
+          "src/main/resources/data/craftnoyaiba/worldgen/template_pool/infinity_castle_platform.json"
         ]
       },
       "path": "~/Structures"
@@ -4372,24 +4372,7 @@
         "files": [
           "src/main/java/net/mcreator/craftnoyaiba/procedures/InfinityCastleBlockRemoveProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     },
@@ -4415,8 +4398,8 @@
       "registry_name": "infinity_castle_multi_bridge",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftnoyaiba/worldgen/template_pool/infinity_castle_multi_bridge.json",
           "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle_multi_bridge.json",
+          "src/main/resources/data/craftnoyaiba/worldgen/template_pool/infinity_castle_multi_bridge.json",
           "src/main/resources/data/craftnoyaiba/worldgen/structure_set/infinity_castle_multi_bridge.json"
         ]
       },
@@ -4431,8 +4414,8 @@
       "registry_name": "infinity_castle_connecting_houses",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftnoyaiba/worldgen/structure_set/infinity_castle_connecting_houses.json",
           "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle_connecting_houses.json",
+          "src/main/resources/data/craftnoyaiba/worldgen/structure_set/infinity_castle_connecting_houses.json",
           "src/main/resources/data/craftnoyaiba/worldgen/template_pool/infinity_castle_connecting_houses.json"
         ]
       },
@@ -4463,9 +4446,9 @@
       "registry_name": "infinity_castle_hallway",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle_hallway.json",
           "src/main/resources/data/craftnoyaiba/worldgen/template_pool/infinity_castle_hallway.json",
-          "src/main/resources/data/craftnoyaiba/worldgen/structure_set/infinity_castle_hallway.json"
+          "src/main/resources/data/craftnoyaiba/worldgen/structure_set/infinity_castle_hallway.json",
+          "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle_hallway.json"
         ]
       },
       "path": "~/Structures"
@@ -4479,8 +4462,8 @@
       "registry_name": "infinity_castle_house",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftnoyaiba/worldgen/structure_set/infinity_castle_house.json",
           "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle_house.json",
+          "src/main/resources/data/craftnoyaiba/worldgen/structure_set/infinity_castle_house.json",
           "src/main/resources/data/craftnoyaiba/worldgen/template_pool/infinity_castle_house.json"
         ]
       },
@@ -4495,9 +4478,9 @@
       "registry_name": "infinity_castle_house_2",
       "metadata": {
         "files": [
+          "src/main/resources/data/craftnoyaiba/worldgen/structure_set/infinity_castle_house_2.json",
           "src/main/resources/data/craftnoyaiba/worldgen/template_pool/infinity_castle_house_2.json",
-          "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle_house_2.json",
-          "src/main/resources/data/craftnoyaiba/worldgen/structure_set/infinity_castle_house_2.json"
+          "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle_house_2.json"
         ]
       },
       "path": "~/Structures"
@@ -4527,9 +4510,9 @@
       "registry_name": "infinity_castle_hut",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftnoyaiba/worldgen/structure_set/infinity_castle_hut.json",
           "src/main/resources/data/craftnoyaiba/worldgen/template_pool/infinity_castle_hut.json",
-          "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle_hut.json"
+          "src/main/resources/data/craftnoyaiba/worldgen/structure/infinity_castle_hut.json",
+          "src/main/resources/data/craftnoyaiba/worldgen/structure_set/infinity_castle_hut.json"
         ]
       },
       "path": "~/Structures"
@@ -4544,8 +4527,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftnoyaiba/entity/model/InfinityCastleDoorModel.java",
-          "src/main/java/net/mcreator/craftnoyaiba/entity/InfinityCastleDoorEntity.java",
-          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/InfinityCastleDoorRenderer.java"
+          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/InfinityCastleDoorRenderer.java",
+          "src/main/java/net/mcreator/craftnoyaiba/entity/InfinityCastleDoorEntity.java"
         ]
       },
       "path": "~/Mobs/Misc"
@@ -4657,10 +4640,6 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -4689,9 +4668,9 @@
       "registry_name": "infinity_castle_door_upside_down",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/InfinityCastleDoorUpsideDownRenderer.java",
           "src/main/java/net/mcreator/craftnoyaiba/entity/model/InfinityCastleDoorUpsideDownModel.java",
-          "src/main/java/net/mcreator/craftnoyaiba/entity/InfinityCastleDoorUpsideDownEntity.java",
-          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/InfinityCastleDoorUpsideDownRenderer.java"
+          "src/main/java/net/mcreator/craftnoyaiba/entity/InfinityCastleDoorUpsideDownEntity.java"
         ]
       },
       "path": "~/Mobs/Misc"
@@ -4814,8 +4793,8 @@
       "registry_name": "rifle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/item/RifleItem.java",
-          "src/main/resources/assets/craftnoyaiba/models/item/rifle.json"
+          "src/main/resources/assets/craftnoyaiba/models/item/rifle.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/RifleItem.java"
         ]
       },
       "path": "~/Weapons"
@@ -4913,8 +4892,8 @@
       "registry_name": "pistol",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftnoyaiba/models/item/pistol.json",
-          "src/main/java/net/mcreator/craftnoyaiba/item/PistolItem.java"
+          "src/main/java/net/mcreator/craftnoyaiba/item/PistolItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/pistol.json"
         ]
       },
       "path": "~/Weapons"
@@ -5184,10 +5163,10 @@
       "registry_name": "flame_first_form",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/FlameFirstFormRenderer.java",
-          "src/main/java/net/mcreator/craftnoyaiba/entity/FlameFirstFormEntity.java",
           "src/main/java/net/mcreator/craftnoyaiba/entity/model/FlameFirstFormModel.java",
-          "src/main/java/net/mcreator/craftnoyaiba/entity/layer/FlameFirstFormLayer.java"
+          "src/main/java/net/mcreator/craftnoyaiba/entity/layer/FlameFirstFormLayer.java",
+          "src/main/java/net/mcreator/craftnoyaiba/entity/FlameFirstFormEntity.java",
+          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/FlameFirstFormRenderer.java"
         ]
       },
       "path": "~/Mobs/Misc/Breathing/Flame"
@@ -5688,8 +5667,8 @@
       "registry_name": "training_sword",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/item/TrainingSwordItem.java",
-          "src/main/resources/assets/craftnoyaiba/models/item/training_sword.json"
+          "src/main/resources/assets/craftnoyaiba/models/item/training_sword.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/TrainingSwordItem.java"
         ]
       },
       "path": "~/Weapons"
@@ -5785,8 +5764,8 @@
       "registry_name": "special_thunder_nichirin",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftnoyaiba/models/item/special_thunder_nichirin.json",
-          "src/main/java/net/mcreator/craftnoyaiba/item/SpecialThunderNichirinItem.java"
+          "src/main/java/net/mcreator/craftnoyaiba/item/SpecialThunderNichirinItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/special_thunder_nichirin.json"
         ]
       },
       "path": "~/Weapons"
@@ -5854,8 +5833,8 @@
       "registry_name": "yellow_electricity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/client/particle/YellowElectricityParticle.java",
-          "src/main/resources/assets/craftnoyaiba/particles/yellow_electricity.json"
+          "src/main/resources/assets/craftnoyaiba/particles/yellow_electricity.json",
+          "src/main/java/net/mcreator/craftnoyaiba/client/particle/YellowElectricityParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -5988,8 +5967,8 @@
       "registry_name": "floating_rock",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftnoyaiba/particles/floating_rock.json",
-          "src/main/java/net/mcreator/craftnoyaiba/client/particle/FloatingRockParticle.java"
+          "src/main/java/net/mcreator/craftnoyaiba/client/particle/FloatingRockParticle.java",
+          "src/main/resources/assets/craftnoyaiba/particles/floating_rock.json"
         ]
       },
       "path": "~/Particles"
@@ -6087,8 +6066,8 @@
         "files": [
           "src/main/java/net/mcreator/craftnoyaiba/entity/FlamingThunderGodEntity.java",
           "src/main/resources/assets/craftnoyaiba/models/item/flaming_thunder_god_spawn_egg.json",
-          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/FlamingThunderGodRenderer.java",
-          "src/main/java/net/mcreator/craftnoyaiba/entity/model/FlamingThunderGodModel.java"
+          "src/main/java/net/mcreator/craftnoyaiba/entity/model/FlamingThunderGodModel.java",
+          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/FlamingThunderGodRenderer.java"
         ]
       },
       "path": "~/Mobs/Misc/Breathing/Thunder"
@@ -7134,8 +7113,8 @@
         "files": [
           "src/main/resources/assets/craftnoyaiba/models/item/zenitsu_agatsuma_spawn_egg.json",
           "src/main/java/net/mcreator/craftnoyaiba/entity/model/ZenitsuAgatsumaModel.java",
-          "src/main/resources/data/craftnoyaiba/forge/biome_modifier/zenitsu_agatsuma_biome_modifier.json",
           "src/main/java/net/mcreator/craftnoyaiba/entity/ZenitsuAgatsumaEntity.java",
+          "src/main/resources/data/craftnoyaiba/forge/biome_modifier/zenitsu_agatsuma_biome_modifier.json",
           "src/main/java/net/mcreator/craftnoyaiba/client/renderer/ZenitsuAgatsumaRenderer.java"
         ]
       },
@@ -7150,11 +7129,11 @@
       "registry_name": "pillar_middle",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/block/PillarMiddleBlock.java",
           "src/main/resources/assets/craftnoyaiba/models/block/pillar_middle.json",
           "src/main/resources/data/craftnoyaiba/loot_tables/blocks/pillar_middle.json",
-          "src/main/java/net/mcreator/craftnoyaiba/block/PillarMiddleBlock.java",
-          "src/main/resources/assets/craftnoyaiba/blockstates/pillar_middle.json",
-          "src/main/resources/assets/craftnoyaiba/models/item/pillar_middle.json"
+          "src/main/resources/assets/craftnoyaiba/models/item/pillar_middle.json",
+          "src/main/resources/assets/craftnoyaiba/blockstates/pillar_middle.json"
         ]
       },
       "path": "~/Blocks"
@@ -7182,11 +7161,11 @@
       "registry_name": "pillar_block_bottom",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftnoyaiba/loot_tables/blocks/pillar_block_bottom.json",
-          "src/main/java/net/mcreator/craftnoyaiba/block/PillarBlockBottomBlock.java",
           "src/main/resources/assets/craftnoyaiba/models/item/pillar_block_bottom.json",
+          "src/main/resources/data/craftnoyaiba/loot_tables/blocks/pillar_block_bottom.json",
           "src/main/resources/assets/craftnoyaiba/blockstates/pillar_block_bottom.json",
-          "src/main/resources/assets/craftnoyaiba/models/block/pillar_block_bottom.json"
+          "src/main/resources/assets/craftnoyaiba/models/block/pillar_block_bottom.json",
+          "src/main/java/net/mcreator/craftnoyaiba/block/PillarBlockBottomBlock.java"
         ]
       },
       "path": "~/Blocks"
@@ -7200,10 +7179,10 @@
       "registry_name": "pillar_block_top",
       "metadata": {
         "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/pillar_block_top.json",
+          "src/main/resources/data/craftnoyaiba/loot_tables/blocks/pillar_block_top.json",
           "src/main/java/net/mcreator/craftnoyaiba/block/PillarBlockTopBlock.java",
           "src/main/resources/assets/craftnoyaiba/models/block/pillar_block_top.json",
-          "src/main/resources/data/craftnoyaiba/loot_tables/blocks/pillar_block_top.json",
-          "src/main/resources/assets/craftnoyaiba/models/item/pillar_block_top.json",
           "src/main/resources/assets/craftnoyaiba/blockstates/pillar_block_top.json"
         ]
       },
@@ -7219,11 +7198,11 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/craftnoyaiba/models/item/upper_moon_one_armor_leggings.json",
-          "src/main/java/net/mcreator/craftnoyaiba/item/UpperMoonOneArmorItem.java",
-          "src/main/resources/assets/craftnoyaiba/models/item/upper_moon_one_armor_chestplate.json"
+          "src/main/resources/assets/craftnoyaiba/models/item/upper_moon_one_armor_chestplate.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/UpperMoonOneArmorItem.java"
         ]
       },
-      "path": "~/Armors"
+      "path": "~/Armors/Demon"
     },
     {
       "name": "Tatami1",
@@ -7235,8 +7214,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/craftnoyaiba/models/item/tatami_1.json",
-          "src/main/resources/data/craftnoyaiba/loot_tables/blocks/tatami_1.json",
           "src/main/resources/assets/craftnoyaiba/blockstates/tatami_1.json",
+          "src/main/resources/data/craftnoyaiba/loot_tables/blocks/tatami_1.json",
           "src/main/java/net/mcreator/craftnoyaiba/block/Tatami1Block.java",
           "src/main/resources/assets/craftnoyaiba/models/block/tatami_1.json"
         ]
@@ -7253,10 +7232,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/craftnoyaiba/blockstates/tatami_2.json",
-          "src/main/java/net/mcreator/craftnoyaiba/block/Tatami2Block.java",
-          "src/main/resources/assets/craftnoyaiba/models/block/tatami_2.json",
           "src/main/resources/assets/craftnoyaiba/models/item/tatami_2.json",
-          "src/main/resources/data/craftnoyaiba/loot_tables/blocks/tatami_2.json"
+          "src/main/java/net/mcreator/craftnoyaiba/block/Tatami2Block.java",
+          "src/main/resources/data/craftnoyaiba/loot_tables/blocks/tatami_2.json",
+          "src/main/resources/assets/craftnoyaiba/models/block/tatami_2.json"
         ]
       },
       "path": "~/Blocks"
@@ -7610,12 +7589,12 @@
       "registry_name": "final_selection_biome",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/world/features/treedecorators/FinalSelectionBiomeTrunkDecorator.java",
           "src/main/resources/data/craftnoyaiba/worldgen/biome/final_selection_biome.json",
-          "src/main/resources/data/craftnoyaiba/worldgen/placed_feature/final_selection_biome_tree.json",
           "src/main/java/net/mcreator/craftnoyaiba/world/features/treedecorators/FinalSelectionBiomeFruitDecorator.java",
-          "src/main/resources/data/craftnoyaiba/worldgen/configured_feature/final_selection_biome_tree.json",
-          "src/main/java/net/mcreator/craftnoyaiba/world/features/treedecorators/FinalSelectionBiomeLeaveDecorator.java"
+          "src/main/resources/data/craftnoyaiba/worldgen/placed_feature/final_selection_biome_tree.json",
+          "src/main/java/net/mcreator/craftnoyaiba/world/features/treedecorators/FinalSelectionBiomeTrunkDecorator.java",
+          "src/main/java/net/mcreator/craftnoyaiba/world/features/treedecorators/FinalSelectionBiomeLeaveDecorator.java",
+          "src/main/resources/data/craftnoyaiba/worldgen/configured_feature/final_selection_biome_tree.json"
         ]
       },
       "path": "~/Biomes"
@@ -7631,8 +7610,8 @@
         "files": [
           "src/main/java/net/mcreator/craftnoyaiba/entity/BasicDemonEntity.java",
           "src/main/resources/data/craftnoyaiba/forge/biome_modifier/basic_demon_biome_modifier.json",
-          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/BasicDemonRenderer.java",
-          "src/main/resources/assets/craftnoyaiba/models/item/basic_demon_spawn_egg.json"
+          "src/main/resources/assets/craftnoyaiba/models/item/basic_demon_spawn_egg.json",
+          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/BasicDemonRenderer.java"
         ]
       },
       "path": "~/Mobs"
@@ -7749,9 +7728,9 @@
       "registry_name": "swordsmith",
       "metadata": {
         "files": [
+          "src/main/resources/data/craftnoyaiba/forge/biome_modifier/swordsmith_biome_modifier.json",
           "src/main/java/net/mcreator/craftnoyaiba/entity/SwordsmithEntity.java",
           "src/main/java/net/mcreator/craftnoyaiba/client/renderer/SwordsmithRenderer.java",
-          "src/main/resources/data/craftnoyaiba/forge/biome_modifier/swordsmith_biome_modifier.json",
           "src/main/resources/assets/craftnoyaiba/models/item/swordsmith_spawn_egg.json"
         ]
       },
@@ -7767,8 +7746,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/craftnoyaiba/dimension/the_final_selection.json",
-          "src/main/resources/data/craftnoyaiba/dimension_type/the_final_selection.json",
-          "src/main/java/net/mcreator/craftnoyaiba/world/dimension/TheFinalSelectionDimension.java"
+          "src/main/java/net/mcreator/craftnoyaiba/world/dimension/TheFinalSelectionDimension.java",
+          "src/main/resources/data/craftnoyaiba/dimension_type/the_final_selection.json"
         ]
       },
       "path": "~/Dimensions"
@@ -8015,8 +7994,8 @@
       "registry_name": "small_gourd",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftnoyaiba/models/item/small_gourd.json",
-          "src/main/java/net/mcreator/craftnoyaiba/item/SmallGourdItem.java"
+          "src/main/java/net/mcreator/craftnoyaiba/item/SmallGourdItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/small_gourd.json"
         ]
       },
       "path": "~/Items"
@@ -8182,7 +8161,12 @@
         "files": [
           "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionGoal1Procedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Overlays/Procedures"
     },
@@ -8222,7 +8206,12 @@
         "files": [
           "src/main/java/net/mcreator/craftnoyaiba/procedures/ShowCompletedFinalSelection2Procedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Overlays/Procedures"
     },
@@ -8238,7 +8227,12 @@
         "files": [
           "src/main/java/net/mcreator/craftnoyaiba/procedures/ShowCompletedFinalSelection1Procedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Overlays/Procedures"
     },
@@ -8301,9 +8295,9 @@
       "registry_name": "hand_demon",
       "metadata": {
         "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/hand_demon_spawn_egg.json",
           "src/main/java/net/mcreator/craftnoyaiba/client/renderer/HandDemonRenderer.java",
-          "src/main/java/net/mcreator/craftnoyaiba/entity/HandDemonEntity.java",
-          "src/main/resources/assets/craftnoyaiba/models/item/hand_demon_spawn_egg.json"
+          "src/main/java/net/mcreator/craftnoyaiba/entity/HandDemonEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -8317,9 +8311,9 @@
       "registry_name": "purple_long",
       "metadata": {
         "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/purple_long_chestplate.json",
           "src/main/resources/assets/craftnoyaiba/models/item/purple_long_leggings.json",
-          "src/main/java/net/mcreator/craftnoyaiba/item/PurpleLongItem.java",
-          "src/main/resources/assets/craftnoyaiba/models/item/purple_long_chestplate.json"
+          "src/main/java/net/mcreator/craftnoyaiba/item/PurpleLongItem.java"
         ]
       },
       "path": "~/Armors/Slayer/Variants"
@@ -8333,8 +8327,8 @@
       "registry_name": "brown",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/item/BrownItem.java",
           "src/main/resources/assets/craftnoyaiba/models/item/brown_chestplate.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/BrownItem.java",
           "src/main/resources/assets/craftnoyaiba/models/item/brown_leggings.json"
         ]
       },
@@ -8349,9 +8343,9 @@
       "registry_name": "blue",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftnoyaiba/models/item/blue_chestplate.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/blue_leggings.json",
           "src/main/java/net/mcreator/craftnoyaiba/item/BlueItem.java",
-          "src/main/resources/assets/craftnoyaiba/models/item/blue_leggings.json"
+          "src/main/resources/assets/craftnoyaiba/models/item/blue_chestplate.json"
         ]
       },
       "path": "~/Armors/Slayer/Variants"
@@ -8366,9 +8360,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/craftnoyaiba/models/item/sound_hashira_leggings.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/SoundHashiraItem.java",
           "src/main/resources/assets/craftnoyaiba/models/item/sound_hashira_helmet.json",
-          "src/main/resources/assets/craftnoyaiba/models/item/sound_hashira_chestplate.json",
-          "src/main/java/net/mcreator/craftnoyaiba/item/SoundHashiraItem.java"
+          "src/main/resources/assets/craftnoyaiba/models/item/sound_hashira_chestplate.json"
         ]
       },
       "path": "~/Armors/Slayer"
@@ -8382,8 +8376,8 @@
       "registry_name": "red",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftnoyaiba/models/item/red_chestplate.json",
           "src/main/resources/assets/craftnoyaiba/models/item/red_leggings.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/red_chestplate.json",
           "src/main/java/net/mcreator/craftnoyaiba/item/RedItem.java"
         ]
       },
@@ -8398,9 +8392,9 @@
       "registry_name": "red_long",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftnoyaiba/models/item/red_long_leggings.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/RedLongItem.java",
           "src/main/resources/assets/craftnoyaiba/models/item/red_long_chestplate.json",
-          "src/main/java/net/mcreator/craftnoyaiba/item/RedLongItem.java"
+          "src/main/resources/assets/craftnoyaiba/models/item/red_long_leggings.json"
         ]
       },
       "path": "~/Armors/Slayer/Variants"
@@ -8414,8 +8408,8 @@
       "registry_name": "kaigaku_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftnoyaiba/models/item/kaigaku_armor_chestplate.json",
           "src/main/java/net/mcreator/craftnoyaiba/item/KaigakuArmorItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/kaigaku_armor_chestplate.json",
           "src/main/resources/assets/craftnoyaiba/models/item/kaigaku_armor_leggings.json"
         ]
       },
@@ -8431,8 +8425,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftnoyaiba/item/PinkItem.java",
-          "src/main/resources/assets/craftnoyaiba/models/item/pink_chestplate.json",
-          "src/main/resources/assets/craftnoyaiba/models/item/pink_leggings.json"
+          "src/main/resources/assets/craftnoyaiba/models/item/pink_leggings.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/pink_chestplate.json"
         ]
       },
       "path": "~/Armors/Slayer/Variants"
@@ -8446,8 +8440,8 @@
       "registry_name": "brown_long",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftnoyaiba/models/item/brown_long_leggings.json",
           "src/main/java/net/mcreator/craftnoyaiba/item/BrownLongItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/brown_long_leggings.json",
           "src/main/resources/assets/craftnoyaiba/models/item/brown_long_chestplate.json"
         ]
       },
@@ -8462,9 +8456,9 @@
       "registry_name": "yellow_long",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/item/YellowLongItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/yellow_long_chestplate.json",
           "src/main/resources/assets/craftnoyaiba/models/item/yellow_long_leggings.json",
-          "src/main/resources/assets/craftnoyaiba/models/item/yellow_long_chestplate.json"
+          "src/main/java/net/mcreator/craftnoyaiba/item/YellowLongItem.java"
         ]
       },
       "path": "~/Armors/Slayer/Variants"
@@ -8478,8 +8472,8 @@
       "registry_name": "yellow",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftnoyaiba/models/item/yellow_leggings.json",
           "src/main/resources/assets/craftnoyaiba/models/item/yellow_chestplate.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/yellow_leggings.json",
           "src/main/java/net/mcreator/craftnoyaiba/item/YellowItem.java"
         ]
       },
@@ -8494,9 +8488,9 @@
       "registry_name": "purple",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftnoyaiba/models/item/purple_chestplate.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/purple_leggings.json",
           "src/main/java/net/mcreator/craftnoyaiba/item/PurpleItem.java",
-          "src/main/resources/assets/craftnoyaiba/models/item/purple_leggings.json"
+          "src/main/resources/assets/craftnoyaiba/models/item/purple_chestplate.json"
         ]
       },
       "path": "~/Armors/Slayer/Variants"
@@ -8526,8 +8520,8 @@
       "registry_name": "stone_hashira",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/item/StoneHashiraItem.java",
           "src/main/resources/assets/craftnoyaiba/models/item/stone_hashira_chestplate.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/StoneHashiraItem.java",
           "src/main/resources/assets/craftnoyaiba/models/item/stone_hashira_leggings.json"
         ]
       },
@@ -8558,9 +8552,9 @@
       "registry_name": "green",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/item/GreenItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/green_leggings.json",
           "src/main/resources/assets/craftnoyaiba/models/item/green_chestplate.json",
-          "src/main/resources/assets/craftnoyaiba/models/item/green_leggings.json"
+          "src/main/java/net/mcreator/craftnoyaiba/item/GreenItem.java"
         ]
       },
       "path": "~/Armors/Slayer/Variants"
@@ -8574,9 +8568,9 @@
       "registry_name": "green_long",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/item/GreenLongItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/green_long_leggings.json",
           "src/main/resources/assets/craftnoyaiba/models/item/green_long_chestplate.json",
-          "src/main/resources/assets/craftnoyaiba/models/item/green_long_leggings.json"
+          "src/main/java/net/mcreator/craftnoyaiba/item/GreenLongItem.java"
         ]
       },
       "path": "~/Armors/Slayer/Variants"
@@ -8590,12 +8584,158 @@
       "registry_name": "blue_long",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/item/BlueLongItem.java",
           "src/main/resources/assets/craftnoyaiba/models/item/blue_long_chestplate.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/BlueLongItem.java",
           "src/main/resources/assets/craftnoyaiba/models/item/blue_long_leggings.json"
         ]
       },
       "path": "~/Armors/Slayer/Variants"
+    },
+    {
+      "name": "ZohakutenArmor",
+      "type": "armor",
+      "sortid": 405,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zohakuten_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/ZohakutenArmorItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/zohakuten_armor_chestplate.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/zohakuten_armor_leggings.json"
+        ]
+      },
+      "path": "~/Armors/Demon"
+    },
+    {
+      "name": "RuiArmor",
+      "type": "armor",
+      "sortid": 406,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rui_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/rui_armor_chestplate.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/RuiArmorItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/rui_armor_leggings.json"
+        ]
+      },
+      "path": "~/Armors/Demon"
+    },
+    {
+      "name": "MuzanArmor",
+      "type": "armor",
+      "sortid": 407,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "muzan_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/MuzanArmorItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/muzan_armor_chestplate.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/muzan_armor_leggings.json"
+        ]
+      },
+      "path": "~/Armors/Demon"
+    },
+    {
+      "name": "MuzanArmorCloakless",
+      "type": "armor",
+      "sortid": 408,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "muzan_armor_cloakless",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/MuzanArmorCloaklessItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/muzan_armor_cloakless_chestplate.json"
+        ]
+      },
+      "path": "~/Armors/Demon"
+    },
+    {
+      "name": "SetDemon",
+      "type": "procedure",
+      "sortid": 409,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_demon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/SetDemonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "RaceDisplay",
+      "type": "procedure",
+      "sortid": 410,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "race_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/RaceDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "IfDemonCheck",
+      "type": "procedure",
+      "sortid": 411,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "if_demon_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/IfDemonCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "IfHumanCheck",
+      "type": "procedure",
+      "sortid": 412,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "if_human_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/IfHumanCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
     }
   ],
   "variable_elements": [
@@ -9493,9 +9633,12 @@
       "block.craftnoyaiba.pillar_block_bottom": "Pillar Block (Bottom)",
       "item.craftnoyaiba.swordsmith_spawn_egg": "Swordsmith Spawn Egg",
       "subtitles.biwa": "",
+      "item.craftnoyaiba.kaigaku_armor_leggings": "Dishonest Slayer Uniform",
       "advancements.repetitive_action.descr": "Speak to Himejima",
+      "item.craftnoyaiba.kaigaku_armor_chestplate": "Dishonest Slayer Uniform",
       "advancements.total_concentration_constant.descr": "Master the art of \"Total Concentration\"",
       "effect.craftnoyaiba.cooldown": "Cooldown",
+      "item.craftnoyaiba.yellow_leggings": "Demon Slayer Uniform",
       "item_group.craftnoyaiba.yaiba_nichirins": "Yaiba Nichirins",
       "death.attack.breathing_damage.player": "%1$s died whilst trying to escape %2$s",
       "advancements.opening_thread.title": "Opening Thread",
@@ -9506,35 +9649,49 @@
       "item.craftnoyaiba.training_sword": "Training Sword",
       "block.craftnoyaiba.demon_spawn_point": "Demon Spawn Point",
       "entity.craftnoyaiba.flaming_thunder_god": "Flaming Thunder God",
+      "item.craftnoyaiba.blue_leggings": "Demon Slayer Uniform",
       "entity.craftnoyaiba.jigoro_kuwajima": "Jigoro Kuwajima",
       "advancements.thunder_clap_and_flash_six_fold.title": "Thunder Clap And Flash Sixfold",
       "item.craftnoyaiba.upper_moon_one_armor_chestplate": "Upper Moon One Kimono",
-      "effect.craftnoyaiba.air_combo": "AirComboActive",
       "effect.craftnoyaiba.stunned": "Stunned",
+      "effect.craftnoyaiba.air_combo": "AirComboActive",
       "advancements.thunder_clap_and_flash.title": "Thunder Clap And Flash",
       "effect.craftnoyaiba.flaming_thunder_god_active": "Flaming Thunder God Active",
+      "item.craftnoyaiba.muzan_armor_leggings": "Demon King Suit",
       "death.attack.sun_damage": "%1$s collapsed into ash.",
+      "item.craftnoyaiba.green_long_chestplate": "Demon Slayer Uniform (Long)",
       "subtitles.limbcut": "",
+      "item.craftnoyaiba.brown_leggings": "Demon Slayer Uniform",
       "entity.craftnoyaiba.zenitsu_agatsuma": "Zenitsu Agatsuma",
+      "item.craftnoyaiba.blue_chestplate": "Demon Slayer Uniform",
       "gui.craftnoyaiba.ability_selection.button_empty": "§l\u003e\u003e",
       "effect.craftnoyaiba.awaken_breath": "AwakenBreath",
+      "item.craftnoyaiba.green_leggings": "Demon Slayer Uniform",
       "advancements.head_regeneration.descr": "Unlock Head Regeneration As A Demon.",
-      "advancements.demon.descr": "Become a Demon.",
       "item_group.craftnoyaiba.yaiba_slayer_armor": "Yaiba Slayer Armor",
+      "advancements.demon.descr": "Become a Demon.",
       "item.craftnoyaiba.jigoro_kuwajima_spawn_egg": "Jigoro Kuwajima Spawn Egg",
       "item_group.craftnoyaiba.yaiba_humans": "Yaiba Humans",
       "advancements.repetitive_action_mastered.title": "Repetitive Action Mastered",
       "item_group.craftnoyaiba.yaiba_trainers": "Yaiba Trainers",
+      "item.craftnoyaiba.zohakuten_armor_chestplate": "Upper Moon Four Armor",
+      "item.craftnoyaiba.blue_long_leggings": "Demon Slayer Uniform (Long)",
       "subtitles.breathingbegun": "",
+      "item.craftnoyaiba.stone_hashira_chestplate": "Stone Hashira Uniform",
+      "item.craftnoyaiba.brown_long_leggings": "Demon Slayer Uniform (Long)",
       "advancements.head_regeneration.title": "Head Regeneration",
+      "item.craftnoyaiba.stone_hashira_leggings": "Stone Hashira Uniform",
       "death.attack.breathing_damage.item": "%1$s was killed by %2$s using %3$s",
       "item.craftnoyaiba.demon_slayer_uniform_chestplate": "Demon Slayer Uniform",
       "item.craftnoyaiba.thunder_nichirin_sword": "Thunder Nichirin Sword",
+      "item.craftnoyaiba.pink_long_chestplate": "Demon Slayer Uniform (Long)",
+      "item.craftnoyaiba.purple_leggings": "Demon Slayer Uniform",
       "effect.craftnoyaiba.ground_slam": "GroundSlam",
       "advancements.muzan_favorite.title": "Muzan\u0027s Favorite",
+      "item.craftnoyaiba.yellow_chestplate": "Demon Slayer Uniform",
       "item.craftnoyaiba.big_gourd": "Big Gourd",
-      "item.craftnoyaiba.kaigaku_human_spawn_egg": "Kaigaku (Human) Spawn Egg",
       "item_group.craftnoyaiba.yaiba_demons": "Yaiba Demons",
+      "item.craftnoyaiba.kaigaku_human_spawn_egg": "Kaigaku (Human) Spawn Egg",
       "advancements.the_infinity_castle.descr": "Enter The Infinity Fortress.",
       "subtitles.shock": "",
       "item.craftnoyaiba.blade": "Blade",
@@ -9543,10 +9700,12 @@
       "entity.craftnoyaiba.infinity_castle_door": "Infinity Castle Door",
       "effect.craftnoyaiba.tesla_active": "Tesla Active",
       "gui.craftnoyaiba.take_blood.button_take": "Take",
+      "item.craftnoyaiba.rui_armor_leggings": "Lower Moon Five Hakama",
       "gamerule.cnyAutoParry.description": "parry automatically",
       "subtitles.woodenblock": "",
       "death.attack.sun_damage.item": "%1$s shriveled into ash from the sun.",
       "gui.craftnoyaiba.take_blood.BloodAmount": "Amount Of Blood In Demon Power",
+      "item.craftnoyaiba.green_chestplate": "Demon Slayer Uniform",
       "subtitles.waterbreathing": "",
       "effect.craftnoyaiba.electrified": "Electrified",
       "key.craftnoyaiba.switch_skill": "Switch Skill",
@@ -9555,16 +9714,22 @@
       "item.craftnoyaiba.blood": "Blood",
       "advancements.total_concentration.descr": "Get used to your breathing with many gourds.",
       "effect.craftnoyaiba.impact_frame": "Impact Frame",
+      "item.craftnoyaiba.purple_long_leggings": "Demon Slayer Uniform (Long)",
+      "item.craftnoyaiba.purple_long_chestplate": "Demon Slayer Uniform (Long)",
+      "item.craftnoyaiba.brown_chestplate": "Demon Slayer Uniform",
+      "item.craftnoyaiba.demon_slayer_uniform_long_chestplate": "Demon Slayer Uniform (Long)",
       "advancements.repetitive_action_mastered.descr": "Use Breathings 250 Times After Learning Repetitive Action",
       "item.craftnoyaiba.test": "Test",
       "biome.craftnoyaiba.infinity_castle_biome": "Infinity Castle Biome",
       "biome.craftnoyaiba.town": "Town",
+      "item.craftnoyaiba.zohakuten_armor_leggings": "Upper Moon Four Hakama",
       "effect.craftnoyaiba.tcaf_active": "TcafActive",
       "subtitles.stab": "",
       "effect.craftnoyaiba.string_performance_move": "String Performance Move",
       "item.craftnoyaiba.demon_slayer_uniform_leggings": "Demon Slayer Uniform",
       "advancements.thunder_clap_and_flash_six_fold.descr": "Learn Thunderclap And Flash: Sixfold",
       "subtitles.clash": "",
+      "item.craftnoyaiba.muzan_armor_chestplate": "Demon King Suit (Cloak)",
       "block.craftnoyaiba.pillar_block_top": "Pillar Block (Top)",
       "advancements.demon_slayer.descr": "Become a Demon Slayer",
       "entity.craftnoyaiba.kiriya_ubuyashiki": "Kiriya Ubuyashiki",
@@ -9576,30 +9741,39 @@
       "advancements.muzan_favorite.descr": "One Of Muzan\u0027s Favorites, You can say Muzan.",
       "item.craftnoyaiba.basic_nichirin_sword": "Nichirin Sword",
       "gui.craftnoyaiba.create_ability.button_sslx1": "§lX",
-      "advancements.the_infinity_castle.title": "The Infinity Castle",
-      "item.craftnoyaiba.khakkhara": "Khakkhara",
+      "item.craftnoyaiba.red_chestplate": "Demon Slayer Uniform",
+      "item.craftnoyaiba.muzan_armor_cloakless_chestplate": "Demon King Suit",
       "item.craftnoyaiba.special_thunder_nichirin": "Special Thunder Nichirin",
+      "item.craftnoyaiba.khakkhara": "Khakkhara",
+      "advancements.the_infinity_castle.title": "The Infinity Castle",
       "death.attack.sun_damage.player": "%1$s died whilst trying to escape the sun.",
+      "item.craftnoyaiba.sound_hashira_helmet": "Sound Hashira Headpiece",
       "item.craftnoyaiba.infinity_castle_door_spawn_egg": "Infinity Castle Door Spawn Egg",
       "item.craftnoyaiba.primary_gale_slash_spawn_egg": "Primary Gale Slash Spawn Egg",
+      "item.craftnoyaiba.sound_hashira_chestplate": "Sound Hashira Uniform",
+      "item.craftnoyaiba.rui_armor_chestplate": "Lower Moon Five Robes",
       "subtitles.heartbeat": "",
       "item.craftnoyaiba.rifle": "Rifle",
       "effect.craftnoyaiba.outwards_poof": "Outwards Poof",
       "death.attack.breathing_damage": "%1$s was killed by a breathing technique",
       "effect.craftnoyaiba.asleep": "Asleep",
       "entity.craftnoyaiba.swordsmith": "Swordsmith",
+      "item.craftnoyaiba.sound_hashira_leggings": "Sound Hashira Uniform",
       "effect.craftnoyaiba.regen_stun": "Regeneration Stun",
       "gamerule.cnyAutoParry": "cnyautoparry",
+      "item.craftnoyaiba.blue_long_chestplate": "Demon Slayer Uniform (Long)",
       "entity.craftnoyaiba.kaigaku_human": "Kaigaku (Human)",
       "block.craftnoyaiba.tatami_1": "Tatami (1)",
-      "block.craftnoyaiba.tatami_2": "Tatami (1)",
+      "block.craftnoyaiba.tatami_2": "Tatami (2)",
       "advancements.total_concentration.title": "Total Concentration",
       "item.craftnoyaiba.kanata_ubuyashiki_spawn_egg": "Kanata Ubuyashiki Spawn Egg",
+      "item.craftnoyaiba.demon_slayer_uniform_long_leggings": "Demon Slayer Uniform (Long)",
       "advancements.recovery_breathing.descr": "WIP",
       "item.craftnoyaiba.crimson_ore": "Crimson Ore",
       "effect.craftnoyaiba.constant_resounding_slashes": "Constant Resounding Slashes",
       "subtitles.level": "",
       "item.craftnoyaiba.flame_first_form_spawn_egg": "Flame First Form Spawn Egg",
+      "item.craftnoyaiba.red_long_chestplate": "Demon Slayer Uniform (Long)",
       "item.craftnoyaiba.flaming_thunder_god_spawn_egg": "Flaming Thunder God Spawn Egg",
       "item_group.craftnoyaiba.yaiba_items": "Yaiba Items",
       "biome.craftnoyaiba.final_selection_biome": "Final Selection Biome",
@@ -9608,14 +9782,20 @@
       "item_group.craftnoyaiba.yaiba_blocks": "Yaiba Blocks",
       "advancements.craft_no_yaiba.title": "Craft No Yaiba",
       "entity.craftnoyaiba.basic_demon": "Demon",
+      "item.craftnoyaiba.red_leggings": "Demon Slayer Uniform",
+      "item.craftnoyaiba.red_long_leggings": "Demon Slayer Uniform (Long)",
+      "item.craftnoyaiba.brown_long_chestplate": "Demon Slayer Uniform (Long)",
       "subtitles.infinitycastlesummon": "",
       "biome.craftnoyaiba.fujikasane": "Fujikasane",
       "item.craftnoyaiba.crimson_iron_sand": "Crimson Iron Sand",
       "advancements.repetitive_action.title": "Repetitive Action",
       "advancements.opening_thread.descr": "Unlock The Opening Thread Skill",
       "advancements.total_concentration_constant.title": "Total Concentration: Constant",
+      "item.craftnoyaiba.purple_chestplate": "Demon Slayer Uniform",
       "item.craftnoyaiba.upper_moon_one_armor_leggings": "Upper Moon One Hakama",
+      "item.craftnoyaiba.yellow_long_leggings": "Demon Slayer Uniform (Long)",
       "advancements.recovery_breathing.title": "Recovery Breathing",
+      "entity.craftnoyaiba.hand_demon": "Hand Demon",
       "advancements.demon.title": "Demon",
       "item.craftnoyaiba.small_gourd": "Small Gourd",
       "gamerule.assignedRanks": "assignedranks",
@@ -9630,17 +9810,23 @@
       "entity.craftnoyaiba.infinity_castle_door_upside_down": "Infinity Castle Door Upside Down",
       "advancements.thunder_breathing.title": "Thunder Breathing",
       "gui.craftnoyaiba.create_ability.button_ssl1": "§l+",
+      "item.craftnoyaiba.pink_leggings": "Demon Slayer Uniform",
       "key.craftnoyaiba.parry_key": "Parry",
       "item.craftnoyaiba.basic_demon_spawn_egg": "Demon Spawn Egg",
       "advancements.demon_slayer.title": "Demon Slayer",
       "gui.craftnoyaiba.create_ability.button_empty1": "§l\u003e\u003e",
       "gui.craftnoyaiba.create_ability.button_empty": "§l+",
       "key.craftnoyaiba.use_skill": "Use Skill",
+      "item.craftnoyaiba.pink_long_leggings": "Demon Slayer Uniform (Long)",
+      "item.craftnoyaiba.yellow_long_chestplate": "Demon Slayer Uniform (Long)",
       "subtitles.swordblock": "",
+      "item.craftnoyaiba.pink_chestplate": "Demon Slayer Uniform",
+      "item.craftnoyaiba.hand_demon_spawn_egg": "Hand Demon Spawn Egg",
       "item.craftnoyaiba.sound_nichirin_sword": "Sound Nichirin Sword",
       "effect.craftnoyaiba.head_regeneration_timer": "Head Regeneration Timer",
       "block.craftnoyaiba.pillar_middle": "Pillar Block (Middle)",
       "gui.craftnoyaiba.create_ability.button_sslx": "§lX",
+      "item.craftnoyaiba.green_long_leggings": "Demon Slayer Uniform (Long)",
       "item.craftnoyaiba.infinity_castle_door_upside_down_spawn_egg": "Infinity Castle Door Upside Down Spawn Egg",
       "effect.craftnoyaiba.pre_six_fold": "Pre Six Fold",
       "advancements.thunder_clap_and_flash.descr": "Learn Thunderclap And Flash"
