@@ -47,7 +47,7 @@ public class TakeBloodScreen extends AbstractContainerScreen<TakeBloodMenu> {
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/receiveblood_gui.png"), this.leftPos + -82, this.topPos + -2, 0, 0, 160, 159, 160, 159);
+		guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/bloodguiv2.png"), this.leftPos + -217, this.topPos + -38, 0, 0, 427, 240, 427, 240);
 
 		RenderSystem.disableBlend();
 	}

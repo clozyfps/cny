@@ -33,7 +33,7 @@
         "subtract": false
       }
     ],
-    "name": "Tatami (1)",
+    "name": "Tatami (2)",
     "specialInformation": {
       "fixedValue": []
     },
@@ -56,7 +56,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
-      "value": "ROCK"
+      "value": "CLOTH"
     },
     "tickRate": 0,
     "tickRandomly": false,

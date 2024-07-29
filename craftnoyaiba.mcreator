@@ -7121,7 +7121,7 @@
           }
         ]
       },
-      "path": "~/Mobs/Procedures"
+      "path": "~/Mobs"
     },
     {
       "name": "ZenitsuAgatsuma",
@@ -8088,27 +8088,6 @@
       "path": "~/Items"
     },
     {
-      "name": "FinalSelectionGoal1",
-      "type": "procedure",
-      "sortid": 388,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "final_selection_goal_1",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionGoal1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Overlays/Procedures"
-    },
-    {
       "name": "FinalSelectionOverlayDisplayOverlayIngame",
       "type": "procedure",
       "sortid": 389,
@@ -8130,18 +8109,82 @@
       "path": "~/Overlays/Procedures"
     },
     {
-      "name": "FinalSelectionOverlay",
+      "name": "MoveSelectedDisplay",
       "type": "overlay",
-      "sortid": 390,
+      "sortid": 392,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "final_selection_overlay",
+      "registry_name": "move_selected_display",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/client/screens/FinalSelectionOverlayOverlay.java"
+          "src/main/java/net/mcreator/craftnoyaiba/client/screens/MoveSelectedDisplayOverlay.java"
         ]
       },
       "path": "~/Overlays"
+    },
+    {
+      "name": "FinalSelectionGoal4",
+      "type": "procedure",
+      "sortid": 396,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_selection_goal_4",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionGoal4Procedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "FinalSelectionGoal3",
+      "type": "procedure",
+      "sortid": 395,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_selection_goal_3",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionGoal3Procedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "FinalSelectionGoal2",
+      "type": "procedure",
+      "sortid": 394,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_selection_goal_2",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionGoal2Procedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "FinalSelectionGoal1",
+      "type": "procedure",
+      "sortid": 388,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_selection_goal_1",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionGoal1Procedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Overlays/Procedures"
     },
     {
       "name": "QuestKill",
@@ -8168,78 +8211,16 @@
       "path": "~/Procedures"
     },
     {
-      "name": "MoveSelectedDisplay",
-      "type": "overlay",
-      "sortid": 392,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_selected_display",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/client/screens/MoveSelectedDisplayOverlay.java"
-        ]
-      },
-      "path": "~/Overlays"
-    },
-    {
-      "name": "HandDemon",
-      "type": "livingentity",
-      "sortid": 393,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "hand_demon",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/HandDemonRenderer.java",
-          "src/main/java/net/mcreator/craftnoyaiba/entity/HandDemonEntity.java",
-          "src/main/resources/assets/craftnoyaiba/models/item/hand_demon_spawn_egg.json"
-        ]
-      },
-      "path": "~/Mobs"
-    },
-    {
-      "name": "FinalSelectionGoal2",
+      "name": "ShowCompletedFinalSelection2",
       "type": "procedure",
-      "sortid": 394,
+      "sortid": 398,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "final_selection_goal_2",
+      "registry_name": "show_completed_final_selection_2",
       "metadata": {
-        "return_type": "string",
+        "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionGoal2Procedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Overlays/Procedures"
-    },
-    {
-      "name": "FinalSelectionGoal3",
-      "type": "procedure",
-      "sortid": 395,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "final_selection_goal_3",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionGoal3Procedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Overlays/Procedures"
-    },
-    {
-      "name": "FinalSelectionGoal4",
-      "type": "procedure",
-      "sortid": 396,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "final_selection_goal_4",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionGoal4Procedure.java"
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/ShowCompletedFinalSelection2Procedure.java"
         ],
         "dependencies": []
       },
@@ -8257,33 +8238,7 @@
         "files": [
           "src/main/java/net/mcreator/craftnoyaiba/procedures/ShowCompletedFinalSelection1Procedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Overlays/Procedures"
-    },
-    {
-      "name": "ShowCompletedFinalSelection2",
-      "type": "procedure",
-      "sortid": 398,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "show_completed_final_selection_2",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/procedures/ShowCompletedFinalSelection2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Overlays/Procedures"
     },
@@ -8322,6 +8277,325 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "FinalSelectionOverlay",
+      "type": "overlay",
+      "sortid": 390,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_selection_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/client/screens/FinalSelectionOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Overlays"
+    },
+    {
+      "name": "HandDemon",
+      "type": "livingentity",
+      "sortid": 393,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hand_demon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/HandDemonRenderer.java",
+          "src/main/java/net/mcreator/craftnoyaiba/entity/HandDemonEntity.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/hand_demon_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "PurpleLong",
+      "type": "armor",
+      "sortid": 400,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_long",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/purple_long_leggings.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/PurpleLongItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/purple_long_chestplate.json"
+        ]
+      },
+      "path": "~/Armors/Slayer/Variants"
+    },
+    {
+      "name": "Brown",
+      "type": "armor",
+      "sortid": 391,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/BrownItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/brown_chestplate.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/brown_leggings.json"
+        ]
+      },
+      "path": "~/Armors/Slayer/Variants"
+    },
+    {
+      "name": "Blue",
+      "type": "armor",
+      "sortid": 389,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/blue_chestplate.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/BlueItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/blue_leggings.json"
+        ]
+      },
+      "path": "~/Armors/Slayer/Variants"
+    },
+    {
+      "name": "SoundHashira",
+      "type": "armor",
+      "sortid": 402,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_hashira",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/sound_hashira_leggings.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/sound_hashira_helmet.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/sound_hashira_chestplate.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/SoundHashiraItem.java"
+        ]
+      },
+      "path": "~/Armors/Slayer"
+    },
+    {
+      "name": "Red",
+      "type": "armor",
+      "sortid": 388,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/red_chestplate.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/red_leggings.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/RedItem.java"
+        ]
+      },
+      "path": "~/Armors/Slayer/Variants"
+    },
+    {
+      "name": "RedLong",
+      "type": "armor",
+      "sortid": 395,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_long",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/red_long_leggings.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/red_long_chestplate.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/RedLongItem.java"
+        ]
+      },
+      "path": "~/Armors/Slayer/Variants"
+    },
+    {
+      "name": "KaigakuArmor",
+      "type": "armor",
+      "sortid": 404,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kaigaku_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/kaigaku_armor_chestplate.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/KaigakuArmorItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/kaigaku_armor_leggings.json"
+        ]
+      },
+      "path": "~/Armors/Slayer"
+    },
+    {
+      "name": "Pink",
+      "type": "armor",
+      "sortid": 394,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/PinkItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/pink_chestplate.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/pink_leggings.json"
+        ]
+      },
+      "path": "~/Armors/Slayer/Variants"
+    },
+    {
+      "name": "BrownLong",
+      "type": "armor",
+      "sortid": 397,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brown_long",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/brown_long_leggings.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/BrownLongItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/brown_long_chestplate.json"
+        ]
+      },
+      "path": "~/Armors/Slayer/Variants"
+    },
+    {
+      "name": "YellowLong",
+      "type": "armor",
+      "sortid": 399,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_long",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/YellowLongItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/yellow_long_leggings.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/yellow_long_chestplate.json"
+        ]
+      },
+      "path": "~/Armors/Slayer/Variants"
+    },
+    {
+      "name": "Yellow",
+      "type": "armor",
+      "sortid": 392,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/yellow_leggings.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/yellow_chestplate.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/YellowItem.java"
+        ]
+      },
+      "path": "~/Armors/Slayer/Variants"
+    },
+    {
+      "name": "Purple",
+      "type": "armor",
+      "sortid": 393,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/purple_chestplate.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/PurpleItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/purple_leggings.json"
+        ]
+      },
+      "path": "~/Armors/Slayer/Variants"
+    },
+    {
+      "name": "DemonSlayerUniformLong",
+      "type": "armor",
+      "sortid": 384,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "demon_slayer_uniform_long",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/demon_slayer_uniform_long_leggings.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/DemonSlayerUniformLongItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/demon_slayer_uniform_long_chestplate.json"
+        ]
+      },
+      "path": "~/Armors/Slayer"
+    },
+    {
+      "name": "StoneHashira",
+      "type": "armor",
+      "sortid": 403,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_hashira",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/StoneHashiraItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/stone_hashira_chestplate.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/stone_hashira_leggings.json"
+        ]
+      },
+      "path": "~/Armors/Slayer"
+    },
+    {
+      "name": "PinkLong",
+      "type": "armor",
+      "sortid": 401,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_long",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/PinkLongItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/pink_long_leggings.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/pink_long_chestplate.json"
+        ]
+      },
+      "path": "~/Armors/Slayer/Variants"
+    },
+    {
+      "name": "Green",
+      "type": "armor",
+      "sortid": 390,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/GreenItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/green_chestplate.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/green_leggings.json"
+        ]
+      },
+      "path": "~/Armors/Slayer/Variants"
+    },
+    {
+      "name": "GreenLong",
+      "type": "armor",
+      "sortid": 398,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_long",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/GreenLongItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/green_long_chestplate.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/green_long_leggings.json"
+        ]
+      },
+      "path": "~/Armors/Slayer/Variants"
+    },
+    {
+      "name": "BlueLong",
+      "type": "armor",
+      "sortid": 396,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_long",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/BlueLongItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/blue_long_chestplate.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/blue_long_leggings.json"
+        ]
+      },
+      "path": "~/Armors/Slayer/Variants"
     }
   ],
   "variable_elements": [
@@ -9004,6 +9278,18 @@
       "value": "false"
     },
     {
+      "name": "HandDemonQuest",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "QuestColor",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
       "name": "FinalSelectionProgress1",
       "type": "number",
       "scope": "player_lifetime",
@@ -9014,18 +9300,6 @@
       "type": "string",
       "scope": "player_lifetime",
       "value": "\"\""
-    },
-    {
-      "name": "QuestColor",
-      "type": "string",
-      "scope": "player_lifetime",
-      "value": "\"\""
-    },
-    {
-      "name": "HandDemonQuest",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
     }
   ],
   "sound_elements": [
@@ -9212,101 +9486,55 @@
       "entity.craftnoyaiba.kanata_ubuyashiki": "Kanata Ubuyashiki",
       "entity.craftnoyaiba.primary_gale_slash": "Primary Gale Slash",
       "entity.craftnoyaiba.flame_first_form": "Flame First Form",
-      "gui.craftnoyaiba.create_ability.button_sslx2": "§lX",
-      "item.craftnoyaiba.kiriya_ubuyashiki_spawn_egg": "Kiriya Ubuyashiki Spawn Egg",
       "entity.craftnoyaiba.thunder_clap_and_flash_mob": "Thunder Clap And Flash Mob",
-      "gui.craftnoyaiba.create_ability.button_sslx3": "§lX",
       "effect.craftnoyaiba.tcafend": "Tcafend",
       "item.craftnoyaiba.medium_gourd": "Medium Gourd",
       "gui.craftnoyaiba.create_ability.button_ssl": "§l+",
-      "gui.craftnoyaiba.create_ability.button_sslx4": "§lX",
       "block.craftnoyaiba.pillar_block_bottom": "Pillar Block (Bottom)",
-      "subtitles.biwa": "",
       "item.craftnoyaiba.swordsmith_spawn_egg": "Swordsmith Spawn Egg",
-      "effect.craftnoyaiba.new_godspeed": "New Godspeed",
-      "advancements.muzan_favorite.descr": "One Of Muzan\u0027s Favorites, You can say Muzan.",
-      "item.craftnoyaiba.basic_nichirin_sword": "Nichirin Sword",
-      "gui.craftnoyaiba.create_ability.button_sslx1": "§lX",
+      "subtitles.biwa": "",
       "advancements.repetitive_action.descr": "Speak to Himejima",
       "advancements.total_concentration_constant.descr": "Master the art of \"Total Concentration\"",
       "effect.craftnoyaiba.cooldown": "Cooldown",
-      "item.craftnoyaiba.special_thunder_nichirin": "Special Thunder Nichirin",
-      "item.craftnoyaiba.khakkhara": "Khakkhara",
-      "advancements.the_infinity_castle.title": "The Infinity Castle",
       "item_group.craftnoyaiba.yaiba_nichirins": "Yaiba Nichirins",
       "death.attack.breathing_damage.player": "%1$s died whilst trying to escape %2$s",
       "advancements.opening_thread.title": "Opening Thread",
       "item_group.craftnoyaiba.yaiba_demon_armor": "Yaiba Demon Armor",
-      "death.attack.sun_damage.player": "%1$s died whilst trying to escape the sun.",
       "item_group.craftnoyaiba.yaiba_armors": "Yaiba Armors",
       "gui.craftnoyaiba.menu.button_ssl": "§l\u003e\u003e",
       "item.craftnoyaiba.zenitsu_agatsuma_spawn_egg": "Zenitsu Agatsuma Spawn Egg",
       "item.craftnoyaiba.training_sword": "Training Sword",
       "block.craftnoyaiba.demon_spawn_point": "Demon Spawn Point",
-      "item.craftnoyaiba.infinity_castle_door_spawn_egg": "Infinity Castle Door Spawn Egg",
-      "item.craftnoyaiba.primary_gale_slash_spawn_egg": "Primary Gale Slash Spawn Egg",
       "entity.craftnoyaiba.flaming_thunder_god": "Flaming Thunder God",
       "entity.craftnoyaiba.jigoro_kuwajima": "Jigoro Kuwajima",
       "advancements.thunder_clap_and_flash_six_fold.title": "Thunder Clap And Flash Sixfold",
-      "subtitles.heartbeat": "",
       "item.craftnoyaiba.upper_moon_one_armor_chestplate": "Upper Moon One Kimono",
-      "item.craftnoyaiba.rifle": "Rifle",
-      "effect.craftnoyaiba.stunned": "Stunned",
       "effect.craftnoyaiba.air_combo": "AirComboActive",
-      "effect.craftnoyaiba.outwards_poof": "Outwards Poof",
+      "effect.craftnoyaiba.stunned": "Stunned",
       "advancements.thunder_clap_and_flash.title": "Thunder Clap And Flash",
       "effect.craftnoyaiba.flaming_thunder_god_active": "Flaming Thunder God Active",
-      "death.attack.breathing_damage": "%1$s was killed by a breathing technique",
-      "effect.craftnoyaiba.asleep": "Asleep",
-      "entity.craftnoyaiba.swordsmith": "Swordsmith",
       "death.attack.sun_damage": "%1$s collapsed into ash.",
-      "effect.craftnoyaiba.regen_stun": "Regeneration Stun",
       "subtitles.limbcut": "",
-      "gamerule.cnyAutoParry": "cnyautoparry",
       "entity.craftnoyaiba.zenitsu_agatsuma": "Zenitsu Agatsuma",
       "gui.craftnoyaiba.ability_selection.button_empty": "§l\u003e\u003e",
       "effect.craftnoyaiba.awaken_breath": "AwakenBreath",
-      "entity.craftnoyaiba.kaigaku_human": "Kaigaku (Human)",
       "advancements.head_regeneration.descr": "Unlock Head Regeneration As A Demon.",
-      "block.craftnoyaiba.tatami_1": "Tatami (1)",
-      "block.craftnoyaiba.tatami_2": "Tatami (1)",
-      "advancements.total_concentration.title": "Total Concentration",
       "advancements.demon.descr": "Become a Demon.",
       "item_group.craftnoyaiba.yaiba_slayer_armor": "Yaiba Slayer Armor",
       "item.craftnoyaiba.jigoro_kuwajima_spawn_egg": "Jigoro Kuwajima Spawn Egg",
-      "item.craftnoyaiba.kanata_ubuyashiki_spawn_egg": "Kanata Ubuyashiki Spawn Egg",
-      "advancements.recovery_breathing.descr": "WIP",
       "item_group.craftnoyaiba.yaiba_humans": "Yaiba Humans",
-      "item.craftnoyaiba.crimson_ore": "Crimson Ore",
-      "effect.craftnoyaiba.constant_resounding_slashes": "Constant Resounding Slashes",
       "advancements.repetitive_action_mastered.title": "Repetitive Action Mastered",
-      "subtitles.level": "",
       "item_group.craftnoyaiba.yaiba_trainers": "Yaiba Trainers",
-      "item.craftnoyaiba.flame_first_form_spawn_egg": "Flame First Form Spawn Egg",
       "subtitles.breathingbegun": "",
       "advancements.head_regeneration.title": "Head Regeneration",
-      "item.craftnoyaiba.flaming_thunder_god_spawn_egg": "Flaming Thunder God Spawn Egg",
       "death.attack.breathing_damage.item": "%1$s was killed by %2$s using %3$s",
       "item.craftnoyaiba.demon_slayer_uniform_chestplate": "Demon Slayer Uniform",
-      "item_group.craftnoyaiba.yaiba_items": "Yaiba Items",
-      "biome.craftnoyaiba.final_selection_biome": "Final Selection Biome",
-      "advancements.thunder_breathing.descr": "Learn Thunder Breathing",
       "item.craftnoyaiba.thunder_nichirin_sword": "Thunder Nichirin Sword",
-      "item.craftnoyaiba.pistol": "Pistol",
-      "item_group.craftnoyaiba.yaiba_blocks": "Yaiba Blocks",
-      "advancements.craft_no_yaiba.title": "Craft No Yaiba",
-      "entity.craftnoyaiba.basic_demon": "Demon",
-      "subtitles.infinitycastlesummon": "",
       "effect.craftnoyaiba.ground_slam": "GroundSlam",
-      "biome.craftnoyaiba.fujikasane": "Fujikasane",
       "advancements.muzan_favorite.title": "Muzan\u0027s Favorite",
-      "item.craftnoyaiba.crimson_iron_sand": "Crimson Iron Sand",
       "item.craftnoyaiba.big_gourd": "Big Gourd",
       "item.craftnoyaiba.kaigaku_human_spawn_egg": "Kaigaku (Human) Spawn Egg",
       "item_group.craftnoyaiba.yaiba_demons": "Yaiba Demons",
-      "advancements.repetitive_action.title": "Repetitive Action",
-      "advancements.opening_thread.descr": "Unlock The Opening Thread Skill",
-      "advancements.total_concentration_constant.title": "Total Concentration: Constant",
       "advancements.the_infinity_castle.descr": "Enter The Infinity Fortress.",
       "subtitles.shock": "",
       "item.craftnoyaiba.blade": "Blade",
@@ -9314,64 +9542,108 @@
       "block.craftnoyaiba.wisteria": "Wisteria",
       "entity.craftnoyaiba.infinity_castle_door": "Infinity Castle Door",
       "effect.craftnoyaiba.tesla_active": "Tesla Active",
-      "item.craftnoyaiba.upper_moon_one_armor_leggings": "Upper Moon One Hakama",
       "gui.craftnoyaiba.take_blood.button_take": "Take",
       "gamerule.cnyAutoParry.description": "parry automatically",
-      "advancements.recovery_breathing.title": "Recovery Breathing",
-      "entity.craftnoyaiba.hand_demon": "Hand Demon",
-      "advancements.demon.title": "Demon",
-      "item.craftnoyaiba.small_gourd": "Small Gourd",
-      "gamerule.assignedRanks": "assignedranks",
-      "subtitles.uppermoonmeeting": "",
       "subtitles.woodenblock": "",
       "death.attack.sun_damage.item": "%1$s shriveled into ash from the sun.",
-      "gui.craftnoyaiba.create_ability.button_ssl3": "§l+",
       "gui.craftnoyaiba.take_blood.BloodAmount": "Amount Of Blood In Demon Power",
-      "gui.craftnoyaiba.create_ability.button_ssl2": "§l+",
-      "key.craftnoyaiba.menu_open": "Menu",
       "subtitles.waterbreathing": "",
-      "key.craftnoyaiba.breathe": "Breathe",
-      "item_group.craftnoyaiba.yaiba_weapons": "Yaiba Weapons",
       "effect.craftnoyaiba.electrified": "Electrified",
-      "effect.craftnoyaiba.decaying": "Decaying",
-      "advancements.craft_no_yaiba.descr": "Start Your Journey In Demon Slayer.",
-      "entity.craftnoyaiba.infinity_castle_door_upside_down": "Infinity Castle Door Upside Down",
-      "advancements.thunder_breathing.title": "Thunder Breathing",
       "key.craftnoyaiba.switch_skill": "Switch Skill",
-      "gui.craftnoyaiba.create_ability.button_ssl1": "§l+",
       "gamerule.assignedRanks.description": "Allows only 1 person to be in each rank (Upper Moon 6, Breathing Pillar, Etc)",
       "effect.craftnoyaiba.regeneration_timer": "Regeneration Timer",
       "item.craftnoyaiba.blood": "Blood",
-      "key.craftnoyaiba.parry_key": "Parry",
-      "item.craftnoyaiba.basic_demon_spawn_egg": "Demon Spawn Egg",
       "advancements.total_concentration.descr": "Get used to your breathing with many gourds.",
       "effect.craftnoyaiba.impact_frame": "Impact Frame",
-      "advancements.demon_slayer.title": "Demon Slayer",
-      "gui.craftnoyaiba.create_ability.button_empty1": "§l\u003e\u003e",
-      "gui.craftnoyaiba.create_ability.button_empty": "§l+",
-      "key.craftnoyaiba.use_skill": "Use Skill",
       "advancements.repetitive_action_mastered.descr": "Use Breathings 250 Times After Learning Repetitive Action",
       "item.craftnoyaiba.test": "Test",
       "biome.craftnoyaiba.infinity_castle_biome": "Infinity Castle Biome",
-      "subtitles.swordblock": "",
       "biome.craftnoyaiba.town": "Town",
       "effect.craftnoyaiba.tcaf_active": "TcafActive",
-      "item.craftnoyaiba.hand_demon_spawn_egg": "Hand Demon Spawn Egg",
       "subtitles.stab": "",
       "effect.craftnoyaiba.string_performance_move": "String Performance Move",
       "item.craftnoyaiba.demon_slayer_uniform_leggings": "Demon Slayer Uniform",
       "advancements.thunder_clap_and_flash_six_fold.descr": "Learn Thunderclap And Flash: Sixfold",
-      "item.craftnoyaiba.sound_nichirin_sword": "Sound Nichirin Sword",
-      "effect.craftnoyaiba.head_regeneration_timer": "Head Regeneration Timer",
       "subtitles.clash": "",
-      "block.craftnoyaiba.pillar_middle": "Pillar Block (Middle)",
-      "gui.craftnoyaiba.create_ability.button_sslx": "§lX",
       "block.craftnoyaiba.pillar_block_top": "Pillar Block (Top)",
       "advancements.demon_slayer.descr": "Become a Demon Slayer",
+      "entity.craftnoyaiba.kiriya_ubuyashiki": "Kiriya Ubuyashiki",
+      "gui.craftnoyaiba.create_ability.button_sslx2": "§lX",
+      "gui.craftnoyaiba.create_ability.button_sslx3": "§lX",
+      "item.craftnoyaiba.kiriya_ubuyashiki_spawn_egg": "Kiriya Ubuyashiki Spawn Egg",
+      "gui.craftnoyaiba.create_ability.button_sslx4": "§lX",
+      "effect.craftnoyaiba.new_godspeed": "New Godspeed",
+      "advancements.muzan_favorite.descr": "One Of Muzan\u0027s Favorites, You can say Muzan.",
+      "item.craftnoyaiba.basic_nichirin_sword": "Nichirin Sword",
+      "gui.craftnoyaiba.create_ability.button_sslx1": "§lX",
+      "advancements.the_infinity_castle.title": "The Infinity Castle",
+      "item.craftnoyaiba.khakkhara": "Khakkhara",
+      "item.craftnoyaiba.special_thunder_nichirin": "Special Thunder Nichirin",
+      "death.attack.sun_damage.player": "%1$s died whilst trying to escape the sun.",
+      "item.craftnoyaiba.infinity_castle_door_spawn_egg": "Infinity Castle Door Spawn Egg",
+      "item.craftnoyaiba.primary_gale_slash_spawn_egg": "Primary Gale Slash Spawn Egg",
+      "subtitles.heartbeat": "",
+      "item.craftnoyaiba.rifle": "Rifle",
+      "effect.craftnoyaiba.outwards_poof": "Outwards Poof",
+      "death.attack.breathing_damage": "%1$s was killed by a breathing technique",
+      "effect.craftnoyaiba.asleep": "Asleep",
+      "entity.craftnoyaiba.swordsmith": "Swordsmith",
+      "effect.craftnoyaiba.regen_stun": "Regeneration Stun",
+      "gamerule.cnyAutoParry": "cnyautoparry",
+      "entity.craftnoyaiba.kaigaku_human": "Kaigaku (Human)",
+      "block.craftnoyaiba.tatami_1": "Tatami (1)",
+      "block.craftnoyaiba.tatami_2": "Tatami (1)",
+      "advancements.total_concentration.title": "Total Concentration",
+      "item.craftnoyaiba.kanata_ubuyashiki_spawn_egg": "Kanata Ubuyashiki Spawn Egg",
+      "advancements.recovery_breathing.descr": "WIP",
+      "item.craftnoyaiba.crimson_ore": "Crimson Ore",
+      "effect.craftnoyaiba.constant_resounding_slashes": "Constant Resounding Slashes",
+      "subtitles.level": "",
+      "item.craftnoyaiba.flame_first_form_spawn_egg": "Flame First Form Spawn Egg",
+      "item.craftnoyaiba.flaming_thunder_god_spawn_egg": "Flaming Thunder God Spawn Egg",
+      "item_group.craftnoyaiba.yaiba_items": "Yaiba Items",
+      "biome.craftnoyaiba.final_selection_biome": "Final Selection Biome",
+      "advancements.thunder_breathing.descr": "Learn Thunder Breathing",
+      "item.craftnoyaiba.pistol": "Pistol",
+      "item_group.craftnoyaiba.yaiba_blocks": "Yaiba Blocks",
+      "advancements.craft_no_yaiba.title": "Craft No Yaiba",
+      "entity.craftnoyaiba.basic_demon": "Demon",
+      "subtitles.infinitycastlesummon": "",
+      "biome.craftnoyaiba.fujikasane": "Fujikasane",
+      "item.craftnoyaiba.crimson_iron_sand": "Crimson Iron Sand",
+      "advancements.repetitive_action.title": "Repetitive Action",
+      "advancements.opening_thread.descr": "Unlock The Opening Thread Skill",
+      "advancements.total_concentration_constant.title": "Total Concentration: Constant",
+      "item.craftnoyaiba.upper_moon_one_armor_leggings": "Upper Moon One Hakama",
+      "advancements.recovery_breathing.title": "Recovery Breathing",
+      "advancements.demon.title": "Demon",
+      "item.craftnoyaiba.small_gourd": "Small Gourd",
+      "gamerule.assignedRanks": "assignedranks",
+      "subtitles.uppermoonmeeting": "",
+      "gui.craftnoyaiba.create_ability.button_ssl3": "§l+",
+      "gui.craftnoyaiba.create_ability.button_ssl2": "§l+",
+      "key.craftnoyaiba.menu_open": "Menu",
+      "key.craftnoyaiba.breathe": "Breathe",
+      "item_group.craftnoyaiba.yaiba_weapons": "Yaiba Weapons",
+      "effect.craftnoyaiba.decaying": "Decaying",
+      "advancements.craft_no_yaiba.descr": "Start Your Journey In Demon Slayer.",
+      "entity.craftnoyaiba.infinity_castle_door_upside_down": "Infinity Castle Door Upside Down",
+      "advancements.thunder_breathing.title": "Thunder Breathing",
+      "gui.craftnoyaiba.create_ability.button_ssl1": "§l+",
+      "key.craftnoyaiba.parry_key": "Parry",
+      "item.craftnoyaiba.basic_demon_spawn_egg": "Demon Spawn Egg",
+      "advancements.demon_slayer.title": "Demon Slayer",
+      "gui.craftnoyaiba.create_ability.button_empty1": "§l\u003e\u003e",
+      "gui.craftnoyaiba.create_ability.button_empty": "§l+",
+      "key.craftnoyaiba.use_skill": "Use Skill",
+      "subtitles.swordblock": "",
+      "item.craftnoyaiba.sound_nichirin_sword": "Sound Nichirin Sword",
+      "effect.craftnoyaiba.head_regeneration_timer": "Head Regeneration Timer",
+      "block.craftnoyaiba.pillar_middle": "Pillar Block (Middle)",
+      "gui.craftnoyaiba.create_ability.button_sslx": "§lX",
       "item.craftnoyaiba.infinity_castle_door_upside_down_spawn_egg": "Infinity Castle Door Upside Down Spawn Egg",
       "effect.craftnoyaiba.pre_six_fold": "Pre Six Fold",
-      "advancements.thunder_clap_and_flash.descr": "Learn Thunderclap And Flash",
-      "entity.craftnoyaiba.kiriya_ubuyashiki": "Kiriya Ubuyashiki"
+      "advancements.thunder_clap_and_flash.descr": "Learn Thunderclap And Flash"
     }
   },
   "foldersRoot": {
@@ -9533,7 +9805,21 @@
       },
       {
         "name": "Armors",
-        "children": []
+        "children": [
+          {
+            "name": "Demon",
+            "children": []
+          },
+          {
+            "name": "Slayer",
+            "children": [
+              {
+                "name": "Variants",
+                "children": []
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "Mobs",

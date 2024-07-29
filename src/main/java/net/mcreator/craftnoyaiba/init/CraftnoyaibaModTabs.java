@@ -60,6 +60,43 @@ public class CraftnoyaibaModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.craftnoyaiba.yaiba_slayer_armor")).icon(() -> new ItemStack(CraftnoyaibaModItems.DEMON_SLAYER_UNIFORM_CHESTPLATE.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(CraftnoyaibaModItems.DEMON_SLAYER_UNIFORM_CHESTPLATE.get());
 				tabData.accept(CraftnoyaibaModItems.DEMON_SLAYER_UNIFORM_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.DEMON_SLAYER_UNIFORM_LONG_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.DEMON_SLAYER_UNIFORM_LONG_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.RED_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.RED_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.BLUE_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.BLUE_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.GREEN_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.GREEN_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.BROWN_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.BROWN_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.YELLOW_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.YELLOW_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.PURPLE_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.PURPLE_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.PINK_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.PINK_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.RED_LONG_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.RED_LONG_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.BLUE_LONG_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.BLUE_LONG_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.BROWN_LONG_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.BROWN_LONG_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.GREEN_LONG_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.GREEN_LONG_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.YELLOW_LONG_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.YELLOW_LONG_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.PURPLE_LONG_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.PURPLE_LONG_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.PINK_LONG_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.PINK_LONG_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.SOUND_HASHIRA_HELMET.get());
+				tabData.accept(CraftnoyaibaModItems.SOUND_HASHIRA_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.SOUND_HASHIRA_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.STONE_HASHIRA_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.STONE_HASHIRA_LEGGINGS.get());
+				tabData.accept(CraftnoyaibaModItems.KAIGAKU_ARMOR_CHESTPLATE.get());
+				tabData.accept(CraftnoyaibaModItems.KAIGAKU_ARMOR_LEGGINGS.get());
 			})
 
 					.build());
