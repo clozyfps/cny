@@ -6,12 +6,12 @@
     "renderType": 1,
     "blockingRenderType": 0,
     "texture": "a2i2e_layer_2",
-    "customModelName": "uzui_sword:default",
+    "customModelName": "sword:sound",
     "blockingModelName": "Normal blocking",
-    "name": "§aFlashy Nichirin Sword",
+    "name": "§aNichirin Sword",
     "specialInformation": {
       "fixedValue": [
-        "§e◆ §fA Nichirin Blade accomodating §l§6Sound Breathing§f, notably flashy.",
+        "§e◆ §fA Nichirin Blade accomodating §l§6Sound Breathing",
         "§e◆ §b+1 Sound Breathing Affinity",
         "§7♢ Unrefined"
       ]

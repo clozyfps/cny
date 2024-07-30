@@ -2,14 +2,14 @@
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 
-public class Modelsheathe<T extends Entity> extends EntityModel<T> {
+public class Modelemptysheathe<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-			new ResourceLocation("modid", "sheathe"), "main");
+			new ResourceLocation("modid", "emptysheathe"), "main");
 	private final ModelPart Body;
 
-	public Modelsheathe(ModelPart root) {
+	public Modelemptysheathe(ModelPart root) {
 		this.Body = root.getChild("Body");
 	}
 
@@ -21,16 +21,6 @@ public class Modelsheathe<T extends Entity> extends EntityModel<T> {
 				PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		PartDefinition cube_r1 = Body.addOrReplaceChild("cube_r1",
-				CubeListBuilder.create().texOffs(0, 5).addBox(-2.0F, -2.0F, -0.5F, 4.0F, 4.0F, 1.0F,
-						new CubeDeformation(-0.3F)),
-				PartPose.offsetAndRotation(5.0F, 10.4024F, -2.8551F, 0.0F, -0.3054F, -1.5708F));
-
-		PartDefinition cube_r2 = Body.addOrReplaceChild("cube_r2",
-				CubeListBuilder.create().texOffs(0, 18).addBox(-1.0F, -1.0F, -5.0F, 2.0F, 2.0F, 10.0F,
-						new CubeDeformation(-0.3F)),
-				PartPose.offsetAndRotation(5.0F, 8.976F, -7.4345F, 0.0F, 0.3054F, 1.5708F));
-
-		PartDefinition cube_r3 = Body.addOrReplaceChild("cube_r3",
 				CubeListBuilder.create().texOffs(0, 45).addBox(-1.0F, -1.0F, -1.1F, 2.0F, 2.0F, 17.0F,
 						new CubeDeformation(-0.3F)),
 				PartPose.offsetAndRotation(5.0F, 10.7501F, -2.0575F, -0.3054F, 0.0F, 0.0F));

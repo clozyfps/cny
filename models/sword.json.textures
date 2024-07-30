@@ -1,0 +1,34 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "4": ""
+      },
+      "name": "default"
+    },
+    "moon": {
+      "map": {
+        "4": "moon_sword"
+      },
+      "name": "moon"
+    },
+    "sound": {
+      "map": {
+        "4": "sound_nichirin"
+      },
+      "name": "sound"
+    },
+    "thunder": {
+      "map": {
+        "4": "thunder_sword"
+      },
+      "name": "thunder"
+    },
+    "flame": {
+      "map": {
+        "4": "flame_sword"
+      },
+      "name": "flame"
+    }
+  }
+}

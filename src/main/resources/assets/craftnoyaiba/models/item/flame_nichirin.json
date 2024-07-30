@@ -1,0 +1,7 @@
+{
+  "parent": "craftnoyaiba:custom/sword",
+  "textures": {
+    "4": "craftnoyaiba:block/flame_sword",
+    "particle": "craftnoyaiba:item/a2i2e_layer_2"
+  }
+}

@@ -78,14 +78,17 @@ public class CreateAbilityScreen extends AbstractContainerScreen<CreateAbilityMe
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
-		guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/box.png"), this.leftPos + 184, this.topPos + 10, 0, 0, 17, 17, 17, 17);
-
+		if (IfHumanCheckProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/box.png"), this.leftPos + 184, this.topPos + 10, 0, 0, 17, 17, 17, 17);
+		}
 		if (IfHumanCheckProcedure.execute(entity)) {
 			guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/skillmenu.png"), this.leftPos + -213, this.topPos + -37, 0, 0, 427, 240, 427, 240);
 		}
 		if (IfDemonCheckProcedure.execute(entity)) {
 			guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/demon_skillmenu.png"), this.leftPos + -214, this.topPos + -36, 0, 0, 427, 240, 427, 240);
+		}
+		if (IfDemonCheckProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/box2.png"), this.leftPos + 183, this.topPos + 10, 0, 0, 17, 17, 17, 17);
 		}
 		RenderSystem.disableBlend();
 	}

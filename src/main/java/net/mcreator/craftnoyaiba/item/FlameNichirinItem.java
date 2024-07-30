@@ -8,15 +8,12 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
-
-import net.mcreator.craftnoyaiba.procedures.BasicNichirinSwordEntitySwingsItemProcedure;
 
 import java.util.List;
 
-public class SpecialThunderNichirinItem extends SwordItem {
-	public SpecialThunderNichirinItem() {
+public class FlameNichirinItem extends SwordItem {
+	public FlameNichirinItem() {
 		super(new Tier() {
 			public int getUses() {
 				return 900;
@@ -27,7 +24,7 @@ public class SpecialThunderNichirinItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 5f;
+				return 6f;
 			}
 
 			public int getLevel() {
@@ -47,15 +44,8 @@ public class SpecialThunderNichirinItem extends SwordItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("\u00A7e\u25C6 \u00A7fA Nichirin Blade accomodating \u00A7l\u00A7eThunder Breathing"));
-		list.add(Component.literal("\u00A7e\u25C6 \u00A7b+2 Thunder Breathing Affinity"));
+		list.add(Component.literal("\u00A7e\u25C6 \u00A7fA Nichirin Blade accomodating \u00A7l\u00A74Flame Breathing"));
+		list.add(Component.literal("\u00A7e\u25C6 \u00A7b+1 Flame Breathing Affinity"));
 		list.add(Component.literal("\u00A77\u2662 Unrefined"));
-	}
-
-	@Override
-	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-		super.inventoryTick(itemstack, world, entity, slot, selected);
-		if (selected)
-			BasicNichirinSwordEntitySwingsItemProcedure.execute(entity);
 	}
 }

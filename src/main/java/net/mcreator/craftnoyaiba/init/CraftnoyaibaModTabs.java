@@ -113,6 +113,10 @@ public class CraftnoyaibaModTabs {
 				tabData.accept(CraftnoyaibaModItems.THUNDER_NICHIRIN_SWORD.get());
 				tabData.accept(CraftnoyaibaModItems.SPECIAL_THUNDER_NICHIRIN.get());
 				tabData.accept(CraftnoyaibaModItems.SOUND_NICHIRIN_SWORD.get());
+				tabData.accept(CraftnoyaibaModItems.SOUND_NICHIRIN_REGULAR.get());
+				tabData.accept(CraftnoyaibaModItems.MOON_NICHIRIN.get());
+				tabData.accept(CraftnoyaibaModItems.FLAME_NICHIRIN.get());
+				tabData.accept(CraftnoyaibaModItems.THUNDER_NICHIRIN.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> YAIBA_TRAINERS = REGISTRY.register("yaiba_trainers",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.craftnoyaiba.yaiba_trainers")).icon(() -> new ItemStack(CraftnoyaibaModItems.JIGORO_KUWAJIMA_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {

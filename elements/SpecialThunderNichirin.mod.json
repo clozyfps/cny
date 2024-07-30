@@ -8,9 +8,13 @@
     "texture": "a2i2e_layer_2",
     "customModelName": "zenitsu_sword:default",
     "blockingModelName": "Normal blocking",
-    "name": "Special Thunder Nichirin",
+    "name": "§aSpecial Nichirin Sword",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§e◆ §fA Nichirin Blade accomodating §l§eThunder Breathing",
+        "§e◆ §b+2 Thunder Breathing Affinity",
+        "§7♢ Unrefined"
+      ]
     },
     "creativeTab": {
       "value": "CUSTOM:YaibaNichirins"
