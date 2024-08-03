@@ -13,8 +13,8 @@ import software.bernie.geckolib.animatable.GeoEntity;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -22,21 +22,25 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnGroupData;
+import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.DifficultyInstance;
+import net.minecraft.world.Difficulty;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -45,30 +49,26 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.craftnoyaiba.procedures.FlameFirstFormOnInitialEntitySpawnProcedure;
-import net.mcreator.craftnoyaiba.procedures.FlameFirstFormOnEntityTickUpdateProcedure;
 import net.mcreator.craftnoyaiba.init.CraftnoyaibaModEntities;
 
-import javax.annotation.Nullable;
-
-public class FlameFirstFormEntity extends Monster implements GeoEntity {
-	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(FlameFirstFormEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(FlameFirstFormEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(FlameFirstFormEntity.class, EntityDataSerializers.STRING);
+public class FlameBreathingFormEntity extends Monster implements GeoEntity {
+	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(FlameBreathingFormEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(FlameBreathingFormEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(FlameBreathingFormEntity.class, EntityDataSerializers.STRING);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
 
-	public FlameFirstFormEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(CraftnoyaibaModEntities.FLAME_FIRST_FORM.get(), world);
+	public FlameBreathingFormEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(CraftnoyaibaModEntities.FLAME_BREATHING_FORM.get(), world);
 	}
 
-	public FlameFirstFormEntity(EntityType<FlameFirstFormEntity> type, Level world) {
+	public FlameBreathingFormEntity(EntityType<FlameBreathingFormEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
-		setNoAi(true);
+		setNoAi(false);
 		setMaxUpStep(0.6f);
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
@@ -78,7 +78,7 @@ public class FlameFirstFormEntity extends Monster implements GeoEntity {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "firstform");
+		this.entityData.define(TEXTURE, "firstform_animation");
 	}
 
 	public void setTexture(String texture) {
@@ -97,6 +97,21 @@ public class FlameFirstFormEntity extends Monster implements GeoEntity {
 	@Override
 	protected PathNavigation createNavigation(Level world) {
 		return new FlyingPathNavigation(this, world);
+	}
+
+	@Override
+	protected void registerGoals() {
+		super.registerGoals();
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+			@Override
+			protected double getAttackReachSqr(LivingEntity entity) {
+				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
+			}
+		});
+		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(5, new FloatGoal(this));
 	}
 
 	@Override
@@ -143,13 +158,6 @@ public class FlameFirstFormEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
-	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
-		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		FlameFirstFormOnInitialEntitySpawnProcedure.execute(world, this);
-		return retval;
-	}
-
-	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putString("Texture", this.getTexture());
@@ -165,26 +173,12 @@ public class FlameFirstFormEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		FlameFirstFormOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 
 	@Override
 	public EntityDimensions getDimensions(Pose p_33597_) {
 		return super.getDimensions(p_33597_).scale((float) 1);
-	}
-
-	@Override
-	public boolean isPushable() {
-		return false;
-	}
-
-	@Override
-	protected void doPush(Entity entityIn) {
-	}
-
-	@Override
-	protected void pushEntities() {
 	}
 
 	@Override
@@ -202,6 +196,8 @@ public class FlameFirstFormEntity extends Monster implements GeoEntity {
 	}
 
 	public static void init() {
+		SpawnPlacements.register(CraftnoyaibaModEntities.FLAME_BREATHING_FORM.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -217,7 +213,7 @@ public class FlameFirstFormEntity extends Monster implements GeoEntity {
 
 	private PlayState movementPredicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
-			return event.setAndContinue(RawAnimation.begin().thenLoop("firstform"));
+			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.model.slash"));
 		}
 		return PlayState.STOP;
 	}
@@ -239,7 +235,7 @@ public class FlameFirstFormEntity extends Monster implements GeoEntity {
 	protected void tickDeath() {
 		++this.deathTime;
 		if (this.deathTime == 20) {
-			this.remove(FlameFirstFormEntity.RemovalReason.KILLED);
+			this.remove(FlameBreathingFormEntity.RemovalReason.KILLED);
 			this.dropExperience();
 		}
 	}

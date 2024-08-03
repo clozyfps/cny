@@ -10,6 +10,7 @@ import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animatable.GeoEntity;
 
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
@@ -37,6 +38,8 @@ import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -45,27 +48,27 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.craftnoyaiba.procedures.FlameFirstFormOnInitialEntitySpawnProcedure;
-import net.mcreator.craftnoyaiba.procedures.FlameFirstFormOnEntityTickUpdateProcedure;
+import net.mcreator.craftnoyaiba.procedures.PrimaryGaleSlashOnInitialEntitySpawnProcedure;
+import net.mcreator.craftnoyaiba.procedures.PrimaryGaleSlashOnEntityTickUpdateProcedure;
 import net.mcreator.craftnoyaiba.init.CraftnoyaibaModEntities;
 
 import javax.annotation.Nullable;
 
-public class FlameFirstFormEntity extends Monster implements GeoEntity {
-	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(FlameFirstFormEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(FlameFirstFormEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(FlameFirstFormEntity.class, EntityDataSerializers.STRING);
+public class ThirdFormSlashEntity extends Monster implements GeoEntity {
+	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(ThirdFormSlashEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(ThirdFormSlashEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(ThirdFormSlashEntity.class, EntityDataSerializers.STRING);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
 
-	public FlameFirstFormEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(CraftnoyaibaModEntities.FLAME_FIRST_FORM.get(), world);
+	public ThirdFormSlashEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(CraftnoyaibaModEntities.THIRD_FORM_SLASH.get(), world);
 	}
 
-	public FlameFirstFormEntity(EntityType<FlameFirstFormEntity> type, Level world) {
+	public ThirdFormSlashEntity(EntityType<ThirdFormSlashEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(true);
@@ -78,7 +81,7 @@ public class FlameFirstFormEntity extends Monster implements GeoEntity {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "firstform");
+		this.entityData.define(TEXTURE, "flamingflash");
 	}
 
 	public void setTexture(String texture) {
@@ -102,6 +105,16 @@ public class FlameFirstFormEntity extends Monster implements GeoEntity {
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	@Override
+	public SoundEvent getHurtSound(DamageSource ds) {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
+	}
+
+	@Override
+	public SoundEvent getDeathSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
 	}
 
 	@Override
@@ -145,7 +158,7 @@ public class FlameFirstFormEntity extends Monster implements GeoEntity {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		FlameFirstFormOnInitialEntitySpawnProcedure.execute(world, this);
+		PrimaryGaleSlashOnInitialEntitySpawnProcedure.execute(world, this);
 		return retval;
 	}
 
@@ -165,7 +178,7 @@ public class FlameFirstFormEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		FlameFirstFormOnEntityTickUpdateProcedure.execute(this);
+		PrimaryGaleSlashOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 		this.refreshDimensions();
 	}
 
@@ -207,7 +220,7 @@ public class FlameFirstFormEntity extends Monster implements GeoEntity {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 100);
+		builder = builder.add(Attributes.MAX_HEALTH, 1000);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
@@ -217,7 +230,7 @@ public class FlameFirstFormEntity extends Monster implements GeoEntity {
 
 	private PlayState movementPredicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
-			return event.setAndContinue(RawAnimation.begin().thenLoop("firstform"));
+			return event.setAndContinue(RawAnimation.begin().thenLoop("downwardslash"));
 		}
 		return PlayState.STOP;
 	}
@@ -239,7 +252,7 @@ public class FlameFirstFormEntity extends Monster implements GeoEntity {
 	protected void tickDeath() {
 		++this.deathTime;
 		if (this.deathTime == 20) {
-			this.remove(FlameFirstFormEntity.RemovalReason.KILLED);
+			this.remove(ThirdFormSlashEntity.RemovalReason.KILLED);
 			this.dropExperience();
 		}
 	}

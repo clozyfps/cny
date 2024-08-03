@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.craftnoyaiba.client.renderer.ZenitsuAgatsumaRenderer;
 import net.mcreator.craftnoyaiba.client.renderer.ThunderClapAndFlashMobRenderer;
+import net.mcreator.craftnoyaiba.client.renderer.ThirdFormSlashRenderer;
 import net.mcreator.craftnoyaiba.client.renderer.SwordsmithRenderer;
 import net.mcreator.craftnoyaiba.client.renderer.PrimaryGaleSlashRenderer;
 import net.mcreator.craftnoyaiba.client.renderer.KiriyaUbuyashikiRenderer;
@@ -24,6 +25,7 @@ import net.mcreator.craftnoyaiba.client.renderer.InfinityCastleDoorRenderer;
 import net.mcreator.craftnoyaiba.client.renderer.HandDemonRenderer;
 import net.mcreator.craftnoyaiba.client.renderer.FlamingThunderGodRenderer;
 import net.mcreator.craftnoyaiba.client.renderer.FlameFirstFormRenderer;
+import net.mcreator.craftnoyaiba.client.renderer.FlameBreathingFormRenderer;
 import net.mcreator.craftnoyaiba.client.renderer.BasicDemonRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -50,5 +52,7 @@ public class CraftnoyaibaModEntityRenderers {
 		event.registerEntityRenderer(CraftnoyaibaModEntities.SWORDSMITH.get(), SwordsmithRenderer::new);
 		event.registerEntityRenderer(CraftnoyaibaModEntities.PRIMARY_GALE_SLASH.get(), PrimaryGaleSlashRenderer::new);
 		event.registerEntityRenderer(CraftnoyaibaModEntities.HAND_DEMON.get(), HandDemonRenderer::new);
+		event.registerEntityRenderer(CraftnoyaibaModEntities.THIRD_FORM_SLASH.get(), ThirdFormSlashRenderer::new);
+		event.registerEntityRenderer(CraftnoyaibaModEntities.FLAME_BREATHING_FORM.get(), FlameBreathingFormRenderer::new);
 	}
 }

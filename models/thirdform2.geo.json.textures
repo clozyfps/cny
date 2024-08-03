@@ -1,0 +1,20 @@
+{
+  "mappings": {
+    "default": {
+      "map": {},
+      "name": "default"
+    },
+    "tex3": {
+      "map": {},
+      "name": "tex3"
+    },
+    "tex1": {
+      "map": {},
+      "name": "tex1"
+    },
+    "tex2": {
+      "map": {},
+      "name": "tex2"
+    }
+  }
+}

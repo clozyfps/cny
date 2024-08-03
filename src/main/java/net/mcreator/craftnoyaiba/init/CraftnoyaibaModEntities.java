@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftnoyaiba.entity.ZenitsuAgatsumaEntity;
 import net.mcreator.craftnoyaiba.entity.ThunderClapAndFlashMobEntity;
+import net.mcreator.craftnoyaiba.entity.ThirdFormSlashEntity;
 import net.mcreator.craftnoyaiba.entity.TCAFThunderGodEntity;
 import net.mcreator.craftnoyaiba.entity.TCAFProjectileEntity;
 import net.mcreator.craftnoyaiba.entity.SwordsmithEntity;
@@ -35,6 +36,7 @@ import net.mcreator.craftnoyaiba.entity.HandDemonEntity;
 import net.mcreator.craftnoyaiba.entity.GodspeedTCAFEntity;
 import net.mcreator.craftnoyaiba.entity.FlamingThunderGodEntity;
 import net.mcreator.craftnoyaiba.entity.FlameFirstFormEntity;
+import net.mcreator.craftnoyaiba.entity.FlameBreathingFormEntity;
 import net.mcreator.craftnoyaiba.entity.BasicDemonEntity;
 import net.mcreator.craftnoyaiba.CraftnoyaibaMod;
 
@@ -101,6 +103,10 @@ public class CraftnoyaibaModEntities {
 			EntityType.Builder.<HandDemonEntity>of(HandDemonEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HandDemonEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ThirdFormSlashEntity>> THIRD_FORM_SLASH = register("third_form_slash", EntityType.Builder.<ThirdFormSlashEntity>of(ThirdFormSlashEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ThirdFormSlashEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FlameBreathingFormEntity>> FLAME_BREATHING_FORM = register("flame_breathing_form", EntityType.Builder.<FlameBreathingFormEntity>of(FlameBreathingFormEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlameBreathingFormEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -123,6 +129,8 @@ public class CraftnoyaibaModEntities {
 			SwordsmithEntity.init();
 			PrimaryGaleSlashEntity.init();
 			HandDemonEntity.init();
+			ThirdFormSlashEntity.init();
+			FlameBreathingFormEntity.init();
 		});
 	}
 
@@ -142,5 +150,7 @@ public class CraftnoyaibaModEntities {
 		event.put(SWORDSMITH.get(), SwordsmithEntity.createAttributes().build());
 		event.put(PRIMARY_GALE_SLASH.get(), PrimaryGaleSlashEntity.createAttributes().build());
 		event.put(HAND_DEMON.get(), HandDemonEntity.createAttributes().build());
+		event.put(THIRD_FORM_SLASH.get(), ThirdFormSlashEntity.createAttributes().build());
+		event.put(FLAME_BREATHING_FORM.get(), FlameBreathingFormEntity.createAttributes().build());
 	}
 }

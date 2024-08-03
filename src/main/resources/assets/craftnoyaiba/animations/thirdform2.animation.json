@@ -1,0 +1,42 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.model.spin": {
+			"animation_length": 1.75,
+			"bones": {
+				"bone": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"0.75": {
+							"vector": [0, 0, 1640],
+							"easing": "linear"
+						}
+					},
+					"scale": {
+						"0.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"0.2917": {
+							"vector": [1, 1, 1],
+							"easing": "easeOutBack",
+							"easingArgs": [2]
+						},
+						"0.5": {
+							"vector": [1, 1, 1],
+							"easing": "easeInBack",
+							"easingArgs": [0.5]
+						},
+						"0.75": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						}
+					}
+				}
+			}
+		}
+	}
+}

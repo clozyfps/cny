@@ -9,20 +9,20 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
-import net.mcreator.craftnoyaiba.entity.FlameFirstFormEntity;
+import net.mcreator.craftnoyaiba.entity.FlameBreathingFormEntity;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class FlameFirstFormLayer extends GeoRenderLayer<FlameFirstFormEntity> {
-	private static final ResourceLocation LAYER = new ResourceLocation("craftnoyaiba", "textures/entities/firstform.png");
+public class FlameBreathingFormLayer extends GeoRenderLayer<FlameBreathingFormEntity> {
+	private static final ResourceLocation LAYER = new ResourceLocation("craftnoyaiba", "textures/entities/firstform_animation.png");
 
-	public FlameFirstFormLayer(GeoRenderer<FlameFirstFormEntity> entityRenderer) {
+	public FlameBreathingFormLayer(GeoRenderer<FlameBreathingFormEntity> entityRenderer) {
 		super(entityRenderer);
 	}
 
 	@Override
-	public void render(PoseStack poseStack, FlameFirstFormEntity animatable, BakedGeoModel bakedModel, RenderType renderType, MultiBufferSource bufferSource, VertexConsumer buffer, float partialTick, int packedLight, int packedOverlay) {
+	public void render(PoseStack poseStack, FlameBreathingFormEntity animatable, BakedGeoModel bakedModel, RenderType renderType, MultiBufferSource bufferSource, VertexConsumer buffer, float partialTick, int packedLight, int packedOverlay) {
 		RenderType glowRenderType = RenderType.eyes(LAYER);
 		getRenderer().reRender(getDefaultBakedModel(animatable), poseStack, bufferSource, animatable, glowRenderType, bufferSource.getBuffer(glowRenderType), partialTick, packedLight, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 	}

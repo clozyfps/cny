@@ -5,11 +5,13 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
 import net.mcreator.craftnoyaiba.entity.ZenitsuAgatsumaEntity;
+import net.mcreator.craftnoyaiba.entity.ThirdFormSlashEntity;
 import net.mcreator.craftnoyaiba.entity.PrimaryGaleSlashEntity;
 import net.mcreator.craftnoyaiba.entity.InfinityCastleDoorUpsideDownEntity;
 import net.mcreator.craftnoyaiba.entity.InfinityCastleDoorEntity;
 import net.mcreator.craftnoyaiba.entity.FlamingThunderGodEntity;
 import net.mcreator.craftnoyaiba.entity.FlameFirstFormEntity;
+import net.mcreator.craftnoyaiba.entity.FlameBreathingFormEntity;
 
 @Mod.EventBusSubscriber
 public class EntityAnimationFactory {
@@ -52,6 +54,20 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof PrimaryGaleSlashEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof ThirdFormSlashEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof FlameBreathingFormEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

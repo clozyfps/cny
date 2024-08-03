@@ -8796,6 +8796,40 @@
         ]
       },
       "path": "~/Weapons"
+    },
+    {
+      "name": "ThirdFormSlash",
+      "type": "animatedentity",
+      "sortid": 417,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "third_form_slash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/entity/ThirdFormSlashEntity.java",
+          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/ThirdFormSlashRenderer.java",
+          "src/main/java/net/mcreator/craftnoyaiba/entity/model/ThirdFormSlashModel.java"
+        ]
+      },
+      "path": "~/Mobs/Misc/Breathing/Wind"
+    },
+    {
+      "name": "FlameBreathingForm",
+      "type": "animatedentity",
+      "sortid": 418,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flame_breathing_form",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/FlameBreathingFormRenderer.java",
+          "src/main/java/net/mcreator/craftnoyaiba/entity/layer/FlameBreathingFormLayer.java",
+          "src/main/java/net/mcreator/craftnoyaiba/entity/model/FlameBreathingFormModel.java",
+          "src/main/resources/data/craftnoyaiba/forge/biome_modifier/flame_breathing_form_biome_modifier.json",
+          "src/main/java/net/mcreator/craftnoyaiba/entity/FlameBreathingFormEntity.java"
+        ]
+      },
+      "path": "~/Mobs/Misc/Breathing/Flame"
     }
   ],
   "variable_elements": [
@@ -9771,6 +9805,7 @@
       "item.craftnoyaiba.green_chestplate": "Demon Slayer Uniform",
       "subtitles.waterbreathing": "",
       "effect.craftnoyaiba.electrified": "Electrified",
+      "entity.craftnoyaiba.flame_breathing_form": "Flame Breathing Form",
       "key.craftnoyaiba.switch_skill": "Switch Skill",
       "gamerule.assignedRanks.description": "Allows only 1 person to be in each rank (Upper Moon 6, Breathing Pillar, Etc)",
       "effect.craftnoyaiba.regeneration_timer": "Regeneration Timer",
@@ -9824,6 +9859,7 @@
       "entity.craftnoyaiba.swordsmith": "Swordsmith",
       "item.craftnoyaiba.sound_hashira_leggings": "Sound Hashira Uniform",
       "effect.craftnoyaiba.regen_stun": "Regeneration Stun",
+      "entity.craftnoyaiba.third_form_slash": "Primary Gale Slash",
       "gamerule.cnyAutoParry": "cnyautoparry",
       "item.craftnoyaiba.blue_long_chestplate": "Demon Slayer Uniform (Long)",
       "entity.craftnoyaiba.kaigaku_human": "Kaigaku (Human)",
@@ -9842,6 +9878,7 @@
       "item_group.craftnoyaiba.yaiba_items": "Yaiba Items",
       "biome.craftnoyaiba.final_selection_biome": "Final Selection Biome",
       "advancements.thunder_breathing.descr": "Learn Thunder Breathing",
+      "item.craftnoyaiba.third_form_slash_spawn_egg": "Primary Gale Slash Spawn Egg",
       "item.craftnoyaiba.pistol": "Pistol",
       "item_group.craftnoyaiba.yaiba_blocks": "Yaiba Blocks",
       "advancements.craft_no_yaiba.title": "Craft No Yaiba",
@@ -9867,6 +9904,7 @@
       "gui.craftnoyaiba.create_ability.button_ssl3": "§l+",
       "gui.craftnoyaiba.create_ability.button_ssl2": "§l+",
       "key.craftnoyaiba.menu_open": "Menu",
+      "item.craftnoyaiba.flame_breathing_form_spawn_egg": "Flame Breathing Form Spawn Egg",
       "key.craftnoyaiba.breathe": "Breathe",
       "item_group.craftnoyaiba.yaiba_weapons": "Yaiba Weapons",
       "effect.craftnoyaiba.decaying": "Decaying",
