@@ -16,26 +16,12 @@
             "value": -1,
             "falpha": 0.0
           },
+          "displayCondition": {
+            "name": "FinalSelectionGoalFirst"
+          },
           "anchorPoint": "TOP_LEFT",
           "x": 9,
           "y": 11
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_final_selection_goal_2",
-          "text": {
-            "fixedValue": "",
-            "name": "FinalSelectionGoal2"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "anchorPoint": "TOP_LEFT",
-          "x": 9,
-          "y": 27
         }
       },
       {
@@ -72,6 +58,26 @@
           },
           "displayCondition": {
             "name": "ShowCompletedFinalSelection2"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 9,
+          "y": 27
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_final_selection_goal_2",
+          "text": {
+            "fixedValue": "",
+            "name": "FinalSelectionGoal2"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FinalSelectionGoalNew2"
           },
           "anchorPoint": "TOP_LEFT",
           "x": 9,

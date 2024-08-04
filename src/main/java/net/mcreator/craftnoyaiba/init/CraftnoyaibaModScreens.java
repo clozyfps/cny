@@ -11,6 +11,8 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.gui.screens.MenuScreens;
 
+import net.mcreator.craftnoyaiba.client.gui.UniformTypeSelectorScreen;
+import net.mcreator.craftnoyaiba.client.gui.UniformSelectorScreen;
 import net.mcreator.craftnoyaiba.client.gui.TakeBloodScreen;
 import net.mcreator.craftnoyaiba.client.gui.MenuScreen;
 import net.mcreator.craftnoyaiba.client.gui.CreateAbilityScreen;
@@ -25,6 +27,8 @@ public class CraftnoyaibaModScreens {
 			MenuScreens.register(CraftnoyaibaModMenus.MENU.get(), MenuScreen::new);
 			MenuScreens.register(CraftnoyaibaModMenus.ABILITY_SELECTION.get(), AbilitySelectionScreen::new);
 			MenuScreens.register(CraftnoyaibaModMenus.TAKE_BLOOD.get(), TakeBloodScreen::new);
+			MenuScreens.register(CraftnoyaibaModMenus.UNIFORM_TYPE_SELECTOR.get(), UniformTypeSelectorScreen::new);
+			MenuScreens.register(CraftnoyaibaModMenus.UNIFORM_SELECTOR.get(), UniformSelectorScreen::new);
 		});
 	}
 }

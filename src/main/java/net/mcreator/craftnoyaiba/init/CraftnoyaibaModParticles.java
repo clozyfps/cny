@@ -13,6 +13,7 @@ import net.mcreator.craftnoyaiba.client.particle.YellowElectricityParticle;
 import net.mcreator.craftnoyaiba.client.particle.StoneParticlePreParticle;
 import net.mcreator.craftnoyaiba.client.particle.FloatingRockParticle;
 import net.mcreator.craftnoyaiba.client.particle.ElectricityParticle;
+import net.mcreator.craftnoyaiba.client.particle.DeathParticle;
 import net.mcreator.craftnoyaiba.client.particle.ClashParticleParticle;
 import net.mcreator.craftnoyaiba.client.particle.BlueElectricityParticle;
 import net.mcreator.craftnoyaiba.client.particle.BloodSplashParticle;
@@ -30,5 +31,6 @@ public class CraftnoyaibaModParticles {
 		event.registerSpriteSet(CraftnoyaibaModParticleTypes.BLUE_ELECTRICITY.get(), BlueElectricityParticle::provider);
 		event.registerSpriteSet(CraftnoyaibaModParticleTypes.FLOATING_ROCK.get(), FloatingRockParticle::provider);
 		event.registerSpriteSet(CraftnoyaibaModParticleTypes.STONE_PARTICLE_PRE.get(), StoneParticlePreParticle::provider);
+		event.registerSpriteSet(CraftnoyaibaModParticleTypes.DEATH.get(), DeathParticle::provider);
 	}
 }

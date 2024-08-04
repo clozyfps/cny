@@ -47,6 +47,24 @@ public class BloodPlayerFinishesUsingItemProcedure {
 					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.cave")), SoundSource.NEUTRAL, 1, 1, false);
 				}
 			}
+		} else if (((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).Race).equals("Demon")) {
+			if (itemstack.getOrCreateTag().getDouble("bloodamount") > 0) {
+				{
+					double _setval = (entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).DemonPower + 3 + itemstack.getOrCreateTag().getDouble("bloodamount");
+					entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.DemonPower = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else if (itemstack.getOrCreateTag().getDouble("bloodamount") <= 0) {
+				{
+					double _setval = (entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).DemonPower + 3;
+					entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.DemonPower = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
 		}
 		itemstack.shrink(1);
 	}

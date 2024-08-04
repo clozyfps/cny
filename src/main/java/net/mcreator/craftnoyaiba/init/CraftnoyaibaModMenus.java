@@ -11,6 +11,8 @@ import net.minecraftforge.common.extensions.IForgeMenuType;
 
 import net.minecraft.world.inventory.MenuType;
 
+import net.mcreator.craftnoyaiba.world.inventory.UniformTypeSelectorMenu;
+import net.mcreator.craftnoyaiba.world.inventory.UniformSelectorMenu;
 import net.mcreator.craftnoyaiba.world.inventory.TakeBloodMenu;
 import net.mcreator.craftnoyaiba.world.inventory.MenuMenu;
 import net.mcreator.craftnoyaiba.world.inventory.CreateAbilityMenu;
@@ -23,4 +25,6 @@ public class CraftnoyaibaModMenus {
 	public static final RegistryObject<MenuType<MenuMenu>> MENU = REGISTRY.register("menu", () -> IForgeMenuType.create(MenuMenu::new));
 	public static final RegistryObject<MenuType<AbilitySelectionMenu>> ABILITY_SELECTION = REGISTRY.register("ability_selection", () -> IForgeMenuType.create(AbilitySelectionMenu::new));
 	public static final RegistryObject<MenuType<TakeBloodMenu>> TAKE_BLOOD = REGISTRY.register("take_blood", () -> IForgeMenuType.create(TakeBloodMenu::new));
+	public static final RegistryObject<MenuType<UniformTypeSelectorMenu>> UNIFORM_TYPE_SELECTOR = REGISTRY.register("uniform_type_selector", () -> IForgeMenuType.create(UniformTypeSelectorMenu::new));
+	public static final RegistryObject<MenuType<UniformSelectorMenu>> UNIFORM_SELECTOR = REGISTRY.register("uniform_selector", () -> IForgeMenuType.create(UniformSelectorMenu::new));
 }

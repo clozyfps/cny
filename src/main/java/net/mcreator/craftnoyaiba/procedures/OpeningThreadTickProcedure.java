@@ -6,6 +6,7 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LivingEntity;
@@ -14,8 +15,10 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
 import net.mcreator.craftnoyaiba.network.CraftnoyaibaModVariables;
 
@@ -49,87 +52,37 @@ public class OpeningThreadTickProcedure {
 		double Xo = 0;
 		double Ya = 0;
 		double Xa = 0;
+		double mag = 0;
+		double deltaz = 0;
+		double distance = 0;
+		double deltax = 0;
+		double deltay = 0;
 		if (entity instanceof ServerPlayer _plr0 && _plr0.level() instanceof ServerLevel && _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().getAdvancement(new ResourceLocation("craftnoyaiba:opening_thread"))).isDone()) {
+			mag = Math.sqrt(deltax * deltax + deltay * deltay + deltaz * deltaz);
 			{
 				final Vec3 _center = new Vec3(x, y, z);
-				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
-					if (!(entity == entityiterator) && (entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("craftnoyaiba:demon")))
-							|| ((entityiterator.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).Race).equals("Demon"))) {
-						if ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= (entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).Kendo
-								|| (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 8
-										&& (entityiterator.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).Blood <= (entityiterator
-												.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).BloodMax / 5) {
-							Xo = entity.getX() - entityiterator.getX();
-							Yo = entity.getY() - entityiterator.getY();
-							Zo = entity.getZ() - entityiterator.getZ();
-							if (Math.floor(entity.getX()) <= Math.floor(entityiterator.getX())) {
-								if (Math.floor(entity.getX()) == Math.floor(entityiterator.getX())) {
-									if (Math.floor(entity.getY()) == Math.floor(entityiterator.getY())) {
-										if (Math.floor(entity.getZ()) <= Math.floor(entityiterator.getZ())) {
-											Za = Math.floor(entity.getZ()) + 0.2;
-											while (Za <= Math.floor(entityiterator.getZ())) {
-												T = (Za - entity.getZ()) / Zo;
-												Ya = entity.getBbHeight() / 2 + entity.getY() + Yo * T;
-												Xa = entity.getX() + Xo * T;
-												if (world instanceof ServerLevel _level)
-													_level.sendParticles(ParticleTypes.ELECTRIC_SPARK, Xa, Ya, Za, 1, 0, 0, 0, 0);
-												Za = 0.2 + Za;
-											}
-										} else {
-											Za = Math.floor(entityiterator.getZ()) + 0.2;
-											while (Za <= Math.floor(entity.getZ())) {
-												T = (Za - entity.getZ()) / Zo;
-												Ya = entity.getBbHeight() / 2 + entity.getY() + Yo * T;
-												Xa = entity.getX() + Xo * T;
-												if (world instanceof ServerLevel _level)
-													_level.sendParticles(ParticleTypes.ELECTRIC_SPARK, Xa, Ya, Za, 1, 0, 0, 0, 0);
-												Za = 0.2 + Za;
-											}
-										}
-									} else {
-										if (Math.floor(entity.getY()) <= Math.floor(entityiterator.getY())) {
-											Ya = Math.floor(entity.getY()) + 0.2;
-											while (Ya <= Math.floor(entityiterator.getY())) {
-												T = (Ya - entity.getY()) / Yo;
-												Xa = entity.getX() + Xo * T;
-												Za = entity.getZ() + Zo * T;
-												if (world instanceof ServerLevel _level)
-													_level.sendParticles(ParticleTypes.ELECTRIC_SPARK, Xa, Ya, Za, 1, 0, 0, 0, 0);
-												Ya = 0.2 + Ya;
-											}
-										} else {
-											Ya = Math.floor(entityiterator.getY()) + 0.2;
-											while (Ya <= Math.floor(entity.getY())) {
-												T = (Ya - entity.getY()) / Yo;
-												Xa = entity.getX() + Xo * T;
-												Za = entity.getZ() + Zo * T;
-												if (world instanceof ServerLevel _level)
-													_level.sendParticles(ParticleTypes.ELECTRIC_SPARK, Xa, Ya, Za, 1, 0, 0, 0, 0);
-												Ya = 0.2 + Ya;
-											}
-										}
-									}
-								} else {
-									Xa = Math.floor(entity.getX()) + 0.2;
-									while (Xa <= Math.floor(entityiterator.getX())) {
-										T = (Xa - entity.getX()) / Xo;
-										Ya = entity.getBbHeight() / 2 + entity.getY() + Yo * T;
-										Za = entity.getZ() + Zo * T;
+					if (!(entity == entityiterator)) {
+						if ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 8 && (entityiterator.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(
+								new CraftnoyaibaModVariables.PlayerVariables())).Blood <= (entityiterator.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).BloodMax
+										/ 5) {
+							if ((entityiterator instanceof LivingEntity _livEnt
+									? _livEnt.getHealth()
+									: -1) <= (entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).Kendo) {
+								if (entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("craftnoyaiba:demon")))
+										|| ((entityiterator.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).Race).equals("Demon")) {
+									deltax = entityiterator.getX() - x;
+									deltay = entityiterator.getY() - y;
+									deltaz = entityiterator.getZ() - z;
+									for (int index0 = 0; index0 < (int) mag; index0++) {
 										if (world instanceof ServerLevel _level)
-											_level.sendParticles(ParticleTypes.ELECTRIC_SPARK, Xa, Ya, Za, 1, 0, 0, 0, 0);
-										Xa = 0.2 + Xa;
+											_level.getServer().getCommands().performPrefixedCommand(
+													new CommandSourceStack(CommandSource.NULL, new Vec3((x + entityiterator.getX() * distance), (y + 1.6 + entityiterator.getY() * distance), (z + entityiterator.getZ() * distance)), Vec2.ZERO, _level,
+															4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+													"particle minecraft:dust 0 0 0 0.5 ^0 ^0 ^0 0.01 0.01 0.01 0 1");
+										distance = distance + 1;
 									}
-								}
-							} else {
-								Xa = entityiterator.getX() + 0.2;
-								while (Xa < Math.floor(entity.getX())) {
-									T = (Xa - entity.getX()) / Xo;
-									Ya = entity.getBbHeight() / 2 + entity.getY() + Yo * T;
-									Za = entity.getZ() + Zo * T;
-									if (world instanceof ServerLevel _level)
-										_level.sendParticles(ParticleTypes.ELECTRIC_SPARK, Xa, Ya, Za, 1, 0, 0, 0, 0);
-									Xa = 0.2 + Xa;
 								}
 							}
 						}

@@ -1,27 +1,18 @@
 package net.mcreator.craftnoyaiba.procedures;
 
-import net.minecraftforge.network.NetworkDirection;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.Connection;
 import net.minecraft.client.player.AbstractClientPlayer;
 
 import net.mcreator.craftnoyaiba.network.CraftnoyaibaModVariables;
-import net.mcreator.craftnoyaiba.CraftnoyaibaMod;
 
 import javax.annotation.Nullable;
-
-import java.util.List;
-import java.util.Iterator;
 
 import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
 import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
@@ -59,19 +50,6 @@ public class DemonLimbTickProcedure {
 					}
 				}
 			}
-			if (!world.isClientSide()) {
-				if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-					List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-					synchronized (connections) {
-						Iterator<Connection> iterator = connections.iterator();
-						while (iterator.hasNext()) {
-							Connection connection = iterator.next();
-							if (!connection.isConnecting() && connection.isConnected())
-								CraftnoyaibaMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.CraftnoyaibaModAnimationMessage(Component.literal("rightleggone"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-						}
-					}
-				}
-			}
 		} else if ((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).LeftLegHealth <= 0
 				&& (entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).LostLeftLeg
 				&& !((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).LostRightLeg
@@ -83,19 +61,6 @@ public class DemonLimbTickProcedure {
 					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("craftnoyaiba", "player_animation"));
 					if (animation != null) {
 						animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("craftnoyaiba", "leftleggone"))));
-					}
-				}
-			}
-			if (!world.isClientSide()) {
-				if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-					List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-					synchronized (connections) {
-						Iterator<Connection> iterator = connections.iterator();
-						while (iterator.hasNext()) {
-							Connection connection = iterator.next();
-							if (!connection.isConnecting() && connection.isConnected())
-								CraftnoyaibaMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.CraftnoyaibaModAnimationMessage(Component.literal("leftleggone"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-						}
 					}
 				}
 			}
@@ -113,19 +78,6 @@ public class DemonLimbTickProcedure {
 					}
 				}
 			}
-			if (!world.isClientSide()) {
-				if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-					List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-					synchronized (connections) {
-						Iterator<Connection> iterator = connections.iterator();
-						while (iterator.hasNext()) {
-							Connection connection = iterator.next();
-							if (!connection.isConnecting() && connection.isConnected())
-								CraftnoyaibaMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.CraftnoyaibaModAnimationMessage(Component.literal("rightarmgone"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-						}
-					}
-				}
-			}
 		} else if ((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).LeftArmHealth <= 0
 				&& (entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).LostLeftArm
 				&& !((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).LostRightLeg
@@ -137,19 +89,6 @@ public class DemonLimbTickProcedure {
 					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("craftnoyaiba", "player_animation"));
 					if (animation != null) {
 						animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("craftnoyaiba", "leftarmgone"))));
-					}
-				}
-			}
-			if (!world.isClientSide()) {
-				if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-					List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-					synchronized (connections) {
-						Iterator<Connection> iterator = connections.iterator();
-						while (iterator.hasNext()) {
-							Connection connection = iterator.next();
-							if (!connection.isConnecting() && connection.isConnected())
-								CraftnoyaibaMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.CraftnoyaibaModAnimationMessage(Component.literal("leftarmgone"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-						}
 					}
 				}
 			}
@@ -167,19 +106,6 @@ public class DemonLimbTickProcedure {
 					}
 				}
 			}
-			if (!world.isClientSide()) {
-				if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-					List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-					synchronized (connections) {
-						Iterator<Connection> iterator = connections.iterator();
-						while (iterator.hasNext()) {
-							Connection connection = iterator.next();
-							if (!connection.isConnecting() && connection.isConnected())
-								CraftnoyaibaMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.CraftnoyaibaModAnimationMessage(Component.literal("headgone"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-						}
-					}
-				}
-			}
 		}
 		if ((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).LostRightLeg
 				&& (entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).LostLeftLeg
@@ -191,19 +117,6 @@ public class DemonLimbTickProcedure {
 					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("craftnoyaiba", "player_animation"));
 					if (animation != null) {
 						animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("craftnoyaiba", "bothlegsgone"))));
-					}
-				}
-			}
-			if (!world.isClientSide()) {
-				if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-					List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-					synchronized (connections) {
-						Iterator<Connection> iterator = connections.iterator();
-						while (iterator.hasNext()) {
-							Connection connection = iterator.next();
-							if (!connection.isConnecting() && connection.isConnected())
-								CraftnoyaibaMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.CraftnoyaibaModAnimationMessage(Component.literal("bothlegsgone"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-						}
 					}
 				}
 			}
@@ -221,19 +134,6 @@ public class DemonLimbTickProcedure {
 					}
 				}
 			}
-			if (!world.isClientSide()) {
-				if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-					List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-					synchronized (connections) {
-						Iterator<Connection> iterator = connections.iterator();
-						while (iterator.hasNext()) {
-							Connection connection = iterator.next();
-							if (!connection.isConnecting() && connection.isConnected())
-								CraftnoyaibaMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.CraftnoyaibaModAnimationMessage(Component.literal("botharmsgone"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-						}
-					}
-				}
-			}
 		}
 		if ((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).LostRightArm
 				&& (entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).LostRightLeg
@@ -245,19 +145,6 @@ public class DemonLimbTickProcedure {
 					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("craftnoyaiba", "player_animation"));
 					if (animation != null) {
 						animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("craftnoyaiba", "rightsidegone"))));
-					}
-				}
-			}
-			if (!world.isClientSide()) {
-				if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-					List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-					synchronized (connections) {
-						Iterator<Connection> iterator = connections.iterator();
-						while (iterator.hasNext()) {
-							Connection connection = iterator.next();
-							if (!connection.isConnecting() && connection.isConnected())
-								CraftnoyaibaMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.CraftnoyaibaModAnimationMessage(Component.literal("rightsidegone"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-						}
 					}
 				}
 			}
@@ -275,19 +162,6 @@ public class DemonLimbTickProcedure {
 					}
 				}
 			}
-			if (!world.isClientSide()) {
-				if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-					List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-					synchronized (connections) {
-						Iterator<Connection> iterator = connections.iterator();
-						while (iterator.hasNext()) {
-							Connection connection = iterator.next();
-							if (!connection.isConnecting() && connection.isConnected())
-								CraftnoyaibaMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.CraftnoyaibaModAnimationMessage(Component.literal("leftsidegone"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-						}
-					}
-				}
-			}
 		}
 		if ((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).LostRightArm
 				&& (entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).LostLeftLeg
@@ -302,19 +176,6 @@ public class DemonLimbTickProcedure {
 					}
 				}
 			}
-			if (!world.isClientSide()) {
-				if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-					List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-					synchronized (connections) {
-						Iterator<Connection> iterator = connections.iterator();
-						while (iterator.hasNext()) {
-							Connection connection = iterator.next();
-							if (!connection.isConnecting() && connection.isConnected())
-								CraftnoyaibaMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.CraftnoyaibaModAnimationMessage(Component.literal("rightarmleftleggone"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-						}
-					}
-				}
-			}
 		}
 		if ((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).LostLeftArm
 				&& (entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).LostRightLeg
@@ -326,19 +187,6 @@ public class DemonLimbTickProcedure {
 					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("craftnoyaiba", "player_animation"));
 					if (animation != null) {
 						animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("craftnoyaiba", "leftarmrightleggone"))));
-					}
-				}
-			}
-			if (!world.isClientSide()) {
-				if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-					List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-					synchronized (connections) {
-						Iterator<Connection> iterator = connections.iterator();
-						while (iterator.hasNext()) {
-							Connection connection = iterator.next();
-							if (!connection.isConnecting() && connection.isConnected())
-								CraftnoyaibaMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.CraftnoyaibaModAnimationMessage(Component.literal("leftarmrightleggone"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-						}
 					}
 				}
 			}

@@ -16,7 +16,7 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 1.3
+      "fixedValue": 2.5
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
@@ -69,7 +69,7 @@
     "armorBaseValue": 0.5,
     "trackingRange": 64,
     "followRange": 50,
-    "health": 10,
+    "health": 240,
     "xpAmount": 0,
     "waterMob": false,
     "breatheUnderwater": {

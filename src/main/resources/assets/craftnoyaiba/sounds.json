@@ -102,5 +102,13 @@
         "stream": false
       }
     ]
+  },
+  "heavyattack": {
+    "sounds": [
+      {
+        "name": "craftnoyaiba:sfx-sekiro-attack-fx",
+        "stream": false
+      }
+    ]
   }
 }

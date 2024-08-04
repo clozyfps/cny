@@ -8,18 +8,21 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnoyaiba.init.CraftnoyaibaModParticleTypes;
 import net.mcreator.craftnoyaiba.init.CraftnoyaibaModItems;
+import net.mcreator.craftnoyaiba.CraftnoyaibaMod;
 
 import javax.annotation.Nullable;
 
@@ -40,7 +43,8 @@ public class SwingClashProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (entity.getPersistentData().getDouble("swingtimer") > 0 && sourceentity.getPersistentData().getDouble("swingtimer") > 0) {
-			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("craftnoyaiba:nichirins")))) {
+			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof SwordItem
+					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof SwordItem) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craftnoyaiba:swordblock")), SoundSource.NEUTRAL, 1, 1);
@@ -64,7 +68,17 @@ public class SwingClashProcedure {
 				if (event != null && event.isCancelable()) {
 					event.setCanceled(true);
 				}
+			} else {
+				if (event != null && event.isCancelable()) {
+					event.setCanceled(true);
+				}
 			}
+		}
+		if (sourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("craftnoyaiba:demon")))) {
+			sourceentity.getPersistentData().putDouble("swingtimer", 1);
+			CraftnoyaibaMod.queueServerWork(5, () -> {
+				sourceentity.getPersistentData().putDouble("swingtimer", 0);
+			});
 		}
 	}
 }

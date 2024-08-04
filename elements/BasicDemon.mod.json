@@ -132,6 +132,9 @@
       "value": ""
     },
     "entityDataEntries": [],
+    "onMobTickUpdate": {
+      "name": "BasicDemonOnEntityTickUpdate"
+    },
     "onInitialSpawn": {
       "name": "BasicDemonOnInitialEntitySpawn"
     },

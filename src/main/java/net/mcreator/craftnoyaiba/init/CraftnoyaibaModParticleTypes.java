@@ -23,4 +23,5 @@ public class CraftnoyaibaModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> BLUE_ELECTRICITY = REGISTRY.register("blue_electricity", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> FLOATING_ROCK = REGISTRY.register("floating_rock", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> STONE_PARTICLE_PRE = REGISTRY.register("stone_particle_pre", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> DEATH = REGISTRY.register("death", () -> new SimpleParticleType(true));
 }

@@ -1,0 +1,142 @@
+{
+  "_fv": 60,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_black",
+          "text": "Black",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "BlackUniformSelect"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 195,
+          "y": 35
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_black1",
+          "text": "Red",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "RedUniformSelect"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 195,
+          "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_black2",
+          "text": "Blue",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "BlueUniformSelect"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 195,
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_black3",
+          "text": "Yellow",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "YellowUniformSelect"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 195,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_black4",
+          "text": "Purple",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "PurpleUniformSelect"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 195,
+          "y": 143
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_green",
+          "text": "Green",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "GreenUniformSelect"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 195,
+          "y": 170
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_sslwhat_color_uniform",
+          "text": {
+            "fixedValue": "§lSelect Your Uniform Color."
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 150,
+          "y": 197
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_brown",
+          "text": "Brown",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "BrownUniformSelect"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 195,
+          "y": 8
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

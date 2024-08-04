@@ -21,6 +21,7 @@ import net.mcreator.craftnoyaiba.potion.PreSixFoldMobEffect;
 import net.mcreator.craftnoyaiba.potion.OutwardsPoofMobEffect;
 import net.mcreator.craftnoyaiba.potion.NewGodspeedMobEffect;
 import net.mcreator.craftnoyaiba.potion.ImpactFrameMobEffect;
+import net.mcreator.craftnoyaiba.potion.HeavyDemonAttackMobEffect;
 import net.mcreator.craftnoyaiba.potion.HeadRegenerationTimerMobEffect;
 import net.mcreator.craftnoyaiba.potion.GroundSlamMobEffect;
 import net.mcreator.craftnoyaiba.potion.FlamingThunderGodActiveMobEffect;
@@ -56,4 +57,5 @@ public class CraftnoyaibaModMobEffects {
 	public static final RegistryObject<MobEffect> STRING_PERFORMANCE_MOVE = REGISTRY.register("string_performance_move", () -> new StringPerformanceMoveMobEffect());
 	public static final RegistryObject<MobEffect> TCAFEND = REGISTRY.register("tcafend", () -> new TcafendMobEffect());
 	public static final RegistryObject<MobEffect> NEW_GODSPEED = REGISTRY.register("new_godspeed", () -> new NewGodspeedMobEffect());
+	public static final RegistryObject<MobEffect> HEAVY_DEMON_ATTACK = REGISTRY.register("heavy_demon_attack", () -> new HeavyDemonAttackMobEffect());
 }
