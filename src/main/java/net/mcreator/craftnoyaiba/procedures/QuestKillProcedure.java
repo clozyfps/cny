@@ -1,20 +1,6 @@
 package net.mcreator.craftnoyaiba.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
-
-import net.minecraft.world.entity.Entity;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.core.registries.Registries;
-
-import net.mcreator.craftnoyaiba.network.CraftnoyaibaModVariables;
-import net.mcreator.craftnoyaiba.entity.HandDemonEntity;
-import net.mcreator.craftnoyaiba.entity.BasicDemonEntity;
-
-import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
 public class QuestKillProcedure {

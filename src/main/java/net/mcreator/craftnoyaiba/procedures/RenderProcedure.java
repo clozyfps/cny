@@ -20,8 +20,8 @@ import net.minecraft.client.Minecraft;
 import net.mcreator.craftnoyaiba.network.CraftnoyaibaModVariables;
 import net.mcreator.craftnoyaiba.init.CraftnoyaibaModItems;
 import net.mcreator.craftnoyaiba.client.model.Modeluzuisheathe;
-import net.mcreator.craftnoyaiba.client.model.Modelsheatheempty;
 import net.mcreator.craftnoyaiba.client.model.Modelsheathe;
+import net.mcreator.craftnoyaiba.client.model.Modelemptysheathe;
 
 import javax.annotation.Nullable;
 
@@ -55,13 +55,13 @@ public class RenderProcedure {
 		}
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 				.getItem() == ((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).EquippedSword).getItem()) {
-			if (((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).EquippedSword).getItem() == CraftnoyaibaModItems.THUNDER_NICHIRIN_SWORD.get()
+			if (((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).EquippedSword).getItem() == CraftnoyaibaModItems.SPECIAL_THUNDER_NICHIRIN.get()
 					|| ((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).EquippedSword).getItem() == CraftnoyaibaModItems.SPECIAL_THUNDER_NICHIRIN.get()) {
 				if (_evt.getRenderer() instanceof PlayerRenderer) {
 					if (_evt instanceof RenderLivingEvent.Pre) {
 						// _evt.setCanceled(true);
 					}
-					new com.kleiders.kleidersplayerrenderer.KleidersPlayerRenderer(context, new ResourceLocation("craftnoyaiba:textures/entities/thunder_sheathe.png"), new Modelsheatheempty(context.bakeLayer(Modelsheatheempty.LAYER_LOCATION)))
+					new com.kleiders.kleidersplayerrenderer.KleidersPlayerRenderer(context, new ResourceLocation("craftnoyaiba:textures/entities/sheathethunder.png"), new Modelemptysheathe(context.bakeLayer(Modelemptysheathe.LAYER_LOCATION)))
 							.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
 				}
 			}
@@ -71,13 +71,13 @@ public class RenderProcedure {
 				: false)
 				&& !((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 						.getItem() == ((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).EquippedSword).getItem())) {
-			if (((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).EquippedSword).getItem() == CraftnoyaibaModItems.THUNDER_NICHIRIN_SWORD.get()
+			if (((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).EquippedSword).getItem() == CraftnoyaibaModItems.SPECIAL_THUNDER_NICHIRIN.get()
 					|| ((entity.getCapability(CraftnoyaibaModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftnoyaibaModVariables.PlayerVariables())).EquippedSword).getItem() == CraftnoyaibaModItems.SPECIAL_THUNDER_NICHIRIN.get()) {
 				if (_evt.getRenderer() instanceof PlayerRenderer) {
 					if (_evt instanceof RenderLivingEvent.Pre) {
 						// _evt.setCanceled(true);
 					}
-					new com.kleiders.kleidersplayerrenderer.KleidersPlayerRenderer(context, new ResourceLocation("craftnoyaiba:textures/entities/thunder_sheathe.png"), new Modelsheathe(context.bakeLayer(Modelsheathe.LAYER_LOCATION)))
+					new com.kleiders.kleidersplayerrenderer.KleidersPlayerRenderer(context, new ResourceLocation("craftnoyaiba:textures/entities/sheathethunder.png"), new Modelsheathe(context.bakeLayer(Modelsheathe.LAYER_LOCATION)))
 							.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
 				}
 			}

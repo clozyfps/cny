@@ -1,8 +1,6 @@
 package net.mcreator.craftnoyaiba.procedures;
 
-import net.minecraft.world.entity.Entity;
-
-import net.mcreator.craftnoyaiba.network.CraftnoyaibaModVariables;
+import net.minecraftforge.eventbus.api.Event;
 
 public class FinalSelectionGoalNew2Procedure {
 	public static boolean execute(Entity entity) {

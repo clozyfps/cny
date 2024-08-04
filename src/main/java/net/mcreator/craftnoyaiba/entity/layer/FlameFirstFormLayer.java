@@ -15,7 +15,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class FlameFirstFormLayer extends GeoRenderLayer<FlameFirstFormEntity> {
-	private static final ResourceLocation LAYER = new ResourceLocation("craftnoyaiba", "textures/entities/a2i2e_layer_2.png");
+	private static final ResourceLocation LAYER = new ResourceLocation("craftnoyaiba", "textures/entities/firstform.png");
 
 	public FlameFirstFormLayer(GeoRenderer<FlameFirstFormEntity> entityRenderer) {
 		super(entityRenderer);

@@ -8,9 +8,13 @@
     "texture": "a2i2e_layer_2",
     "customModelName": "uzui_sword:default",
     "blockingModelName": "Normal blocking",
-    "name": "Sound Nichirin Sword",
+    "name": "§aFlashy Nichirin Sword",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§e◆ §fA Nichirin Blade accomodating §l§6Sound Breathing§f, notably flashy.",
+        "§e◆ §b+1 Sound Breathing Affinity",
+        "§7♢ Unrefined"
+      ]
     },
     "creativeTab": {
       "value": "CUSTOM:YaibaNichirins"

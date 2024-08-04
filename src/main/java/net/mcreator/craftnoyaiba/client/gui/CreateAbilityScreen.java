@@ -11,6 +11,8 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.craftnoyaiba.world.inventory.CreateAbilityMenu;
+import net.mcreator.craftnoyaiba.procedures.IfHumanCheckProcedure;
+import net.mcreator.craftnoyaiba.procedures.IfDemonCheckProcedure;
 import net.mcreator.craftnoyaiba.procedures.DisplayMove5Procedure;
 import net.mcreator.craftnoyaiba.procedures.DisplayMove4Procedure;
 import net.mcreator.craftnoyaiba.procedures.DisplayMove3Procedure;
@@ -76,6 +78,18 @@ public class CreateAbilityScreen extends AbstractContainerScreen<CreateAbilityMe
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		if (IfHumanCheckProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/box.png"), this.leftPos + 184, this.topPos + 10, 0, 0, 17, 17, 17, 17);
+		}
+		if (IfHumanCheckProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/skillmenu.png"), this.leftPos + -213, this.topPos + -37, 0, 0, 427, 240, 427, 240);
+		}
+		if (IfDemonCheckProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/demon_skillmenu.png"), this.leftPos + -214, this.topPos + -36, 0, 0, 427, 240, 427, 240);
+		}
+		if (IfDemonCheckProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("craftnoyaiba:textures/screens/box2.png"), this.leftPos + 183, this.topPos + 10, 0, 0, 17, 17, 17, 17);
+		}
 		RenderSystem.disableBlend();
 	}
 
@@ -97,25 +111,25 @@ public class CreateAbilityScreen extends AbstractContainerScreen<CreateAbilityMe
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				DisplayMove1Procedure.execute(entity), -127, -20, -1, false);
+				DisplayMove1Procedure.execute(entity), -101, 13, -1, false);
 		guiGraphics.drawString(this.font,
 
-				DisplayMove2Procedure.execute(entity), -127, 16, -1, false);
+				DisplayMove2Procedure.execute(entity), -101, 32, -1, false);
 		guiGraphics.drawString(this.font,
 
-				DisplayMove3Procedure.execute(entity), -127, 52, -1, false);
+				DisplayMove3Procedure.execute(entity), -102, 52, -1, false);
 		guiGraphics.drawString(this.font,
 
-				DisplayMove4Procedure.execute(entity), -127, 94, -1, false);
+				DisplayMove4Procedure.execute(entity), -102, 71, -1, false);
 		guiGraphics.drawString(this.font,
 
-				DisplayMove5Procedure.execute(entity), -127, 133, -1, false);
+				DisplayMove5Procedure.execute(entity), -102, 91, -1, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		button_ssl = new PlainTextButton(this.leftPos + -168, this.topPos + -20, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_ssl"), e -> {
+		button_ssl = new PlainTextButton(this.leftPos + -115, this.topPos + 14, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_ssl"), e -> {
 			if (CheckAdd1Procedure.execute(entity)) {
 				CraftnoyaibaMod.PACKET_HANDLER.sendToServer(new CreateAbilityButtonMessage(0, x, y, z));
 				CreateAbilityButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -129,7 +143,7 @@ public class CreateAbilityScreen extends AbstractContainerScreen<CreateAbilityMe
 		};
 		guistate.put("button:button_ssl", button_ssl);
 		this.addRenderableWidget(button_ssl);
-		button_ssl1 = new PlainTextButton(this.leftPos + -168, this.topPos + 16, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_ssl1"), e -> {
+		button_ssl1 = new PlainTextButton(this.leftPos + -115, this.topPos + 34, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_ssl1"), e -> {
 			if (CheckAdd2Procedure.execute(entity)) {
 				CraftnoyaibaMod.PACKET_HANDLER.sendToServer(new CreateAbilityButtonMessage(1, x, y, z));
 				CreateAbilityButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -143,7 +157,7 @@ public class CreateAbilityScreen extends AbstractContainerScreen<CreateAbilityMe
 		};
 		guistate.put("button:button_ssl1", button_ssl1);
 		this.addRenderableWidget(button_ssl1);
-		button_ssl2 = new PlainTextButton(this.leftPos + -168, this.topPos + 52, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_ssl2"), e -> {
+		button_ssl2 = new PlainTextButton(this.leftPos + -115, this.topPos + 53, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_ssl2"), e -> {
 			if (CheckAdd3Procedure.execute(entity)) {
 				CraftnoyaibaMod.PACKET_HANDLER.sendToServer(new CreateAbilityButtonMessage(2, x, y, z));
 				CreateAbilityButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -157,7 +171,7 @@ public class CreateAbilityScreen extends AbstractContainerScreen<CreateAbilityMe
 		};
 		guistate.put("button:button_ssl2", button_ssl2);
 		this.addRenderableWidget(button_ssl2);
-		button_empty = new PlainTextButton(this.leftPos + -168, this.topPos + 92, 30, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_empty"), e -> {
+		button_empty = new PlainTextButton(this.leftPos + -115, this.topPos + 72, 30, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_empty"), e -> {
 			if (CheckAdd4Procedure.execute(entity)) {
 				CraftnoyaibaMod.PACKET_HANDLER.sendToServer(new CreateAbilityButtonMessage(3, x, y, z));
 				CreateAbilityButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -171,7 +185,7 @@ public class CreateAbilityScreen extends AbstractContainerScreen<CreateAbilityMe
 		};
 		guistate.put("button:button_empty", button_empty);
 		this.addRenderableWidget(button_empty);
-		button_ssl3 = new PlainTextButton(this.leftPos + -168, this.topPos + 133, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_ssl3"), e -> {
+		button_ssl3 = new PlainTextButton(this.leftPos + -115, this.topPos + 92, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_ssl3"), e -> {
 			if (CheckAdd5Procedure.execute(entity)) {
 				CraftnoyaibaMod.PACKET_HANDLER.sendToServer(new CreateAbilityButtonMessage(4, x, y, z));
 				CreateAbilityButtonMessage.handleButtonAction(entity, 4, x, y, z);
@@ -185,7 +199,7 @@ public class CreateAbilityScreen extends AbstractContainerScreen<CreateAbilityMe
 		};
 		guistate.put("button:button_ssl3", button_ssl3);
 		this.addRenderableWidget(button_ssl3);
-		button_empty1 = new PlainTextButton(this.leftPos + 183, this.topPos + -31, 35, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_empty1"), e -> {
+		button_empty1 = new PlainTextButton(this.leftPos + 187, this.topPos + 15, 35, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_empty1"), e -> {
 			if (true) {
 				CraftnoyaibaMod.PACKET_HANDLER.sendToServer(new CreateAbilityButtonMessage(5, x, y, z));
 				CreateAbilityButtonMessage.handleButtonAction(entity, 5, x, y, z);
@@ -193,7 +207,7 @@ public class CreateAbilityScreen extends AbstractContainerScreen<CreateAbilityMe
 		}, this.font);
 		guistate.put("button:button_empty1", button_empty1);
 		this.addRenderableWidget(button_empty1);
-		button_sslx = new PlainTextButton(this.leftPos + -207, this.topPos + -20, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_sslx"), e -> {
+		button_sslx = new PlainTextButton(this.leftPos + 153, this.topPos + 15, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_sslx"), e -> {
 			if (CheckX1Procedure.execute(entity)) {
 				CraftnoyaibaMod.PACKET_HANDLER.sendToServer(new CreateAbilityButtonMessage(6, x, y, z));
 				CreateAbilityButtonMessage.handleButtonAction(entity, 6, x, y, z);
@@ -207,7 +221,7 @@ public class CreateAbilityScreen extends AbstractContainerScreen<CreateAbilityMe
 		};
 		guistate.put("button:button_sslx", button_sslx);
 		this.addRenderableWidget(button_sslx);
-		button_sslx1 = new PlainTextButton(this.leftPos + -207, this.topPos + 16, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_sslx1"), e -> {
+		button_sslx1 = new PlainTextButton(this.leftPos + 153, this.topPos + 34, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_sslx1"), e -> {
 			if (CheckX2Procedure.execute(entity)) {
 				CraftnoyaibaMod.PACKET_HANDLER.sendToServer(new CreateAbilityButtonMessage(7, x, y, z));
 				CreateAbilityButtonMessage.handleButtonAction(entity, 7, x, y, z);
@@ -221,7 +235,7 @@ public class CreateAbilityScreen extends AbstractContainerScreen<CreateAbilityMe
 		};
 		guistate.put("button:button_sslx1", button_sslx1);
 		this.addRenderableWidget(button_sslx1);
-		button_sslx2 = new PlainTextButton(this.leftPos + -206, this.topPos + 93, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_sslx2"), e -> {
+		button_sslx2 = new PlainTextButton(this.leftPos + 152, this.topPos + 72, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_sslx2"), e -> {
 			if (CheckX4Procedure.execute(entity)) {
 				CraftnoyaibaMod.PACKET_HANDLER.sendToServer(new CreateAbilityButtonMessage(8, x, y, z));
 				CreateAbilityButtonMessage.handleButtonAction(entity, 8, x, y, z);
@@ -235,7 +249,7 @@ public class CreateAbilityScreen extends AbstractContainerScreen<CreateAbilityMe
 		};
 		guistate.put("button:button_sslx2", button_sslx2);
 		this.addRenderableWidget(button_sslx2);
-		button_sslx3 = new PlainTextButton(this.leftPos + -206, this.topPos + 133, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_sslx3"), e -> {
+		button_sslx3 = new PlainTextButton(this.leftPos + 152, this.topPos + 93, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_sslx3"), e -> {
 			if (CheckX5Procedure.execute(entity)) {
 				CraftnoyaibaMod.PACKET_HANDLER.sendToServer(new CreateAbilityButtonMessage(9, x, y, z));
 				CreateAbilityButtonMessage.handleButtonAction(entity, 9, x, y, z);
@@ -249,7 +263,7 @@ public class CreateAbilityScreen extends AbstractContainerScreen<CreateAbilityMe
 		};
 		guistate.put("button:button_sslx3", button_sslx3);
 		this.addRenderableWidget(button_sslx3);
-		button_sslx4 = new PlainTextButton(this.leftPos + -207, this.topPos + 52, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_sslx4"), e -> {
+		button_sslx4 = new PlainTextButton(this.leftPos + 152, this.topPos + 54, 40, 20, Component.translatable("gui.craftnoyaiba.create_ability.button_sslx4"), e -> {
 			if (CheckX3Procedure.execute(entity)) {
 				CraftnoyaibaMod.PACKET_HANDLER.sendToServer(new CreateAbilityButtonMessage(10, x, y, z));
 				CreateAbilityButtonMessage.handleButtonAction(entity, 10, x, y, z);

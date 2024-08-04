@@ -1,4 +1,4 @@
-// Made with Blockbench 4.9.4
+// Made with Blockbench 4.10.4
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 
@@ -29,8 +29,7 @@ public class Modeljigoro<T extends Entity> extends EntityModel<T> {
 
 		PartDefinition Head = partdefinition.addOrReplaceChild("Head",
 				CubeListBuilder.create().texOffs(0, 0)
-						.addBox(-4.0F, -5.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.0F)).texOffs(32, 0)
-						.addBox(-4.0F, -5.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.5F)).texOffs(40, 51)
+						.addBox(-4.0F, -5.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.0F)).texOffs(40, 51)
 						.addBox(-3.0F, -9.6667F, -1.0F, 6.0F, 5.0F, 0.0F, new CubeDeformation(0.0F)).texOffs(24, 0)
 						.addBox(-7.0F, -3.0F, 1.6667F, 14.0F, 6.0F, 0.0F, new CubeDeformation(0.0F)).texOffs(48, 6)
 						.addBox(-5.0F, -3.0F, -4.025F, 10.0F, 3.0F, 0.0F, new CubeDeformation(0.0F)).texOffs(12, 45)
@@ -81,12 +80,6 @@ public class Modeljigoro<T extends Entity> extends EntityModel<T> {
 	}
 
 	@Override
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
-			float headPitch) {
-
-	}
-
-	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay,
 			float red, float green, float blue, float alpha) {
 		Head.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
@@ -95,5 +88,15 @@ public class Modeljigoro<T extends Entity> extends EntityModel<T> {
 		LeftArm.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		RightLeg.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		LeftLeg.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+	}
+
+	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
+			float headPitch) {
+		this.RightArm.xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount;
+		this.LeftLeg.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
+		this.Head.yRot = netHeadYaw / (180F / (float) Math.PI);
+		this.Head.xRot = headPitch / (180F / (float) Math.PI);
+		this.LeftArm.xRot = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
+		this.RightLeg.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
 	}
 }

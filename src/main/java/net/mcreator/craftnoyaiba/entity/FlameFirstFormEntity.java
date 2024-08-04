@@ -78,7 +78,7 @@ public class FlameFirstFormEntity extends Monster implements GeoEntity {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "a2i2e_layer_2");
+		this.entityData.define(TEXTURE, "firstform");
 	}
 
 	public void setTexture(String texture) {
@@ -217,7 +217,7 @@ public class FlameFirstFormEntity extends Monster implements GeoEntity {
 
 	private PlayState movementPredicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
-			return event.setAndContinue(RawAnimation.begin().thenLoop("flamefirstform"));
+			return event.setAndContinue(RawAnimation.begin().thenLoop("firstform"));
 		}
 		return PlayState.STOP;
 	}

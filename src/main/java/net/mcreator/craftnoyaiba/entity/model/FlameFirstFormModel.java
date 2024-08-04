@@ -9,12 +9,12 @@ import net.mcreator.craftnoyaiba.entity.FlameFirstFormEntity;
 public class FlameFirstFormModel extends GeoModel<FlameFirstFormEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(FlameFirstFormEntity entity) {
-		return new ResourceLocation("craftnoyaiba", "animations/1stformflame.animation.json");
+		return new ResourceLocation("craftnoyaiba", "animations/flamingslash.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(FlameFirstFormEntity entity) {
-		return new ResourceLocation("craftnoyaiba", "geo/1stformflame.geo.json");
+		return new ResourceLocation("craftnoyaiba", "geo/flamingslash.geo.json");
 	}
 
 	@Override

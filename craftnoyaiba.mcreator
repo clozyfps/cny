@@ -7121,7 +7121,7 @@
           }
         ]
       },
-      "path": "~/Mobs/Procedures"
+      "path": "~/Mobs"
     },
     {
       "name": "ZenitsuAgatsuma",
@@ -8613,21 +8613,6 @@
       "path": "~/Armors/Slayer/Variants"
     },
     {
-      "name": "Death",
-      "type": "particle",
-      "sortid": 405,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "death",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/client/particle/DeathParticle.java",
-          "src/main/resources/assets/craftnoyaiba/particles/death.json"
-        ]
-      },
-      "path": "~/Particles"
-    },
-    {
       "name": "BasicDemonOnEntityTickUpdate",
       "type": "procedure",
       "sortid": 406,
@@ -8664,25 +8649,198 @@
       "path": "~/Mobs/Procedures"
     },
     {
-      "name": "FinalSelectionGoalFirst",
+      "name": "UniformSelectorThisGUIIsClosed",
       "type": "procedure",
-      "sortid": 407,
+      "sortid": 420,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "final_selection_goal_first",
+      "registry_name": "uniform_selector_this_gui_is_closed",
       "metadata": {
-        "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionGoalFirstProcedure.java"
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/UniformSelectorThisGUIIsClosedProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
-      "path": "~/Overlays/Procedures"
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "YellowUniformSelect",
+      "type": "procedure",
+      "sortid": 415,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_uniform_select",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/YellowUniformSelectProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "HeavyDemonAttack",
+      "type": "potioneffect",
+      "sortid": 422,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_demon_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/potion/HeavyDemonAttackMobEffect.java"
+        ]
+      },
+      "path": "~/Potion"
+    },
+    {
+      "name": "PurpleUniformSelect",
+      "type": "procedure",
+      "sortid": 414,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_uniform_select",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/PurpleUniformSelectProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "SelectNormal",
+      "type": "procedure",
+      "sortid": 418,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_normal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/SelectNormalProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "SelectLong",
+      "type": "procedure",
+      "sortid": 419,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_long",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/SelectLongProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
     },
     {
       "name": "FinalSelectionGoalNew2",
@@ -8695,6 +8853,63 @@
         "return_type": "logic",
         "files": [
           "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionGoalNew2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "GreenUniformSelect",
+      "type": "procedure",
+      "sortid": 413,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_uniform_select",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/GreenUniformSelectProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "FinalSelectionGoalFirst",
+      "type": "procedure",
+      "sortid": 407,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_selection_goal_first",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/FinalSelectionGoalFirstProcedure.java"
         ],
         "dependencies": [
           {
@@ -8793,15 +9008,15 @@
       "path": "~/GUI/Procedures"
     },
     {
-      "name": "BlueUniformSelect",
+      "name": "HeavyDemonAttackEffectExpires",
       "type": "procedure",
-      "sortid": 412,
+      "sortid": 421,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "blue_uniform_select",
+      "registry_name": "heavy_demon_attack_effect_expires",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/procedures/BlueUniformSelectProcedure.java"
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/HeavyDemonAttackEffectExpiresProcedure.java"
         ],
         "dependencies": [
           {
@@ -8826,115 +9041,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "GreenUniformSelect",
-      "type": "procedure",
-      "sortid": 413,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "green_uniform_select",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/procedures/GreenUniformSelectProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "PurpleUniformSelect",
-      "type": "procedure",
-      "sortid": 414,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "purple_uniform_select",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/procedures/PurpleUniformSelectProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "YellowUniformSelect",
-      "type": "procedure",
-      "sortid": 415,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "yellow_uniform_select",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/procedures/YellowUniformSelectProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
+      "path": "~/Potion"
     },
     {
       "name": "BrownUniformSelect",
@@ -8973,6 +9080,57 @@
       "path": "~/GUI/Procedures"
     },
     {
+      "name": "BlueUniformSelect",
+      "type": "procedure",
+      "sortid": 412,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_uniform_select",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/BlueUniformSelectProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Death",
+      "type": "particle",
+      "sortid": 405,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/client/particle/DeathParticle.java",
+          "src/main/resources/assets/craftnoyaiba/particles/death.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
       "name": "UniformSelector",
       "type": "gui",
       "sortid": 417,
@@ -8989,162 +9147,244 @@
       "path": "~/GUI"
     },
     {
-      "name": "SelectNormal",
+      "name": "MuzanArmorCloakless",
+      "type": "armor",
+      "sortid": 408,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "muzan_armor_cloakless",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/muzan_armor_cloakless_chestplate.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/MuzanArmorCloaklessItem.java"
+        ]
+      },
+      "path": "~/Armors/Demon"
+    },
+    {
+      "name": "MuzanArmor",
+      "type": "armor",
+      "sortid": 407,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "muzan_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/MuzanArmorItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/muzan_armor_chestplate.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/muzan_armor_leggings.json"
+        ]
+      },
+      "path": "~/Armors/Demon"
+    },
+    {
+      "name": "IfDemonCheck",
       "type": "procedure",
+      "sortid": 411,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "if_demon_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/IfDemonCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ZohakutenArmor",
+      "type": "armor",
+      "sortid": 405,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zohakuten_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/zohakuten_armor_leggings.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/ZohakutenArmorItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/zohakuten_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Armors/Demon"
+    },
+    {
+      "name": "SoundNichirinRegular",
+      "type": "tool",
+      "sortid": 413,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_nichirin_regular",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftnoyaiba/models/item/sound_nichirin_regular.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/SoundNichirinRegularItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "FlameBreathingForm",
+      "type": "animatedentity",
       "sortid": 418,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "select_normal",
+      "registry_name": "flame_breathing_form",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/procedures/SelectNormalProcedure.java"
+          "src/main/java/net/mcreator/craftnoyaiba/entity/model/FlameBreathingFormModel.java",
+          "src/main/java/net/mcreator/craftnoyaiba/entity/layer/FlameBreathingFormLayer.java",
+          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/FlameBreathingFormRenderer.java",
+          "src/main/resources/data/craftnoyaiba/forge/biome_modifier/flame_breathing_form_biome_modifier.json",
+          "src/main/java/net/mcreator/craftnoyaiba/entity/FlameBreathingFormEntity.java"
+        ]
+      },
+      "path": "~/Mobs/Misc/Breathing/Flame"
+    },
+    {
+      "name": "ThunderNichirin",
+      "type": "tool",
+      "sortid": 416,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_nichirin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/ThunderNichirinItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/thunder_nichirin.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "IfHumanCheck",
+      "type": "procedure",
+      "sortid": 412,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "if_human_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/IfHumanCheckProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
       "path": "~/GUI/Procedures"
     },
     {
-      "name": "SelectLong",
+      "name": "RaceDisplay",
       "type": "procedure",
-      "sortid": 419,
+      "sortid": 410,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "select_long",
+      "registry_name": "race_display",
       "metadata": {
+        "return_type": "string",
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/procedures/SelectLongProcedure.java"
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/RaceDisplayProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
       "path": "~/GUI/Procedures"
     },
     {
-      "name": "UniformSelectorThisGUIIsClosed",
-      "type": "procedure",
-      "sortid": 420,
+      "name": "MoonNichirin",
+      "type": "tool",
+      "sortid": 414,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "uniform_selector_this_gui_is_closed",
+      "registry_name": "moon_nichirin",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/procedures/UniformSelectorThisGUIIsClosedProcedure.java"
+          "src/main/resources/assets/craftnoyaiba/models/item/moon_nichirin.json",
+          "src/main/java/net/mcreator/craftnoyaiba/item/MoonNichirinItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "RuiArmor",
+      "type": "armor",
+      "sortid": 406,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rui_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/RuiArmorItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/rui_armor_leggings.json",
+          "src/main/resources/assets/craftnoyaiba/models/item/rui_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Armors/Demon"
+    },
+    {
+      "name": "FlameNichirin",
+      "type": "tool",
+      "sortid": 415,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flame_nichirin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/item/FlameNichirinItem.java",
+          "src/main/resources/assets/craftnoyaiba/models/item/flame_nichirin.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "ThirdFormSlash",
+      "type": "animatedentity",
+      "sortid": 417,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "third_form_slash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/entity/ThirdFormSlashEntity.java",
+          "src/main/java/net/mcreator/craftnoyaiba/client/renderer/ThirdFormSlashRenderer.java",
+          "src/main/java/net/mcreator/craftnoyaiba/entity/model/ThirdFormSlashModel.java"
+        ]
+      },
+      "path": "~/Mobs/Misc/Breathing/Wind"
+    },
+    {
+      "name": "SetDemon",
+      "type": "procedure",
+      "sortid": 409,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_demon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnoyaiba/procedures/SetDemonProcedure.java"
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
+            "name": "arguments",
+            "type": "cmdcontext"
           }
         ]
       },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "HeavyDemonAttackEffectExpires",
-      "type": "procedure",
-      "sortid": 421,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "heavy_demon_attack_effect_expires",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/procedures/HeavyDemonAttackEffectExpiresProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Potion"
-    },
-    {
-      "name": "HeavyDemonAttack",
-      "type": "potioneffect",
-      "sortid": 422,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "heavy_demon_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnoyaiba/potion/HeavyDemonAttackMobEffect.java"
-        ]
-      },
-      "path": "~/Potion"
+      "path": "~/Commands/Procedures"
     }
   ],
   "variable_elements": [
@@ -9968,10 +10208,6 @@
   "tag_elements": {
     "BIOMES:minecraft:has_structure/pillager_outpost": [
       "~CUSTOM:Town"
-    ],
-    "ENTITIES:mod:demon": [
-      "CUSTOM:BasicDemon",
-      "CUSTOM:HandDemon"
     ],
     "BLOCKS:mod:inf_castle_blocks_removed": [
       "Blocks.FLOWING_LAVA",

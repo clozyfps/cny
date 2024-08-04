@@ -1,31 +1,6 @@
 package net.mcreator.craftnoyaiba.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.Vec2;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.core.BlockPos;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
-
-import net.mcreator.craftnoyaiba.init.CraftnoyaibaModMobEffects;
-import net.mcreator.craftnoyaiba.CraftnoyaibaMod;
-
-import java.util.List;
-import java.util.Comparator;
+import net.minecraftforge.eventbus.api.Event;
 
 public class BasicDemonOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -66,7 +41,7 @@ public class BasicDemonOnEntityTickUpdateProcedure {
 									"/particle craftnoyaiba:death ~ ~2.2 ~ 0.1 0.1 0.1 0 1");
 						entity.getPersistentData().putDouble("heavyattacktimer", 0);
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(CraftnoyaibaModMobEffects.HEAVY_DEMON_ATTACK.get(), 15, 0));
+							_entity.addEffect(new MobEffectInstance(CraftnoyaibaModMobEffects.DELETED_MOD_ELEMENT.get(), 15, 0));
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 25, 0));
 					}

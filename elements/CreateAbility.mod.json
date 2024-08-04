@@ -24,8 +24,8 @@
           },
           "width": 40,
           "height": 20,
-          "x": 46,
-          "y": 17
+          "x": 99,
+          "y": 51
         }
       },
       {
@@ -42,8 +42,8 @@
           },
           "width": 40,
           "height": 20,
-          "x": 46,
-          "y": 53
+          "x": 99,
+          "y": 71
         }
       },
       {
@@ -60,8 +60,8 @@
           },
           "width": 40,
           "height": 20,
-          "x": 46,
-          "y": 89
+          "x": 99,
+          "y": 90
         }
       },
       {
@@ -78,8 +78,8 @@
           },
           "width": 30,
           "height": 20,
-          "x": 46,
-          "y": 129
+          "x": 99,
+          "y": 109
         }
       },
       {
@@ -96,8 +96,8 @@
           },
           "width": 40,
           "height": 20,
-          "x": 46,
-          "y": 170
+          "x": 99,
+          "y": 129
         }
       },
       {
@@ -112,8 +112,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 17
+          "x": 113,
+          "y": 50
         }
       },
       {
@@ -128,8 +128,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 53
+          "x": 113,
+          "y": 69
         }
       },
       {
@@ -144,7 +144,7 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 87,
+          "x": 112,
           "y": 89
         }
       },
@@ -160,8 +160,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 131
+          "x": 112,
+          "y": 108
         }
       },
       {
@@ -176,8 +176,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 170
+          "x": 112,
+          "y": 128
         }
       },
       {
@@ -191,8 +191,8 @@
           },
           "width": 35,
           "height": 20,
-          "x": 397,
-          "y": 6
+          "x": 401,
+          "y": 52
         }
       },
       {
@@ -209,8 +209,8 @@
           },
           "width": 40,
           "height": 20,
-          "x": 7,
-          "y": 17
+          "x": 367,
+          "y": 52
         }
       },
       {
@@ -227,8 +227,8 @@
           },
           "width": 40,
           "height": 20,
-          "x": 7,
-          "y": 53
+          "x": 367,
+          "y": 71
         }
       },
       {
@@ -245,8 +245,8 @@
           },
           "width": 40,
           "height": 20,
-          "x": 8,
-          "y": 130
+          "x": 366,
+          "y": 109
         }
       },
       {
@@ -263,8 +263,8 @@
           },
           "width": 40,
           "height": 20,
-          "x": 8,
-          "y": 170
+          "x": 366,
+          "y": 130
         }
       },
       {
@@ -281,8 +281,56 @@
           },
           "width": 40,
           "height": 20,
-          "x": 7,
-          "y": 89
+          "x": 366,
+          "y": 91
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "box.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "IfHumanCheck"
+          },
+          "x": 398,
+          "y": 47
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "skillmenu.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "IfHumanCheck"
+          },
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "demon_skillmenu.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "IfDemonCheck"
+          },
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "box2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "IfDemonCheck"
+          },
+          "x": 397,
+          "y": 47
         }
       }
     ],
